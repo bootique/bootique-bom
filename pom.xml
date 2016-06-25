@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.nhl.bootique.parent</groupId>
+		<artifactId>bootique-parent</artifactId>
+		<version>0.10</version>
+	</parent>
+
+	<groupId>io.bootique.bom</groupId>
+	<artifactId>bootique-io-bom-parent</artifactId>
+	
+	<!-- Keeping this version in sync with Bootique version -->
+	<version>0.18-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>Parent of bootique-io-bom</name>
+	<description>
+		Parent POM of bootique-io-bom and related modules.
+	</description>
+
+	<modules>
+		<module>bootique-io-bom</module>
+		<module>bootique-io-bom-tests</module>
+	</modules>
+
+	<scm>
+		<developerConnection>scm:git:ssh://git@github.com/bootique/bootique-io-bom</developerConnection>
+		<url>https://github.com/bootique/bootique-io-bom</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<!-- Optional profile used to sign artifacts -->
+	<profiles>
+		<profile>
+			<id>gpg</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.bootique.bom</groupId>
+        <artifactId>bootique-io-bom-tests</artifactId>
+        <version>0.18-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>bootique-io-test-swagger</artifactId>
+    <packaging>jar</packaging>
+
+    <name>bootique-swagger Tests</name>
+
+    <dependencies>
+        <!-- unit test deps -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.nhl.bootique.jetty</groupId>
+            <artifactId>bootique-jetty-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- All the stuff coming from the io.bootique BOM -->
+        <dependency>
+            <groupId>io.bootique.swagger</groupId>
+            <artifactId>bootique-swagger</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Plus some stuff from com.nhl BOM -->
+        <dependency>
+            <groupId>com.nhl.bootique.logback</groupId>
+            <artifactId>bootique-logback</artifactId>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
