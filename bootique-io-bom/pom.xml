@@ -29,6 +29,11 @@
 				<artifactId>bootique-jooq</artifactId>
 				<version>0.1-SNAPSHOT</version>
 			</dependency>
+			<dependency>
+				<groupId>io.bootique.kafka.client</groupId>
+				<artifactId>bq-kafka-client-0.8</artifactId>
+				<version>0.1-SNAPSHOT</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
