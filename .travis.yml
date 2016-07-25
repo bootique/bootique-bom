@@ -9,8 +9,8 @@ branches:
 
 script: mvn clean source:jar deploy --settings travis_settings.xml
 
-# travis encrypt -r bootique/bootique-io-bom "CI_DEPLOY_USERNAME='name'"
-# travis encrypt -r bootique/bootique-io-bom "CI_DEPLOY_PASSWORD='password'"
+# travis encrypt -r bootique/bootique-bom "CI_DEPLOY_USERNAME='name'"
+# travis encrypt -r bootique/bootique-bom "CI_DEPLOY_PASSWORD='password'"
 env:
   global:
     - secure: "uitlkW4gz+jT0Y7Fl2hquGh+QwKj1ld1EBhsb9FABeKS064WaLpfrztQQXf+eQc1BaRGFGAqowLJUBOxPCY+oIr3ksupxFekbvVP9e3qLnHtRAVQmRBRvZvx6RNnO6/QEWGGtM8Pseln9Y2lfYRBTSOddggLR2FIN7K3cikCLr8RJ8nwJO2ewhD+baJlnlYK+F10TU+us4s3RIYE2F9fbNCFmFZoOgHbDxdL0hZQgXESv/gWgJ1/NaU7hA57LoZ1B4pCOgPJP9mA9154ImdPAiNpBFF7odEjsB7aR52LLUBWb8ou7LLVFZn507YEJhOF2R1YzbWUTK8dbOeJDN5Mi1hV1EQSXxMvZTE4LtpoSA9vkdwslkDui3WQJ3IBWH5HFMNixhjQgjJuEL2iUGcXV6QifVyNRKebB1DcFC4aCUpFRfGDon14Ys1k03k1pSZjum/0RTuBWanbAW9iHUsu6zysDlztq4dan6CQ3twJ5oL05hBECiOmrchdbTLfbWOYGdfzvg/BIND8W9wWnHofw0kkn03Az8O9UTRPoVw77VJOpwWGNqM3ZeKAD9QDb/MVwlzs3fx8+ZLhfznMpDZgb6Wur0XqKwCakYcJg96+Hw2qsx3SpO2KE5QXC6zGcQZpW0yMMZKNXFVM8i5BMmlqRnOwbYEZLOvIe+Vltzh31Ck="

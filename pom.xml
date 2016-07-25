@@ -15,9 +15,9 @@
 	<version>0.18-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Parent of bootique-bom</name>
+	<name>Parent of complementary bootique-bom</name>
 	<description>
-		Parent POM of bootique-bom and related modules.
+		Parent POM of complementary bootique-bom and related modules.
 	</description>
 
 	<modules>
@@ -26,8 +26,8 @@
 	</modules>
 
 	<scm>
-		<developerConnection>scm:git:ssh://git@github.com/bootique/bootique-io-bom</developerConnection>
-		<url>https://github.com/bootique/bootique-io-bom</url>
+		<developerConnection>scm:git:ssh://git@github.com/bootique/bootique-bom</developerConnection>
+		<url>https://github.com/bootique/bootique-bom</url>
 		<tag>HEAD</tag>
 	</scm>
 
