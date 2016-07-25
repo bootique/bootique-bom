@@ -5,20 +5,20 @@
 
     <parent>
         <groupId>io.bootique.bom</groupId>
-        <artifactId>bootique-io-bom-parent</artifactId>
+        <artifactId>bootique-bom-parent</artifactId>
         <version>0.18-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bootique-io-bom-tests</artifactId>
+    <artifactId>bootique-bom-tests</artifactId>
     <packaging>pom</packaging>
 
-    <name>Parent of bootique-io-bom test modules</name>
+    <name>Parent of bootique-bom test modules</name>
     <description>
-        Parent POM of bootique-io-bom test modules.
+        Parent POM of bootique-bom test modules.
     </description>
 
     <modules>
-        <module>bootique-io-test-swagger</module>
+        <module>bootique-test-swagger</module>
     </modules>
 
     <dependencyManagement>
@@ -32,7 +32,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.bom</groupId>
-                <artifactId>bootique-io-bom</artifactId>
+                <artifactId>bootique-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>

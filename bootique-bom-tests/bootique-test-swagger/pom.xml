@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.bootique.bom</groupId>
-        <artifactId>bootique-io-bom-tests</artifactId>
+        <artifactId>bootique-bom-tests</artifactId>
         <version>0.18-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bootique-io-test-swagger</artifactId>
+    <artifactId>bootique-test-swagger</artifactId>
     <packaging>jar</packaging>
 
     <name>bootique-swagger Tests</name>
