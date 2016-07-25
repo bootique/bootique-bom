@@ -22,17 +22,17 @@
 			<dependency>
 				<groupId>io.bootique.swagger</groupId>
 				<artifactId>bootique-swagger</artifactId>
-				<version>0.1-SNAPSHOT</version>
+				<version>0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>io.bootique.jooq</groupId>
 				<artifactId>bootique-jooq</artifactId>
-				<version>0.1-SNAPSHOT</version>
+				<version>0.1</version>
 			</dependency>
 			<dependency>
 				<groupId>io.bootique.kafka.client</groupId>
 				<artifactId>bootique-kafka-client-0.8</artifactId>
-				<version>0.1-SNAPSHOT</version>
+				<version>0.1</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
