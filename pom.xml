@@ -12,7 +12,7 @@
 	<artifactId>bootique-bom-parent</artifactId>
 	
 	<!-- Keeping this version in sync with Bootique version -->
-	<version>0.18</version>
+	<version>0.19-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Parent of complementary bootique-bom</name>
@@ -28,7 +28,7 @@
 	<scm>
 		<developerConnection>scm:git:ssh://git@github.com/bootique/bootique-bom</developerConnection>
 		<url>https://github.com/bootique/bootique-bom</url>
-		<tag>bootique-bom-parent-0.18</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<!-- Optional profile used to sign artifacts -->
