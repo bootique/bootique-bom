@@ -31,15 +31,8 @@
             <artifactId>mockito-core</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- All the stuff coming from the io.bootique BOM -->
-        <dependency>
-            <groupId>io.bootique.swagger</groupId>
-            <artifactId>bootique-swagger</artifactId>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- Plus some stuff from com.nhl BOM -->
+        
+        <!-- Extra stuff from com.nhl BOM -->
         <dependency>
             <groupId>com.nhl.bootique.logback</groupId>
             <artifactId>bootique-logback</artifactId>
