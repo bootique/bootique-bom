@@ -53,6 +53,11 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.kafka.client</groupId>
+            <artifactId>bootique-kafka-client</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.bootique.kafka.client</groupId>
             <artifactId>bootique-kafka-client-0.8</artifactId>
             <scope>compile</scope>
         </dependency>
