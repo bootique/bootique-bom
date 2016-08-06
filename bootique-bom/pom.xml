@@ -1,68 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>io.bootique.bom</groupId>
-		<artifactId>bootique-bom-parent</artifactId>
-		<version>0.19-SNAPSHOT</version>
-	</parent>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.bootique.bom</groupId>
+        <artifactId>bootique-bom-parent</artifactId>
+        <version>0.19-SNAPSHOT</version>
+    </parent>
 
-	<artifactId>bootique-bom</artifactId>
-	<packaging>pom</packaging>
+    <artifactId>bootique-bom</artifactId>
+    <packaging>pom</packaging>
 
-	<name>bootique-bom: A complementary Bill of Materials (BOM) for Bootique many of its extensions</name>
-	<description>Provides a complementary Maven "Bill of Materials" (BOM) for the projects using Bootique to 
-		ensure consistency of the versions of all included standard extensions. The main BOM is 
-		available here: https://github.com/nhl/bootique-bom .
-	</description>
+    <name>bootique-bom: A complementary Bill of Materials (BOM) for Bootique many of its extensions</name>
+    <description>Provides a complementary Maven "Bill of Materials" (BOM) for the projects using Bootique to
+        ensure consistency of the versions of all included standard extensions. The main BOM is
+        available here: https://github.com/nhl/bootique-bom .
+    </description>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>io.bootique.swagger</groupId>
-				<artifactId>bootique-swagger</artifactId>
-				<version>0.1</version>
-			</dependency>
-			<dependency>
-				<groupId>io.bootique.jooq</groupId>
-				<artifactId>bootique-jooq</artifactId>
-				<version>0.1</version>
-			</dependency>
-			<dependency>
-				<groupId>io.bootique.kafka.client</groupId>
-				<artifactId>bootique-kafka-client</artifactId>
-				<version>0.2-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>io.bootique.kafka.client</groupId>
-				<artifactId>bootique-kafka-client-0.8</artifactId>
-				<version>0.2-SNAPSHOT</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.bootique</groupId>
+                <artifactId>bootique</artifactId>
+                <version>0.19-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique</groupId>
+                <artifactId>bootique-test</artifactId>
+                <version>0.19-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nhl.bootique.cayenne</groupId>
+                <artifactId>bootique-cayenne</artifactId>
+                <version>0.16-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.curator</groupId>
+                <artifactId>bootique-curator</artifactId>
+                <version>0.10-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jdbc</groupId>
+                <artifactId>bootique-jdbc</artifactId>
+                <version>0.11-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jdbc</groupId>
+                <artifactId>bootique-jdbc-instrumented</artifactId>
+                <version>0.11-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jersey</groupId>
+                <artifactId>bootique-jersey</artifactId>
+                <version>0.18-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jetty</groupId>
+                <artifactId>bootique-jetty</artifactId>
+                <version>0.17-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jetty</groupId>
+                <artifactId>bootique-jetty-instrumented</artifactId>
+                <version>0.17-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jetty</groupId>
+                <artifactId>bootique-jetty-test</artifactId>
+                <version>0.17-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.job</groupId>
+                <artifactId>bootique-job</artifactId>
+                <version>0.11-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jooq</groupId>
+                <artifactId>bootique-jooq</artifactId>
+                <version>0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.kafka.client</groupId>
+                <artifactId>bootique-kafka-client</artifactId>
+                <version>0.2-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.kafka.client</groupId>
+                <artifactId>bootique-kafka-client-0.8</artifactId>
+                <version>0.2-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove</artifactId>
+                <version>0.11-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nhl.bootique.linkrest</groupId>
+                <artifactId>bootique-linkrest</artifactId>
+                <version>0.12-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nhl.bootique.liquibase</groupId>
+                <artifactId>bootique-liquibase</artifactId>
+                <version>0.9-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.logback</groupId>
+                <artifactId>bootique-logback</artifactId>
+                <version>0.11-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.metrics</groupId>
+                <artifactId>bootique-metrics</artifactId>
+                <version>0.7-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.swagger</groupId>
+                <artifactId>bootique-swagger</artifactId>
+                <version>0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.tapestry</groupId>
+                <artifactId>bootique-tapestry</artifactId>
+                <version>0.2-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-	<!-- Optional profile used to sign artifacts -->
-	<profiles>
-		<profile>
-			<id>gpg</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+    <!-- Optional profile used to sign artifacts -->
+    <profiles>
+        <profile>
+            <id>gpg</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
