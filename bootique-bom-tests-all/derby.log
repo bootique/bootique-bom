@@ -1,0 +1,39 @@
+----------------------------------------------------------------
+Tue Jul 26 15:51:17 MSK 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0156-2742-62af-00000ca2e920 
+on database directory /Users/andrus/work/bootique/bootique-bom/bootique-bom-tests/target/derby/bqjdbc_test2 with class loader sun.misc.Launcher$AppClassLoader@4aa298b7 
+Loaded from file:/Users/andrus/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_92-b14
+user.dir=/Users/andrus/work/bootique/bootique-bom/bootique-bom-tests
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.11.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Jul 26 15:51:18 MSK 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance f33d40c7-0156-2742-62af-00000ca2e920 
+on database directory /Users/andrus/work/bootique/bootique-bom/bootique-bom-tests/target/derby/bqjdbc_test1 with class loader sun.misc.Launcher$AppClassLoader@4aa298b7 
+Loaded from file:/Users/andrus/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_92-b14
+user.dir=/Users/andrus/work/bootique/bootique-bom/bootique-bom-tests
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.11.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Jul 26 15:51:27 MSK 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance fcd90178-0156-2742-62af-00000ca2e920 
+on database directory /Users/andrus/work/bootique/bootique-bom/bootique-bom-tests/target/derby/linkrest_noconfig with class loader sun.misc.Launcher$AppClassLoader@4aa298b7 
+Loaded from file:/Users/andrus/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_92-b14
+user.dir=/Users/andrus/work/bootique/bootique-bom/bootique-bom-tests
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.11.6
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

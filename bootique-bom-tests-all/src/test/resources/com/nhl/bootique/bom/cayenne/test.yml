@@ -1,0 +1,12 @@
+jdbc:
+  test2:
+    url: jdbc:derby:target/derby/bqjdbc_test2;create=true
+    driver: org.apache.derby.jdbc.EmbeddedDriver
+    maxActive: 2
+
+
+cayenne:
+  datasource: test2
+  createSchema: true
+  configs: 
+    - com/nhl/bootique/bom/cayenne/cayenne-project.xml

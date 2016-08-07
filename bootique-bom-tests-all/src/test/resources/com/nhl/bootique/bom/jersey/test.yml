@@ -1,0 +1,9 @@
+jersey:
+  urlPattern: /jr/*
+
+jetty:
+  context: /jt
+  connector:
+    port: 12009
+
+

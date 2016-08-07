@@ -1,0 +1,15 @@
+jdbc:
+  ds:
+    url: jdbc:derby:target/derby/linkrest_noconfig;create=true
+    driver: org.apache.derby.jdbc.EmbeddedDriver
+    initialSize: 1
+
+jersey:
+  urlPattern: /lrservlet/*
+
+jetty:
+  context: /lr
+  connector:
+    port: 12011
+
+

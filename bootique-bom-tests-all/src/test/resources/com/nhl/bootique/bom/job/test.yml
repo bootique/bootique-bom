@@ -1,0 +1,16 @@
+jobs:
+  bomparameterized:
+     pl: 17
+     pd: 2016-01-17
+
+scheduler:
+  threadPoolSize: 2
+  triggers:
+    - job: bom
+      trigger: trigger1
+      fixedDelayMs: 301
+      initialDelayMs: 0
+    - job: bomparameterized
+      trigger: trigger2
+      fixedDelayMs: 318
+      initialDelayMs: 0
