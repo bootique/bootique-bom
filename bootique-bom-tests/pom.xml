@@ -11,7 +11,7 @@
     <artifactId>bootique-bom-tests</artifactId>
     <packaging>pom</packaging>
 
-    <name>Parent of bootique-bom test modules</name>
+    <name>bootique-bom-tests: Parent of individual BOM test modules</name>
     <description>
         Parent POM of bootique-bom test modules.
     </description>

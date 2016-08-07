@@ -11,7 +11,7 @@
     <artifactId>bootique-test-swagger</artifactId>
     <packaging>jar</packaging>
 
-    <name>bootique-swagger Tests</name>
+    <name>bootique-test-swagger: bootique-swagger integration tests.</name>
 
     <dependencies>
         <!-- unit test deps -->

@@ -12,7 +12,7 @@
     <artifactId>bootique-bom</artifactId>
     <packaging>pom</packaging>
 
-    <name>bootique-bom: The main Bill of Materials (BOM) for Bootique and Bootique modules.</name>
+    <name>bootique-bom: Bill of Materials (BOM) for Bootique and Bootique modules.</name>
     <description>The main Maven "Bill of Materials" (BOM) to the projects using Bootique, ensuring
         consistency of the versions of all included standard extensions.
     </description>

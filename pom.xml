@@ -15,9 +15,9 @@
 	<version>0.19-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Parent of complementary bootique-bom</name>
+	<name>bootique-bom-parent: Parent of bootique-bom</name>
 	<description>
-		Parent POM of complementary bootique-bom and related modules.
+		Parent POM of bootique-bom and related modules.
 	</description>
 
 	<modules>
