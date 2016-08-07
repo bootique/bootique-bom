@@ -1,7 +1,7 @@
 package io.bootique.bom.swagger;
 
 
-import com.nhl.bootique.jetty.test.junit.JettyTestFactory;
+import io.bootique.jetty.test.junit.JettyTestFactory;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;

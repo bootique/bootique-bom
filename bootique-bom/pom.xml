@@ -12,10 +12,9 @@
     <artifactId>bootique-bom</artifactId>
     <packaging>pom</packaging>
 
-    <name>bootique-bom: A complementary Bill of Materials (BOM) for Bootique many of its extensions</name>
-    <description>Provides a complementary Maven "Bill of Materials" (BOM) for the projects using Bootique to
-        ensure consistency of the versions of all included standard extensions. The main BOM is
-        available here: https://github.com/nhl/bootique-bom .
+    <name>bootique-bom: The main Bill of Materials (BOM) for Bootique and Bootique modules.</name>
+    <description>The main Maven "Bill of Materials" (BOM) to the projects using Bootique, ensuring
+        consistency of the versions of all included standard extensions.
     </description>
 
     <dependencyManagement>
@@ -31,7 +30,7 @@
                 <version>0.19-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.nhl.bootique.cayenne</groupId>
+                <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne</artifactId>
                 <version>0.16-SNAPSHOT</version>
             </dependency>
@@ -56,6 +55,16 @@
                 <version>0.18-SNAPSHOT</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.jersey.client</groupId>
+                <artifactId>bootique-jersey-client</artifactId>
+                <version>0.6-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jersey.client</groupId>
+                <artifactId>bootique-jersey-client-instrumented</artifactId>
+                <version>0.6-SNAPSHOT</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty</artifactId>
                 <version>0.17-SNAPSHOT</version>
@@ -78,7 +87,7 @@
             <dependency>
                 <groupId>io.bootique.jooq</groupId>
                 <artifactId>bootique-jooq</artifactId>
-                <version>0.1</version>
+                <version>0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.kafka.client</groupId>
@@ -96,12 +105,12 @@
                 <version>0.11-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.nhl.bootique.linkrest</groupId>
+                <groupId>io.bootique.linkrest</groupId>
                 <artifactId>bootique-linkrest</artifactId>
                 <version>0.12-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.nhl.bootique.liquibase</groupId>
+                <groupId>io.bootique.liquibase</groupId>
                 <artifactId>bootique-liquibase</artifactId>
                 <version>0.9-SNAPSHOT</version>
             </dependency>
@@ -116,9 +125,19 @@
                 <version>0.7-SNAPSHOT</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.mvc</groupId>
+                <artifactId>bootique-mvc</artifactId>
+                <version>0.4-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.mvc</groupId>
+                <artifactId>bootique-mvc-mustache</artifactId>
+                <version>0.4-SNAPSHOT</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.swagger</groupId>
                 <artifactId>bootique-swagger</artifactId>
-                <version>0.1</version>
+                <version>0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.tapestry</groupId>

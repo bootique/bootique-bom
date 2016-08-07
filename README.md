@@ -2,7 +2,7 @@
 
 # bootique-bom
 
-A "Bill of Materials" (BOM) project complementary to https://github.com/nhl/bootique-bom . Helps user projects to 
+The main Bill of Materials (BOM) for Bootique and Bootique modules. Helps user projects to 
 maintain consistent versions of various [Bootique](http://bootique.io)-related dependencies.
 
 

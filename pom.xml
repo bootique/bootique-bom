@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.nhl.bootique.parent</groupId>
+		<groupId>io.bootique.parent</groupId>
 		<artifactId>bootique-parent</artifactId>
-		<version>0.10</version>
+		<version>0.12</version>
 	</parent>
 
 	<groupId>io.bootique.bom</groupId>
