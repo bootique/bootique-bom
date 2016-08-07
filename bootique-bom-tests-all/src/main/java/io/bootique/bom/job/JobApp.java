@@ -2,9 +2,9 @@ package io.bootique.bom.job;
 
 import com.google.inject.Binder;
 import com.google.inject.Module;
-import com.nhl.bootique.Bootique;
+import io.bootique.Bootique;
 import io.bootique.bom.BomTestApp;
-import com.nhl.bootique.job.runtime.JobModule;
+import io.bootique.job.runtime.JobModule;
 
 public class JobApp extends BomTestApp implements Module {
 

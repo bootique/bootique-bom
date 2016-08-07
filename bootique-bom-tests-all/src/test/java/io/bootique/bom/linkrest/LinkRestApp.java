@@ -1,12 +1,12 @@
 package io.bootique.bom.linkrest;
 
-import com.nhl.bootique.Bootique;
+import io.bootique.Bootique;
 import io.bootique.bom.linkrest.r1.LrResource1;
-import com.nhl.bootique.cayenne.CayenneModule;
-import com.nhl.bootique.jdbc.JdbcModule;
-import com.nhl.bootique.jersey.JerseyModule;
-import com.nhl.bootique.jetty.test.junit.JettyTestFactory;
-import com.nhl.bootique.linkrest.LinkRestModule;
+import io.bootique.cayenne.CayenneModule;
+import io.bootique.jdbc.JdbcModule;
+import io.bootique.jersey.JerseyModule;
+import io.bootique.jetty.test.junit.JettyTestFactory;
+import io.bootique.linkrest.LinkRestModule;
 
 import java.util.function.Consumer;
 

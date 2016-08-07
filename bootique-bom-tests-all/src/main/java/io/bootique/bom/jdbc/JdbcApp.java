@@ -2,10 +2,10 @@ package io.bootique.bom.jdbc;
 
 import com.google.inject.Binder;
 import com.google.inject.Module;
-import com.nhl.bootique.BQCoreModule;
-import com.nhl.bootique.Bootique;
+import io.bootique.BQCoreModule;
+import io.bootique.Bootique;
 import io.bootique.bom.BomTestApp;
-import com.nhl.bootique.jdbc.JdbcModule;
+import io.bootique.jdbc.JdbcModule;
 
 public class JdbcApp extends BomTestApp implements Module {
 

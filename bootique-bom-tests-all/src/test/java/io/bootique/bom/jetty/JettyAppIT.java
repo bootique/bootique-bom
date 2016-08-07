@@ -1,20 +1,18 @@
 package io.bootique.bom.jetty;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeoutException;
+import io.bootique.test.BQDaemonTestRuntime;
+import org.junit.Rule;
+import org.junit.Test;
 
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
 
-import org.junit.Rule;
-import org.junit.Test;
-
-import io.bootique.test.BQDaemonTestRuntime;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class JettyAppIT {
 
@@ -36,7 +34,7 @@ public class JettyAppIT {
 	@Test
 	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		app.newRuntime().startServer("--config=src/test/resources/com/nhl/bootique/bom/jetty/test.yml");
+		app.newRuntime().startServer("--config=src/test/resources/io/bootique/bom/jetty/test.yml");
 
 		// wait for Jetty to start and run some web requests...
 		Thread.sleep(1000);

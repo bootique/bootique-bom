@@ -1,13 +1,12 @@
 package io.bootique.bom.jersey;
 
-import java.util.function.Consumer;
-
-import com.nhl.bootique.Bootique;
-import io.bootique.bom.jersey.JerseyAppFeature;
+import io.bootique.Bootique;
 import io.bootique.bom.jersey.r1.Resource1;
 import io.bootique.bom.jersey.r2.Resource2;
-import com.nhl.bootique.jersey.JerseyModule;
-import com.nhl.bootique.jetty.test.junit.JettyTestFactory;
+import io.bootique.jersey.JerseyModule;
+import io.bootique.jetty.test.junit.JettyTestFactory;
+
+import java.util.function.Consumer;
 
 public class JerseyApp extends JettyTestFactory {
 

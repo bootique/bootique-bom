@@ -1,12 +1,10 @@
 package io.bootique.bom.jetty;
 
-import java.util.function.Consumer;
+import io.bootique.Bootique;
+import io.bootique.jetty.JettyModule;
+import io.bootique.jetty.test.junit.JettyTestFactory;
 
-import com.nhl.bootique.Bootique;
-import com.nhl.bootique.jetty.JettyModule;
-import com.nhl.bootique.jetty.test.junit.JettyTestFactory;
-import io.bootique.bom.jetty.BomFilter;
-import io.bootique.bom.jetty.BomServlet;
+import java.util.function.Consumer;
 
 public class JettyApp extends JettyTestFactory {
 

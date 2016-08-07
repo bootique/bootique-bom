@@ -1,7 +1,9 @@
 package io.bootique.bom.job;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import io.bootique.command.CommandOutcome;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -10,14 +12,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-import io.bootique.bom.job.BomJob;
-import io.bootique.bom.job.BomParameterizedJob;
-import io.bootique.bom.job.JobApp;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import com.nhl.bootique.command.CommandOutcome;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class JobAppIT {
 
@@ -62,7 +58,7 @@ public class JobAppIT {
 
 	@Test
 	public void testList_BadConfig_Ignored() {
-		CommandOutcome outcome = app.run("--config=src/test/resources/com/nhl/bootique/bom/job/no-such.yml", "--list");
+		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/job/no-such.yml", "--list");
 		assertEquals(0, outcome.getExitCode());
 
 		String stdout = app.getStdout();
@@ -89,7 +85,7 @@ public class JobAppIT {
 		// separate thread...
 
 		Future<CommandOutcome> result = executor.submit(() -> {
-			return app.run("--config=src/test/resources/com/nhl/bootique/bom/job/test.yml", "--schedule");
+			return app.run("--config=src/test/resources/io/bootique/bom/job/test.yml", "--schedule");
 		});
 
 		// wait for scheduler to start and run some jobs...

@@ -1,12 +1,11 @@
 package io.bootique.bom.logback;
 
+import io.bootique.cli.Cli;
+import io.bootique.command.CommandMetadata;
+import io.bootique.command.CommandOutcome;
+import io.bootique.command.CommandWithMetadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.nhl.bootique.cli.Cli;
-import com.nhl.bootique.command.CommandMetadata;
-import com.nhl.bootique.command.CommandOutcome;
-import com.nhl.bootique.command.CommandWithMetadata;
 
 public class LogbackTestCommand extends CommandWithMetadata {
 

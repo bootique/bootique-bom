@@ -1,15 +1,14 @@
 package io.bootique.bom.logback;
 
-import java.util.function.Consumer;
-
 import com.google.inject.Singleton;
-import com.nhl.bootique.BQCoreModule;
-import com.nhl.bootique.Bootique;
-import com.nhl.bootique.annotation.DefaultCommand;
-import com.nhl.bootique.command.Command;
-import com.nhl.bootique.logback.LogbackModule;
-import io.bootique.bom.logback.LogbackTestCommand;
+import io.bootique.BQCoreModule;
+import io.bootique.Bootique;
+import io.bootique.annotation.DefaultCommand;
+import io.bootique.command.Command;
+import io.bootique.logback.LogbackModule;
 import io.bootique.test.junit.BQTestFactory;
+
+import java.util.function.Consumer;
 
 public class LogbackApp extends BQTestFactory {
 

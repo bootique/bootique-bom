@@ -1,17 +1,16 @@
 package io.bootique.bom.mvc;
 
-import static org.junit.Assert.assertEquals;
-
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeoutException;
+import org.junit.Rule;
+import org.junit.Test;
 
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
 
-import org.junit.Rule;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class MustacheAppIT {
 
@@ -21,7 +20,7 @@ public class MustacheAppIT {
 	@Test
 	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		app.newRuntime().startServer("--config=src/test/resources/com/nhl/bootique/bom/mvc/test.yml");
+		app.newRuntime().startServer("--config=src/test/resources/io/bootique/bom/mvc/test.yml");
 
 		WebTarget base = ClientBuilder.newClient().target("http://localhost:8080/");
 

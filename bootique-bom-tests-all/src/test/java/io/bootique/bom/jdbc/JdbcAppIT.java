@@ -1,14 +1,12 @@
 package io.bootique.bom.jdbc;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
-import io.bootique.bom.jdbc.JdbcApp;
+import io.bootique.command.CommandOutcome;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.nhl.bootique.command.CommandOutcome;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class JdbcAppIT {
 
@@ -32,7 +30,7 @@ public class JdbcAppIT {
 
 	@Test
 	public void testRun_SQL_1() {
-		CommandOutcome outcome = app.run("--config=src/test/resources/com/nhl/bootique/bom/jdbc/test.yml", "--runsql",
+		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/jdbc/test.yml", "--runsql",
 				"--sql=SELECT * FROM T1");
 		assertEquals(0, outcome.getExitCode());
 		String data = app.getStdout();
@@ -43,7 +41,7 @@ public class JdbcAppIT {
 
 	@Test
 	public void testRun_SQL_2() {
-		CommandOutcome outcome = app.run("--config=src/test/resources/com/nhl/bootique/bom/jdbc/test.yml", "--runsql",
+		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/jdbc/test.yml", "--runsql",
 				"--sql=SELECT * FROM T1 WHERE ID = 2");
 		assertEquals(0, outcome.getExitCode());
 		String data = app.getStdout();

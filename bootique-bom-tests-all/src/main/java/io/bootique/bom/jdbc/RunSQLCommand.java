@@ -1,22 +1,21 @@
 package io.bootique.bom.jdbc;
 
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+import io.bootique.cli.Cli;
+import io.bootique.cli.CliOption;
+import io.bootique.command.CommandMetadata;
+import io.bootique.command.CommandOutcome;
+import io.bootique.command.CommandWithMetadata;
+import io.bootique.jdbc.DataSourceFactory;
+import io.bootique.log.BootLogger;
+
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-
-import javax.sql.DataSource;
-
-import com.google.inject.Inject;
-import com.google.inject.Provider;
-import com.nhl.bootique.cli.Cli;
-import com.nhl.bootique.cli.CliOption;
-import com.nhl.bootique.command.CommandMetadata;
-import com.nhl.bootique.command.CommandOutcome;
-import com.nhl.bootique.command.CommandWithMetadata;
-import com.nhl.bootique.jdbc.DataSourceFactory;
-import com.nhl.bootique.log.BootLogger;
 
 public class RunSQLCommand extends CommandWithMetadata {
 

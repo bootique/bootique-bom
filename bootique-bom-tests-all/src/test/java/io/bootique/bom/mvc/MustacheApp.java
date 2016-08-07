@@ -1,13 +1,13 @@
 package io.bootique.bom.mvc;
 
-import java.util.function.Consumer;
-
-import com.nhl.bootique.Bootique;
+import io.bootique.Bootique;
 import io.bootique.bom.mvc.r1.MustacheResource;
-import com.nhl.bootique.jersey.JerseyModule;
-import com.nhl.bootique.jetty.test.junit.JettyTestFactory;
-import com.nhl.bootique.mvc.MvcModule;
-import com.nhl.bootique.mvc.mustache.MvcMustacheModule;
+import io.bootique.jersey.JerseyModule;
+import io.bootique.jetty.test.junit.JettyTestFactory;
+import io.bootique.mvc.MvcModule;
+import io.bootique.mvc.mustache.MvcMustacheModule;
+
+import java.util.function.Consumer;
 
 public class MustacheApp extends JettyTestFactory {
 

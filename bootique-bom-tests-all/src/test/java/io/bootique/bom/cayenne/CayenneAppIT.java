@@ -1,13 +1,11 @@
 package io.bootique.bom.cayenne;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-import io.bootique.bom.cayenne.CayenneApp;
+import io.bootique.command.CommandOutcome;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.nhl.bootique.command.CommandOutcome;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class CayenneAppIT {
 	private CayenneApp app;
@@ -32,7 +30,7 @@ public class CayenneAppIT {
 
 	@Test
 	public void testRun_Query() {
-		CommandOutcome outcome = app.run("--config=src/test/resources/com/nhl/bootique/bom/cayenne/test.yml",
+		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/cayenne/test.yml",
 				"--runquery", "--key=name", "--value=n5");
 		assertEquals(0, outcome.getExitCode());
 		String data = app.getStdout();

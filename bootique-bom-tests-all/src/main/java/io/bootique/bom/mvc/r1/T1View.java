@@ -1,6 +1,6 @@
 package io.bootique.bom.mvc.r1;
 
-import com.nhl.bootique.mvc.AbstractView;
+import io.bootique.mvc.AbstractView;
 
 public class T1View extends AbstractView {
 

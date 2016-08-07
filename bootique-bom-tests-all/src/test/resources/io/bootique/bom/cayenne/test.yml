@@ -9,4 +9,4 @@ cayenne:
   datasource: test2
   createSchema: true
   configs: 
-    - com/nhl/bootique/bom/cayenne/cayenne-project.xml
+    - io/bootique/bom/cayenne/cayenne-project.xml

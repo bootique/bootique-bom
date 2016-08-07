@@ -1,21 +1,19 @@
 package io.bootique.bom.linkrest;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeoutException;
+import io.bootique.command.CommandOutcome;
+import io.bootique.test.BQDaemonTestRuntime;
+import org.junit.Rule;
+import org.junit.Test;
 
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
 
-import org.junit.Rule;
-import org.junit.Test;
-
-import com.nhl.bootique.command.CommandOutcome;
-import io.bootique.test.BQDaemonTestRuntime;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class LinkRestAppIT {
 
@@ -53,7 +51,7 @@ public class LinkRestAppIT {
 	@Test
 	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		app.newRuntime().startServer("--config=src/test/resources/com/nhl/bootique/bom/linkrest/test.yml");
+		app.newRuntime().startServer("--config=src/test/resources/io/bootique/bom/linkrest/test.yml");
 
 		WebTarget base = ClientBuilder.newClient().target("http://localhost:12011/");
 
