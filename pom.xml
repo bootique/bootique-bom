@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>io.bootique.parent</groupId>
-		<artifactId>bootique-parent</artifactId>
-		<version>0.12</version>
+		<groupId>io.bootique.modules.parent</groupId>
+		<artifactId>bootique-modules-parent</artifactId>
+		<version>0.2</version>
 	</parent>
 
 	<groupId>io.bootique.bom</groupId>
@@ -25,12 +25,6 @@
 		<module>bootique-bom-tests</module>
 		<module>bootique-bom-tests-all</module>
 	</modules>
-
-	<scm>
-		<developerConnection>scm:git:ssh://git@github.com/bootique/bootique-bom</developerConnection>
-		<url>https://github.com/bootique/bootique-bom</url>
-		<tag>HEAD</tag>
-	</scm>
 
 	<!-- Optional profile used to sign artifacts -->
 	<profiles>

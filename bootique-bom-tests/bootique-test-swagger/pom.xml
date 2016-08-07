@@ -36,6 +36,11 @@
             <artifactId>bootique-logback</artifactId>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>io.bootique.swagger</groupId>
+            <artifactId>bootique-swagger</artifactId>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -49,11 +54,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-        <plugins>
-            <plugin>
-                <artifactId>maven-failsafe-plugin</artifactId>
-            </plugin>
-        </plugins>
     </build>
 
 </project>

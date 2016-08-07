@@ -32,30 +32,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <!-- All the stuff coming from the BOM -->
-        <dependency>
-            <groupId>io.bootique.swagger</groupId>
-            <artifactId>bootique-swagger</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.jooq</groupId>
-            <artifactId>bootique-jooq</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.kafka.client</groupId>
-            <artifactId>bootique-kafka-client</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.kafka.client</groupId>
-            <artifactId>bootique-kafka-client-0.8</artifactId>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
-
     <build>
         <pluginManagement>
             <plugins>
