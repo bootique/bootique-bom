@@ -12,7 +12,7 @@
 	<artifactId>bootique-bom-parent</artifactId>
 	
 	<!-- Keeping this version in sync with Bootique version -->
-	<version>0.20-SNAPSHOT</version>
+	<version>0.19-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>bootique-bom-parent: Parent of bootique-bom</name>
@@ -33,11 +33,12 @@
     </scm>
 
     <distributionManagement>
-        <repository>
-            <id>bintray-bootique-releases</id>
-            <name>bintray-bootique-releases</name>
-            <url>https://api.bintray.com/maven/bootique/releases/bootique-bom/;publish=1</url>
-        </repository>
+       	<repository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>oss-sonatype-releases</id>
+			<name>Deployment Repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+		</repository>
     </distributionManagement>
 
 	<!-- Optional profile used to sign artifacts -->
