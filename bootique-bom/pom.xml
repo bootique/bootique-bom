@@ -21,12 +21,12 @@
             <dependency>
                 <groupId>io.bootique</groupId>
                 <artifactId>bootique</artifactId>
-                <version>0.19</version>
+                <version>0.20-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique</groupId>
                 <artifactId>bootique-test</artifactId>
-                <version>0.19</version>
+                <version>0.20-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
@@ -66,17 +66,17 @@
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty</artifactId>
-                <version>0.17</version>
+                <version>0.18-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-instrumented</artifactId>
-                <version>0.17</version>
+                <version>0.18-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-test</artifactId>
-                <version>0.17</version>
+                <version>0.18-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.job</groupId>
@@ -116,7 +116,7 @@
             <dependency>
                 <groupId>io.bootique.logback</groupId>
                 <artifactId>bootique-logback</artifactId>
-                <version>0.11</version>
+                <version>0.12-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.metrics</groupId>
