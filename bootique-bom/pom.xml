@@ -56,12 +56,12 @@
             <dependency>
                 <groupId>io.bootique.jersey.client</groupId>
                 <artifactId>bootique-jersey-client</artifactId>
-                <version>0.6</version>
+                <version>0.7-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey.client</groupId>
                 <artifactId>bootique-jersey-client-instrumented</artifactId>
-                <version>0.6</version>
+                <version>0.7-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
