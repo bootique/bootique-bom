@@ -32,12 +32,11 @@
     </scm>
 
     <distributionManagement>
-       	<repository>
-			<uniqueVersion>false</uniqueVersion>
-			<id>oss-sonatype-releases</id>
-			<name>Deployment Repository</name>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-		</repository>
+	    <repository>
+            <id>bintray-bootique-releases</id>
+            <name>bintray-bootique-releases</name>
+            <url>https://api.bintray.com/maven/bootique/releases/bootique-bom/;publish=1</url>
+        </repository>
     </distributionManagement>
 
 	<!-- Optional profile used to sign artifacts -->
