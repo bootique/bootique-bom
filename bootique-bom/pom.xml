@@ -101,12 +101,12 @@
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove</artifactId>
-                <version>0.11</version>
+                <version>0.12-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkrest</groupId>
                 <artifactId>bootique-linkrest</artifactId>
-                <version>0.12</version>
+                <version>0.13-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.liquibase</groupId>
