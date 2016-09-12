@@ -2,9 +2,9 @@ package io.bootique.bom.cayenne;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import io.bootique.application.CommandMetadata;
+import io.bootique.application.OptionMetadata;
 import io.bootique.cli.Cli;
-import io.bootique.cli.CliOption;
-import io.bootique.command.CommandMetadata;
 import io.bootique.command.CommandOutcome;
 import io.bootique.command.CommandWithMetadata;
 import io.bootique.log.BootLogger;
@@ -31,8 +31,8 @@ public class RunQueryCommand extends CommandWithMetadata {
 
 	public RunQueryCommand() {
 		super(CommandMetadata.builder(RunQueryCommand.class)
-				.addOption(CliOption.builder(KEY_OPTION).valueRequired("property_name"))
-				.addOption(CliOption.builder(VALUE_OPTION).valueRequired("property_value")));
+				.addOption(OptionMetadata.builder(KEY_OPTION).valueRequired("property_name"))
+				.addOption(OptionMetadata.builder(VALUE_OPTION).valueRequired("property_value")));
 	}
 
 	@Override

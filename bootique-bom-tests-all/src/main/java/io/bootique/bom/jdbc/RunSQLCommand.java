@@ -2,9 +2,9 @@ package io.bootique.bom.jdbc;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import io.bootique.application.CommandMetadata;
+import io.bootique.application.OptionMetadata;
 import io.bootique.cli.Cli;
-import io.bootique.cli.CliOption;
-import io.bootique.command.CommandMetadata;
 import io.bootique.command.CommandOutcome;
 import io.bootique.command.CommandWithMetadata;
 import io.bootique.jdbc.DataSourceFactory;
@@ -27,7 +27,7 @@ public class RunSQLCommand extends CommandWithMetadata {
 
 	public RunSQLCommand() {
 		super(CommandMetadata.builder(RunSQLCommand.class)
-				.addOption(CliOption.builder("sql").valueRequired("sql_string")));
+				.addOption(OptionMetadata.builder("sql").valueRequired("sql_string")));
 	}
 
 	@Override

@@ -1,7 +1,7 @@
 package io.bootique.bom.logback;
 
+import io.bootique.application.CommandMetadata;
 import io.bootique.cli.Cli;
-import io.bootique.command.CommandMetadata;
 import io.bootique.command.CommandOutcome;
 import io.bootique.command.CommandWithMetadata;
 import org.slf4j.Logger;
