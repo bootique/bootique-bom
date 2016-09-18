@@ -49,6 +49,11 @@
                 <version>0.12-SNAPSHOT</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.jdbc</groupId>
+                <artifactId>bootique-jdbc-test</artifactId>
+                <version>0.12-SNAPSHOT</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey</artifactId>
                 <version>0.19-SNAPSHOT</version>
