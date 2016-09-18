@@ -16,77 +16,77 @@ import static org.junit.Assert.assertTrue;
 
 public class LogbackAppIT {
 
-	@Rule
-	public LogbackApp app = new LogbackApp();
+    @Rule
+    public LogbackApp app = new LogbackApp();
 
-	private File prepareLogFile(String name) {
-		File logFile = new File(name);
-		logFile.delete();
-		assertFalse(logFile.exists());
+    private File prepareLogFile(String name) {
+        File logFile = new File(name);
+        logFile.delete();
+        assertFalse(logFile.exists());
 
-		return logFile;
-	}
+        return logFile;
+    }
 
-	@Test
-	public void testRun_Help() {
+    @Test
+    public void testRun_Help() {
 
-		BQTestRuntime runtime = app.newRuntime().build("--help");
-		CommandOutcome outcome = runtime.run();
-		assertEquals(0, outcome.getExitCode());
+        BQTestRuntime runtime = app.app("--help").createRuntime();
+        CommandOutcome outcome = runtime.run();
+        assertEquals(0, outcome.getExitCode());
 
-		String help = runtime.getStdout();
+        String help = runtime.getStdout();
 
-		assertTrue(help.contains("--help"));
-		assertTrue(help.contains("--config"));
-	}
+        assertTrue(help.contains("--help"));
+        assertTrue(help.contains("--config"));
+    }
 
-	@Test
-	public void testRun_Debug() throws IOException {
-		File logFile = prepareLogFile("target/logback/testRun_Debug.log");
+    @Test
+    public void testRun_Debug() throws IOException {
+        File logFile = prepareLogFile("target/logback/testRun_Debug.log");
 
-		BQTestRuntime runtime = app.newRuntime()
-				.build("--config=src/test/resources/io/bootique/bom/logback/test-debug.yml");
-		CommandOutcome outcome = runtime.run();
+        BQTestRuntime runtime = app
+                .app("--config=src/test/resources/io/bootique/bom/logback/test-debug.yml").createRuntime();
+        CommandOutcome outcome = runtime.run();
 
-		// stopping runtime to ensure the logs are flushed before we start
-		// making assertions...
-		// TODO: a new API in tests - runAndStop...
-		runtime.stop();
+        // stopping runtime to ensure the logs are flushed before we start
+        // making assertions...
+        // TODO: a new API in tests - runAndStop...
+        runtime.stop();
 
-		assertEquals(0, outcome.getExitCode());
+        assertEquals(0, outcome.getExitCode());
 
-		assertTrue(logFile.isFile());
+        assertTrue(logFile.isFile());
 
-		String logfileContents = Files.lines(logFile.toPath()).collect(joining("\n"));
-		assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-debug"));
-		assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-info"));
-		assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-warn"));
-		assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-error"));
-	}
+        String logfileContents = Files.lines(logFile.toPath()).collect(joining("\n"));
+        assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-debug"));
+        assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-info"));
+        assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-warn"));
+        assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-error"));
+    }
 
-	@Test
-	public void testRun_Warn() throws IOException {
-		File logFile = prepareLogFile("target/logback/testRun_Warn.log");
+    @Test
+    public void testRun_Warn() throws IOException {
+        File logFile = prepareLogFile("target/logback/testRun_Warn.log");
 
-		BQTestRuntime runtime = app.newRuntime()
-				.build("--config=src/test/resources/io/bootique/bom/logback/test-warn.yml");
-		CommandOutcome outcome = runtime.run();
+        BQTestRuntime runtime = app.app("--config=src/test/resources/io/bootique/bom/logback/test-warn.yml")
+                .createRuntime();
+        CommandOutcome outcome = runtime.run();
 
-		// stopping runtime to ensure the logs are flushed before we start
-		// making assertions...
-		// TODO: a new API in tests - runAndStop...
-		runtime.stop();
+        // stopping runtime to ensure the logs are flushed before we start
+        // making assertions...
+        // TODO: a new API in tests - runAndStop...
+        runtime.stop();
 
-		assertEquals(0, outcome.getExitCode());
+        assertEquals(0, outcome.getExitCode());
 
-		assertTrue(logFile.isFile());
+        assertTrue(logFile.isFile());
 
-		String logfileContents = Files.lines(logFile.toPath()).collect(joining("\n"));
-		assertFalse(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-debug"));
-		assertFalse(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-info"));
-		assertTrue("Logfile contents: " + logfileContents,
-				logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-warn"));
-		assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-error"));
-	}
+        String logfileContents = Files.lines(logFile.toPath()).collect(joining("\n"));
+        assertFalse(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-debug"));
+        assertFalse(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-info"));
+        assertTrue("Logfile contents: " + logfileContents,
+                logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-warn"));
+        assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-error"));
+    }
 
 }

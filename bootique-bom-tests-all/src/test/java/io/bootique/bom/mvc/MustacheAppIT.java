@@ -20,7 +20,7 @@ public class MustacheAppIT {
 	@Test
 	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		app.newRuntime().startServer("--config=src/test/resources/io/bootique/bom/mvc/test.yml");
+		app.app("--config=src/test/resources/io/bootique/bom/mvc/test.yml").startServer();
 
 		WebTarget base = ClientBuilder.newClient().target("http://localhost:8080/");
 

@@ -23,7 +23,7 @@ public class JerseyAppIT {
 	@Test
 	public void testRun_NoCommand() {
 
-		BQDaemonTestRuntime runtime = app.newRuntime().startupAndWaitCheck().start();
+		BQDaemonTestRuntime runtime = app.app().startupAndWaitCheck().start();
 
 		CommandOutcome outcome = runtime.getOutcome().get();
 		assertEquals(0, outcome.getExitCode());
@@ -37,7 +37,7 @@ public class JerseyAppIT {
 
 	@Test
 	public void testRun_Help() {
-		BQDaemonTestRuntime runtime = app.newRuntime().startupAndWaitCheck().start("--help");
+		BQDaemonTestRuntime runtime = app.app("--help").startupAndWaitCheck().start();
 
 		CommandOutcome outcome = runtime.getOutcome().get();
 		assertEquals(0, outcome.getExitCode());
@@ -52,20 +52,20 @@ public class JerseyAppIT {
 	@Test
 	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		app.newRuntime().startServer("--config=src/test/resources/io/bootique/bom/jersey/test.yml");
+		app.app("--config=src/test/resources/io/bootique/bom/jersey/test.yml").startServer();
 
 		WebTarget base = ClientBuilder.newClient().target("http://localhost:12009/");
 
 		// added as a part of a package
 		Response r1 = base.path("/jt/jr/1").request().get();
 		assertEquals(Status.OK.getStatusCode(), r1.getStatus());
-		String expected1 = "bootique-jersey-resource1:--server,--config=src/test/resources/io/bootique/bom/jersey/test.yml";
+		String expected1 = "bootique-jersey-resource1:--config=src/test/resources/io/bootique/bom/jersey/test.yml,--server";
 		assertEquals(expected1, r1.readEntity(String.class));
 
 		// added as individual resource
 		Response r2 = base.path("/jt/jr/2").request().get();
 		assertEquals(Status.OK.getStatusCode(), r2.getStatus());
-		String expected2 = "bootique-jersey-resource2:--server,--config=src/test/resources/io/bootique/bom/jersey/test.yml";
+		String expected2 = "bootique-jersey-resource2:--config=src/test/resources/io/bootique/bom/jersey/test.yml,--server";
 		assertEquals(expected2, r2.readEntity(String.class));
 	}
 

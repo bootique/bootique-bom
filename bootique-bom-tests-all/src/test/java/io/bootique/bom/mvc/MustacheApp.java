@@ -11,16 +11,14 @@ import java.util.function.Consumer;
 
 public class MustacheApp extends JettyTestFactory {
 
-	@Override
-	public Builder newRuntime() {
-		
-		Consumer<Bootique> config = (bootique) -> {
-			bootique.modules(JerseyModule.class, MvcModule.class, MvcMustacheModule.class).module((binder) -> {
-				JerseyModule.contributeResources(binder).addBinding().to(MustacheResource.class);
-			});
-		};
+    @Override
+    public Builder app(String... args) {
 
-		return super.newRuntime().configurator(config);
-	}
+        return super.app(args)
+                .modules(JerseyModule.class, MvcModule.class, MvcMustacheModule.class)
+                .module((binder) -> {
+                    JerseyModule.contributeResources(binder).addBinding().to(MustacheResource.class);
+                });
+    }
 
 }

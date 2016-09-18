@@ -22,10 +22,12 @@ public class SwaggerIT {
 
     @BeforeClass
     public static void beforeClass() {
-        SERVER.newRuntime()
-                .configurator(bootique -> bootique.autoLoadModules().module(SwaggerApp.class))
+        SERVER.app()
+                .autoLoadModules()
+                .module(SwaggerApp.class)
                 .startServer();
     }
+
     @Test
     public void testApi_Yaml() {
         Response r = BASE_TARGET.path("/swagger.yaml").request().get();

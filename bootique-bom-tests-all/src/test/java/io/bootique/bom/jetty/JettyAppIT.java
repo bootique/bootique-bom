@@ -22,7 +22,7 @@ public class JettyAppIT {
 	@Test
 	public void testRun_Help() throws InterruptedException {
 
-		BQDaemonTestRuntime runtime = app.newRuntime().startupAndWaitCheck().start("--help");
+		BQDaemonTestRuntime runtime = app.app("--help").startupAndWaitCheck().start();
 
 		String help = runtime.getStdout();
 
@@ -34,7 +34,7 @@ public class JettyAppIT {
 	@Test
 	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		app.newRuntime().startServer("--config=src/test/resources/io/bootique/bom/jetty/test.yml");
+		app.app("--config=src/test/resources/io/bootique/bom/jetty/test.yml").startServer();
 
 		// wait for Jetty to start and run some web requests...
 		Thread.sleep(1000);
