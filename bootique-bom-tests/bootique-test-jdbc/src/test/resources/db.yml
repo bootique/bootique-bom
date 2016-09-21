@@ -1,0 +1,14 @@
+jdbc:
+  derby1:
+    url: "jdbc:derby:target/derby/1;create=true"
+    initialSize: 1
+    username: sa
+  derby2:
+    url: "jdbc:derby:target/derby/2;create=true"
+    initialSize: 1
+    username: sa
+  # this emulates a bad DB
+  derby3:
+    url: "jdbc:derby:target/derby/3;create=false"
+    initialSize: 1
+    username: sa
