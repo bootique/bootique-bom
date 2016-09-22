@@ -1,7 +1,6 @@
 package io.bootique.bom.jdbc;
 
 import com.codahale.metrics.health.HealthCheck;
-import io.bootique.jdbc.test.junit.DerbyDatabase;
 import io.bootique.metrics.healthcheck.HealthCheckRegistry;
 import io.bootique.test.BQTestRuntime;
 import io.bootique.test.junit.BQTestFactory;
@@ -16,12 +15,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 public class DerbyHealthChecksIT {
-
-    @Rule
-    public DerbyDatabase derby1 = new DerbyDatabase("derby1");
-
-    @Rule
-    public DerbyDatabase derby2 = new DerbyDatabase("derby2");
 
     @Rule
     public BQTestFactory testFactory = new BQTestFactory();
