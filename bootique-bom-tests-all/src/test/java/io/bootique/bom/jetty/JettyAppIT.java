@@ -26,7 +26,6 @@ public class JettyAppIT {
 
 		String help = runtime.getStdout();
 
-		assertTrue(help.contains("--server"));
 		assertTrue(help.contains("--help"));
 		assertTrue(help.contains("--config"));
 	}
@@ -34,7 +33,7 @@ public class JettyAppIT {
 	@Test
 	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		app.app("--config=src/test/resources/io/bootique/bom/jetty/test.yml").startServer();
+		app.app("--config=src/test/resources/io/bootique/bom/jetty/test.yml").start();
 
 		// wait for Jetty to start and run some web requests...
 		Thread.sleep(1000);

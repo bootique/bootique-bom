@@ -21,21 +21,6 @@ public class JerseyAppIT {
 	public JerseyApp app = new JerseyApp();
 
 	@Test
-	public void testRun_NoCommand() {
-
-		BQDaemonTestRuntime runtime = app.app().startupAndWaitCheck().start();
-
-		CommandOutcome outcome = runtime.getOutcome().get();
-		assertEquals(0, outcome.getExitCode());
-
-		String help = runtime.getStdout();
-
-		assertTrue(help.contains("--server"));
-		assertTrue(help.contains("--help"));
-		assertTrue(help.contains("--config"));
-	}
-
-	@Test
 	public void testRun_Help() {
 		BQDaemonTestRuntime runtime = app.app("--help").startupAndWaitCheck().start();
 
@@ -44,7 +29,6 @@ public class JerseyAppIT {
 
 		String help = runtime.getStdout();
 
-		assertTrue(help.contains("--server"));
 		assertTrue(help.contains("--help"));
 		assertTrue(help.contains("--config"));
 	}
@@ -52,20 +36,20 @@ public class JerseyAppIT {
 	@Test
 	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		app.app("--config=src/test/resources/io/bootique/bom/jersey/test.yml").startServer();
+		app.app("--config=src/test/resources/io/bootique/bom/jersey/test.yml").start();
 
 		WebTarget base = ClientBuilder.newClient().target("http://localhost:12009/");
 
 		// added as a part of a package
 		Response r1 = base.path("/jt/jr/1").request().get();
 		assertEquals(Status.OK.getStatusCode(), r1.getStatus());
-		String expected1 = "bootique-jersey-resource1:--config=src/test/resources/io/bootique/bom/jersey/test.yml,--server";
+		String expected1 = "bootique-jersey-resource1:--config=src/test/resources/io/bootique/bom/jersey/test.yml";
 		assertEquals(expected1, r1.readEntity(String.class));
 
 		// added as individual resource
 		Response r2 = base.path("/jt/jr/2").request().get();
 		assertEquals(Status.OK.getStatusCode(), r2.getStatus());
-		String expected2 = "bootique-jersey-resource2:--config=src/test/resources/io/bootique/bom/jersey/test.yml,--server";
+		String expected2 = "bootique-jersey-resource2:--config=src/test/resources/io/bootique/bom/jersey/test.yml";
 		assertEquals(expected2, r2.readEntity(String.class));
 	}
 

@@ -21,20 +21,6 @@ public class LinkRestAppIT {
 	public LinkRestApp app = new LinkRestApp();
 
 	@Test
-	public void testRun_NoCommand() {
-		BQDaemonTestRuntime runtime = app.app().startupAndWaitCheck().start();
-
-		CommandOutcome outcome = runtime.getOutcome().get();
-		assertEquals(0, outcome.getExitCode());
-
-		String help = runtime.getStdout();
-
-		assertTrue(help.contains("--server"));
-		assertTrue(help.contains("--help"));
-		assertTrue(help.contains("--config"));
-	}
-
-	@Test
 	public void testRun_Help() {
 		BQDaemonTestRuntime runtime = app.app("--help").startupAndWaitCheck().start();
 
@@ -43,7 +29,6 @@ public class LinkRestAppIT {
 
 		String help = runtime.getStdout();
 
-		assertTrue(help.contains("--server"));
 		assertTrue(help.contains("--help"));
 		assertTrue(help.contains("--config"));
 	}
@@ -51,7 +36,7 @@ public class LinkRestAppIT {
 	@Test
 	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		app.app("--config=src/test/resources/io/bootique/bom/linkrest/test.yml").startServer();
+		app.app("--config=src/test/resources/io/bootique/bom/linkrest/test.yml").start();
 
 		WebTarget base = ClientBuilder.newClient().target("http://localhost:12011/");
 

@@ -25,7 +25,7 @@ public class SwaggerIT {
         SERVER.app()
                 .autoLoadModules()
                 .module(SwaggerApp.class)
-                .startServer();
+                .start();
     }
 
     @Test
