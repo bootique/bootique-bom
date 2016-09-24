@@ -10,6 +10,7 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import static org.junit.Assert.assertEquals;
@@ -22,7 +23,9 @@ public class LinkRestAppIT {
 
 	@Test
 	public void testRun_Help() {
-		BQDaemonTestRuntime runtime = app.app("--help").startupAndWaitCheck().start();
+		// using longer startup timeout .. sometimes this fails on Travis..
+		BQDaemonTestRuntime runtime = app.app("--help").startupAndWaitCheck()
+				.startupTimeout(8, TimeUnit.SECONDS).start();
 
 		CommandOutcome outcome = runtime.getOutcome().get();
 		assertEquals(0, outcome.getExitCode());
@@ -36,7 +39,10 @@ public class LinkRestAppIT {
 	@Test
 	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		app.app("--config=src/test/resources/io/bootique/bom/linkrest/test.yml").start();
+		// using longer startup timeout .. sometimes this fails on Travis..
+		app.app("--config=src/test/resources/io/bootique/bom/linkrest/test.yml")
+				.startupTimeout(8, TimeUnit.SECONDS)
+				.start();
 
 		WebTarget base = ClientBuilder.newClient().target("http://localhost:12011/");
 
