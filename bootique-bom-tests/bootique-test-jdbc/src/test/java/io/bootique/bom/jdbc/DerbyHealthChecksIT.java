@@ -1,13 +1,13 @@
 package io.bootique.bom.jdbc;
 
-import com.codahale.metrics.health.HealthCheck;
-import io.bootique.metrics.healthcheck.HealthCheckRegistry;
+import io.bootique.metrics.health.HealthCheckOutcome;
+import io.bootique.metrics.health.HealthCheckRegistry;
 import io.bootique.test.BQTestRuntime;
 import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
 import org.junit.Test;
 
-import java.util.SortedMap;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -25,19 +25,19 @@ public class DerbyHealthChecksIT {
         BQTestRuntime runtime = testFactory.app("--config=classpath:db.yml").autoLoadModules().createRuntime();
 
         HealthCheckRegistry healthchecks = runtime.getRuntime().getInstance(HealthCheckRegistry.class);
-        SortedMap<String, HealthCheck.Result> results = healthchecks.runHealthChecks();
+        Map<String, HealthCheckOutcome> results = healthchecks.runHealthChecks();
 
         assertEquals(3, results.size());
 
-        HealthCheck.Result one = results.get("derby1");
+        HealthCheckOutcome one = results.get("derby1");
         assertNotNull(one);
         assertTrue(one.isHealthy());
 
-        HealthCheck.Result two = results.get("derby2");
+        HealthCheckOutcome two = results.get("derby2");
         assertNotNull(two);
         assertTrue(two.isHealthy());
 
-        HealthCheck.Result three = results.get("derby3");
+        HealthCheckOutcome three = results.get("derby3");
         assertNotNull(three);
         assertFalse(three.isHealthy());
     }
