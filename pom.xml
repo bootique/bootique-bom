@@ -11,7 +11,7 @@
 	<artifactId>bootique-bom-parent</artifactId>
 	
 	<!-- Keeping this version in sync with Bootique version -->
-	<version>0.20-SNAPSHOT</version>
+	<version>0.20</version>
 	<packaging>pom</packaging>
 
 	<name>bootique-bom-parent: Parent of bootique-bom</name>
@@ -28,7 +28,7 @@
 	<scm>
         <developerConnection>scm:git:ssh://git@github.com/bootique/bootique-bom</developerConnection>
         <url>https://github.com/bootique/bootique-bom</url>
-        <tag>HEAD</tag>
+        <tag>bootique-bom-parent-0.20</tag>
     </scm>
 
     <distributionManagement>
