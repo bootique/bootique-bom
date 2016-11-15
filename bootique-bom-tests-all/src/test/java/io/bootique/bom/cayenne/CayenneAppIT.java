@@ -22,7 +22,7 @@ public class CayenneAppIT {
 
 		String help = app.getStdout();
 
-		assertTrue(help.contains("--runquery"));
+		assertTrue(help.contains("--run-query"));
 		assertTrue(help.contains("--key"));
 		assertTrue(help.contains("--value"));
 		assertTrue(help.contains("--config"));
@@ -31,7 +31,7 @@ public class CayenneAppIT {
 	@Test
 	public void testRun_Query() {
 		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/cayenne/test.yml",
-				"--runquery", "--key=name", "--value=n5");
+				"--run-query", "--key=name", "--value=n5");
 		assertEquals(0, outcome.getExitCode());
 		String data = app.getStdout();
 

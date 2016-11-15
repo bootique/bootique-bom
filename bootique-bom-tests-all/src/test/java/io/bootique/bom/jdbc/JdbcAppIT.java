@@ -24,13 +24,13 @@ public class JdbcAppIT {
 
 		String help = app.getStdout();
 
-		assertTrue(help.contains("--runsql"));
+		assertTrue(help.contains("--run-sql"));
 		assertTrue(help.contains("--sql"));
 	}
 
 	@Test
 	public void testRun_SQL_1() {
-		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/jdbc/test.yml", "--runsql",
+		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/jdbc/test.yml", "--run-sql",
 				"--sql=SELECT * FROM T1");
 		assertEquals(0, outcome.getExitCode());
 		String data = app.getStdout();
@@ -41,7 +41,7 @@ public class JdbcAppIT {
 
 	@Test
 	public void testRun_SQL_2() {
-		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/jdbc/test.yml", "--runsql",
+		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/jdbc/test.yml", "--run-sql",
 				"--sql=SELECT * FROM T1 WHERE ID = 2");
 		assertEquals(0, outcome.getExitCode());
 		String data = app.getStdout();
