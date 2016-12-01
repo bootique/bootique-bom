@@ -1,5 +1,4 @@
 jdbc:
   test1:
     url: jdbc:derby:target/derby/bqjdbc_test1;create=true
-    driver: org.apache.derby.jdbc.EmbeddedDriver
     maxActive: 2
