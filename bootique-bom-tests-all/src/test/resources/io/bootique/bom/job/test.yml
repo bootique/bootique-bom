@@ -2,16 +2,6 @@ jobs:
   bomparameterized:
      pl: 17
      pd: 2016-01-17
-  g1:
-    type: group
-    jobs:
-      - j1:
-        dependsOn:
-          - j2
-          - j3
-      - j2:
-        dependsOn:
-          - j3
 
 scheduler:
   threadPoolSize: 2
