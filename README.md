@@ -7,4 +7,3 @@ The main Bill of Materials (BOM) for Bootique and Bootique modules. Helps user p
 maintain consistent versions of various [Bootique](http://bootique.io)-related dependencies.
 
 
-
