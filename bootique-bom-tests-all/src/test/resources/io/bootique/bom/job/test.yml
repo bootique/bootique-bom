@@ -1,7 +1,8 @@
 jobs:
   bomparameterized:
-     pl: 17
-     pd: 2016-01-17
+    params:
+      pl: 17
+      pd: 2016-01-17
 
 scheduler:
   threadPoolSize: 2
