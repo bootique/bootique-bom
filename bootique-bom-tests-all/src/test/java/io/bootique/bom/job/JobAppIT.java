@@ -57,15 +57,6 @@ public class JobAppIT {
 	}
 
 	@Test
-	public void testList_BadConfig_Ignored() {
-		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/job/no-such.yml", "--list");
-		assertEquals(0, outcome.getExitCode());
-
-		String stdout = app.getStdout();
-		assertTrue(stdout.contains("- bom"));
-	}
-
-	@Test
 	public void testExec() {
 
 		BomJob.COUNTER.set(0);
