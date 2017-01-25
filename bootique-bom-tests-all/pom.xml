@@ -54,7 +54,8 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- All the stuff coming from the BOM -->
+		<!-- Include all the stuff coming from the BOM to ensure the BOM itself contains
+		  existing versions... -->
 		<dependency>
 			<groupId>io.bootique</groupId>
 			<artifactId>bootique</artifactId>
@@ -73,6 +74,16 @@
 		<dependency>
 			<groupId>io.bootique.curator</groupId>
 			<artifactId>bootique-curator</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.bootique.flyway</groupId>
+			<artifactId>bootique-flyway</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.bootique.jcache</groupId>
+			<artifactId>bootique-jcache</artifactId>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
