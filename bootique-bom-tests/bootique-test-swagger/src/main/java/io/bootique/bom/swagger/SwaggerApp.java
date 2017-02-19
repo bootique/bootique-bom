@@ -9,6 +9,6 @@ public class SwaggerApp implements Module {
 
     @Override
     public void configure(Binder binder) {
-        JerseyModule.contributePackages(binder).addBinding().toInstance(Api1.class.getPackage());
+        JerseyModule.extend(binder).addPackage(Api1.class.getPackage());
     }
 }

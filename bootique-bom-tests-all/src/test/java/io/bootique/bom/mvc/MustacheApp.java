@@ -13,7 +13,7 @@ public class MustacheApp extends JettyTestFactory {
 
         return super.app(args)
                 .modules(JerseyModule.class, MvcModule.class, MvcMustacheModule.class)
-                .module((binder) -> JerseyModule.contributeResources(binder).addBinding().to(MustacheResource.class));
+                .module(binder -> JerseyModule.extend(binder).addResource(MustacheResource.class));
     }
 
 }

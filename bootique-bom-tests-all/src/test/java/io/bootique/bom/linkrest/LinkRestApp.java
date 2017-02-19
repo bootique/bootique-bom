@@ -14,9 +14,7 @@ public class LinkRestApp extends JettyTestFactory {
 
         return super.app(args)
                 .modules(JerseyModule.class, LinkRestModule.class, CayenneModule.class, JdbcModule.class)
-                .module((binder) -> {
-                    JerseyModule.contributeResources(binder).addBinding().to(LrResource1.class);
-                });
+                .module(binder -> JerseyModule.extend(binder).addResource(LrResource1.class));
     }
 
 }

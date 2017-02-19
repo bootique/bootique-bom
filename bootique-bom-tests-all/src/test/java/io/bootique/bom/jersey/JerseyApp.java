@@ -10,10 +10,9 @@ public class JerseyApp extends JettyTestFactory {
     @Override
     public Builder app(String... args) {
 
-        return super.app(args).modules(JerseyModule.class).module((binder) -> {
-            JerseyModule.contributeFeatures(binder).addBinding().to(JerseyAppFeature.class);
-            JerseyModule.contributePackages(binder).addBinding().toInstance(Resource1.class.getPackage());
-            JerseyModule.contributeResources(binder).addBinding().to(Resource2.class);
-        });
+        return super.app(args).modules(JerseyModule.class).module(binder -> JerseyModule.extend(binder)
+                .addFeature(JerseyAppFeature.class)
+                .addPackage(Resource1.class.getPackage())
+                .addResource(Resource2.class));
     }
 }
