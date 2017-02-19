@@ -91,17 +91,17 @@
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty</artifactId>
-                <version>0.19</version>
+                <version>0.20-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-instrumented</artifactId>
-                <version>0.19</version>
+                <version>0.20-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-test</artifactId>
-                <version>0.19</version>
+                <version>0.20-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.job</groupId>
