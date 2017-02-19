@@ -17,6 +17,6 @@ public class CayenneApp extends BomTestApp implements Module {
 
 	@Override
 	public void configure(Binder binder) {
-		BQCoreModule.contributeCommands(binder).addBinding().to(RunQueryCommand.class);
+		BQCoreModule.extend(binder).addCommand(RunQueryCommand.class);
 	}
 }

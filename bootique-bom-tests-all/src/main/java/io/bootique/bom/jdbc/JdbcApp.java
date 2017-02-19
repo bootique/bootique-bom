@@ -16,6 +16,6 @@ public class JdbcApp extends BomTestApp implements Module {
 
 	@Override
 	public void configure(Binder binder) {
-		BQCoreModule.contributeCommands(binder).addBinding().to(RunSQLCommand.class);
+		BQCoreModule.extend(binder).addCommand(RunSQLCommand.class);
 	}
 }
