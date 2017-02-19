@@ -100,6 +100,11 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
+                <artifactId>bootique-jetty-metrics</artifactId>
+                <version>0.20-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-test</artifactId>
                 <version>0.20-SNAPSHOT</version>
             </dependency>
@@ -146,12 +151,7 @@
             <dependency>
                 <groupId>io.bootique.metrics</groupId>
                 <artifactId>bootique-metrics</artifactId>
-                <version>0.8</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.metrics</groupId>
-                <artifactId>bootique-metrics-web</artifactId>
-                <version>0.8</version>
+                <version>0.9-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.mvc</groupId>
