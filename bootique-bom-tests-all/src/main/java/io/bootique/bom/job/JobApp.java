@@ -15,7 +15,6 @@ public class JobApp extends BomTestApp implements Module {
 
 	@Override
 	public void configure(Binder binder) {
-		JobModule.contributeJobs(binder).addBinding().to(BomJob.class);
-		JobModule.contributeJobs(binder).addBinding().to(BomParameterizedJob.class);
+		JobModule.extend(binder).addJob(BomJob.class).addJob(BomParameterizedJob.class);
 	}
 }
