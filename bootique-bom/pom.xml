@@ -81,12 +81,12 @@
             <dependency>
                 <groupId>io.bootique.jersey.client</groupId>
                 <artifactId>bootique-jersey-client</artifactId>
-                <version>0.8</version>
+                <version>0.9-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey.client</groupId>
                 <artifactId>bootique-jersey-client-instrumented</artifactId>
-                <version>0.8</version>
+                <version>0.9-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
@@ -146,7 +146,7 @@
             <dependency>
                 <groupId>io.bootique.logback</groupId>
                 <artifactId>bootique-logback</artifactId>
-                <version>0.13</version>
+                <version>0.14-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.metrics</groupId>
@@ -162,6 +162,16 @@
                 <groupId>io.bootique.mvc</groupId>
                 <artifactId>bootique-mvc-mustache</artifactId>
                 <version>0.6-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.shiro</groupId>
+                <artifactId>bootique-shiro</artifactId>
+                <version>0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.shiro</groupId>
+                <artifactId>bootique-shiro-web</artifactId>
+                <version>0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.swagger</groupId>

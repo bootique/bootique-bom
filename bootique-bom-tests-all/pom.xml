@@ -182,6 +182,16 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>io.bootique.shiro</groupId>
+			<artifactId>bootique-shiro-web</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.bootique.swagger</groupId>
+			<artifactId>bootique-swagger</artifactId>
+            <scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>io.bootique.swagger</groupId>
 			<artifactId>bootique-swagger</artifactId>
 			<scope>compile</scope>
