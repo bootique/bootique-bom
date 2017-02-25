@@ -116,17 +116,17 @@
             <dependency>
                 <groupId>io.bootique.jooq</groupId>
                 <artifactId>bootique-jooq</artifactId>
-                <version>0.3</version>
+                <version>0.4-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.kafka.client</groupId>
                 <artifactId>bootique-kafka-client</artifactId>
-                <version>0.3</version>
+                <version>0.4-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.kafka.client</groupId>
                 <artifactId>bootique-kafka-client-0.8</artifactId>
-                <version>0.3</version>
+                <version>0.4-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
