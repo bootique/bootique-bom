@@ -131,7 +131,7 @@
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove</artifactId>
-                <version>0.13</version>
+                <version>0.14-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkrest</groupId>
