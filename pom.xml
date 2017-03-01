@@ -6,7 +6,6 @@
 		<artifactId>bootique-modules-parent</artifactId>
 		<version>0.2</version>
 	</parent>
-
 	<groupId>io.bootique.bom</groupId>
 	<artifactId>bootique-bom-parent</artifactId>
 	
