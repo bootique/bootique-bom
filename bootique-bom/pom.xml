@@ -114,6 +114,11 @@
                 <version>0.14-SNAPSHOT</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.job</groupId>
+                <artifactId>bootique-job-instrumented</artifactId>
+                <version>0.14-SNAPSHOT</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.jooq</groupId>
                 <artifactId>bootique-jooq</artifactId>
                 <version>0.4-SNAPSHOT</version>
