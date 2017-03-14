@@ -141,7 +141,7 @@
             <dependency>
                 <groupId>io.bootique.linkrest</groupId>
                 <artifactId>bootique-linkrest</artifactId>
-                <version>0.14-SNAPSHOT</version>
+                <version>0.15-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.liquibase</groupId>
