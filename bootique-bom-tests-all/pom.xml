@@ -211,6 +211,11 @@
 			<artifactId>bootique-tapestry</artifactId>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.bootique.undertow</groupId>
+			<artifactId>bootique-undertow</artifactId>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

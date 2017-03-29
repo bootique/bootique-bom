@@ -203,6 +203,11 @@
                 <artifactId>bootique-tapestry</artifactId>
                 <version>0.5-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <groupId>io.bootique.undertow</groupId>
+                <artifactId>bootique-undertow</artifactId>
+                <version>0.2-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
