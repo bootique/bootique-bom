@@ -157,6 +157,11 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>io.bootique.logback</groupId>
+			<artifactId>bootique-logback-sentry</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>io.bootique.kafka.client</groupId>
 			<artifactId>bootique-kafka-client</artifactId>
 			<scope>compile</scope>
