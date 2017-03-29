@@ -187,6 +187,11 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>io.bootique.rabbitmq.client</groupId>
+			<artifactId>bootique-rabbitmq-client</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>io.bootique.shiro</groupId>
 			<artifactId>bootique-shiro-web</artifactId>
 			<scope>compile</scope>
