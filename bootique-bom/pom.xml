@@ -154,6 +154,11 @@
                 <version>0.14-SNAPSHOT</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.logback</groupId>
+                <artifactId>bootique-logback-sentry</artifactId>
+                <version>0.14-SNAPSHOT</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.metrics</groupId>
                 <artifactId>bootique-metrics</artifactId>
                 <version>0.9-SNAPSHOT</version>
