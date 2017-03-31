@@ -129,6 +129,11 @@
                 <version>0.4-SNAPSHOT</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.kotlin</groupId>
+                <artifactId>bootique-kotlin</artifactId>
+                <version>0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.kafka.client</groupId>
                 <artifactId>bootique-kafka-client</artifactId>
                 <version>0.4-SNAPSHOT</version>

@@ -177,6 +177,11 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>io.bootique.kotlin</groupId>
+			<artifactId>bootique-kotlin</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>io.bootique.metrics</groupId>
 			<artifactId>bootique-metrics</artifactId>
 			<scope>compile</scope>
