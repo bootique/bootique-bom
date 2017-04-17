@@ -72,17 +72,17 @@ public class JobAppIT {
 		BomJob.COUNTER.set(0);
 		BomParameterizedJob.COUNTER.set(0);
 
-		// since ShceduleCommand main thread blocks, run the server in a
+		// since ScheduleCommand main thread blocks, run the server in a
 		// separate thread...
 
 		Future<CommandOutcome> result = executor.submit(() -> {
-			return app.run("--config=src/test/resources/io/bootique/bom/job/test.yml", "--schedule");
+			return app.run("--config=classpath:io/bootique/bom/job/test.yml", "--schedule");
 		});
 
 		// wait for scheduler to start and run some jobs...
 		Thread.sleep(3000);
 
-		// since we exited via interrupt, the result of the --server command
+		// since we exited via interrupt, the result of the --schedule command
 		// will look like a failure
 		executor.shutdownNow();
 		CommandOutcome outcome = result.get(3, TimeUnit.SECONDS);
