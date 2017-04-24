@@ -9,8 +9,7 @@ public class JettyApp extends JettyTestFactory {
     public Builder app(String... args) {
 
         return super.app(args).module((binder) -> {
-            JettyModule.contributeServlets(binder).addBinding().to(BomServlet.class);
-            JettyModule.contributeFilters(binder).addBinding().to(BomFilter.class);
+            JettyModule.extend(binder).addServlet(BomServlet.class).addFilter(BomFilter.class);
         });
     }
 }
