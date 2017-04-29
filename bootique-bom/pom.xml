@@ -21,12 +21,12 @@
             <dependency>
                 <groupId>io.bootique</groupId>
                 <artifactId>bootique</artifactId>
-                <version>0.22</version>
+                <version>0.23-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique</groupId>
                 <artifactId>bootique-test</artifactId>
-                <version>0.22</version>
+                <version>0.23-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
