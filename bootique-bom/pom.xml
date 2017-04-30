@@ -61,17 +61,17 @@
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc</artifactId>
-                <version>0.14</version>
+                <version>0.15-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-instrumented</artifactId>
-                <version>0.14</version>
+                <version>0.15-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-test</artifactId>
-                <version>0.14</version>
+                <version>0.15-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
@@ -96,22 +96,22 @@
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty</artifactId>
-                <version>0.20</version>
+                <version>0.21-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-instrumented</artifactId>
-                <version>0.20</version>
+                <version>0.21-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-metrics</artifactId>
-                <version>0.20</version>
+                <version>0.21-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-test</artifactId>
-                <version>0.20</version>
+                <version>0.21-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.job</groupId>
