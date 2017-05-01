@@ -5,6 +5,7 @@ import io.bootique.Bootique;
 import io.bootique.command.CommandOutcome;
 import io.bootique.log.BootLogger;
 import io.bootique.log.DefaultBootLogger;
+import io.bootique.test.InMemoryPrintStream;
 
 /**
  * A base app class for BOM integration tests.
