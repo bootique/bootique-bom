@@ -1,7 +1,8 @@
 package io.bootique.bom.logback;
 
+import io.bootique.BQRuntime;
 import io.bootique.command.CommandOutcome;
-import io.bootique.test.BQTestRuntime;
+import io.bootique.test.TestIO;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -10,9 +11,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 import static java.util.stream.Collectors.joining;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class LogbackAppIT {
 
@@ -30,28 +29,25 @@ public class LogbackAppIT {
     @Test
     public void testRun_Help() {
 
-        BQTestRuntime runtime = app.app("--help").createRuntime();
-        CommandOutcome outcome = runtime.run();
+        TestIO io = TestIO.noTrace();
+
+        CommandOutcome outcome = app.app("--help").bootLogger(io.getBootLogger()).createRuntime().run();
         assertEquals(0, outcome.getExitCode());
 
-        String help = runtime.getStdout();
-
-        assertTrue(help.contains("--help"));
-        assertTrue(help.contains("--config"));
+        assertTrue(io.getStdout().contains("--help"));
+        assertTrue(io.getStdout().contains("--config"));
     }
 
     @Test
     public void testRun_Debug() throws IOException {
         File logFile = prepareLogFile("target/logback/testRun_Debug.log");
 
-        BQTestRuntime runtime = app
+        BQRuntime runtime = app
                 .app("--config=src/test/resources/io/bootique/bom/logback/test-debug.yml").createRuntime();
         CommandOutcome outcome = runtime.run();
 
-        // stopping runtime to ensure the logs are flushed before we start
-        // making assertions...
-        // TODO: a new API in tests - runAndStop...
-        runtime.stop();
+        // stopping runtime to ensure the logs are flushed before we start making assertions...
+        runtime.shutdown();
 
         assertEquals(0, outcome.getExitCode());
 
@@ -68,14 +64,12 @@ public class LogbackAppIT {
     public void testRun_Warn() throws IOException {
         File logFile = prepareLogFile("target/logback/testRun_Warn.log");
 
-        BQTestRuntime runtime = app.app("--config=src/test/resources/io/bootique/bom/logback/test-warn.yml")
+        BQRuntime runtime = app.app("--config=src/test/resources/io/bootique/bom/logback/test-warn.yml")
                 .createRuntime();
         CommandOutcome outcome = runtime.run();
 
-        // stopping runtime to ensure the logs are flushed before we start
-        // making assertions...
-        // TODO: a new API in tests - runAndStop...
-        runtime.stop();
+        // stopping runtime to ensure the logs are flushed before we start making assertions...
+        runtime.shutdown();
 
         assertEquals(0, outcome.getExitCode());
 

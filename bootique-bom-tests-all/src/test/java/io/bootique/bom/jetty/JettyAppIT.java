@@ -1,6 +1,6 @@
 package io.bootique.bom.jetty;
 
-import io.bootique.test.BQDaemonTestRuntime;
+import io.bootique.test.TestIO;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -22,12 +22,11 @@ public class JettyAppIT {
 	@Test
 	public void testRun_Help() throws InterruptedException {
 
-		BQDaemonTestRuntime runtime = app.app("--help").startupAndWaitCheck().start();
+		TestIO io = TestIO.noTrace();
+		app.app("--help").bootLogger(io.getBootLogger()).startupAndWaitCheck().start();
 
-		String help = runtime.getStdout();
-
-		assertTrue(help.contains("--help"));
-		assertTrue(help.contains("--config"));
+		assertTrue(io.getStdout().contains("--help"));
+		assertTrue(io.getStdout().contains("--config"));
 	}
 
 	@Test

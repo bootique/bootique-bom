@@ -1,7 +1,8 @@
 package io.bootique.bom.jersey;
 
+import io.bootique.BQRuntime;
 import io.bootique.command.CommandOutcome;
-import io.bootique.test.BQDaemonTestRuntime;
+import io.bootique.test.TestIO;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -22,15 +23,15 @@ public class JerseyAppIT {
 
 	@Test
 	public void testRun_Help() {
-		BQDaemonTestRuntime runtime = app.app("--help").startupAndWaitCheck().start();
 
-		CommandOutcome outcome = runtime.getOutcome().get();
+		TestIO io = TestIO.noTrace();
+		BQRuntime runtime = app.app("--help").bootLogger(io.getBootLogger()).startupAndWaitCheck().start();
+
+		CommandOutcome outcome = app.getOutcome(runtime).get();
 		assertEquals(0, outcome.getExitCode());
 
-		String help = runtime.getStdout();
-
-		assertTrue(help.contains("--help"));
-		assertTrue(help.contains("--config"));
+		assertTrue(io.getStdout().contains("--help"));
+		assertTrue(io.getStdout().contains("--config"));
 	}
 
 	@Test

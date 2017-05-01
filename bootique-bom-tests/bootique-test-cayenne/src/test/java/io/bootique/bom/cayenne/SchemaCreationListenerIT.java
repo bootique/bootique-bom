@@ -1,8 +1,8 @@
 package io.bootique.bom.cayenne;
 
+import io.bootique.BQRuntime;
 import io.bootique.jdbc.test.DatabaseChannel;
 import io.bootique.jdbc.test.Table;
-import io.bootique.test.BQTestRuntime;
 import io.bootique.test.junit.BQTestFactory;
 import org.apache.cayenne.configuration.server.ServerRuntime;
 import org.junit.Rule;
@@ -27,9 +27,9 @@ public class SchemaCreationListenerIT {
     }
 
     private void runWithFreshStack() {
-        BQTestRuntime runtime = testFactory.app("--config=classpath:db.yml").autoLoadModules().createRuntime();
+        BQRuntime runtime = testFactory.app("--config=classpath:db.yml").autoLoadModules().createRuntime();
 
-        runtime.getRuntime().getInstance(ServerRuntime.class);
+        runtime.getInstance(ServerRuntime.class);
 
         // check that schema was created by Cayenne and the queries can run...
 

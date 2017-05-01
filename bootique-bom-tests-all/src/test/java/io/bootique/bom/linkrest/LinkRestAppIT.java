@@ -1,7 +1,8 @@
 package io.bootique.bom.linkrest;
 
+import io.bootique.BQRuntime;
 import io.bootique.command.CommandOutcome;
-import io.bootique.test.BQDaemonTestRuntime;
+import io.bootique.test.TestIO;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -18,39 +19,43 @@ import static org.junit.Assert.assertTrue;
 
 public class LinkRestAppIT {
 
-	@Rule
-	public LinkRestApp app = new LinkRestApp();
+    @Rule
+    public LinkRestApp app = new LinkRestApp();
 
-	@Test
-	public void testRun_Help() {
-		// using longer startup timeout .. sometimes this fails on Travis..
-		BQDaemonTestRuntime runtime = app.app("--help").startupAndWaitCheck()
-				.startupTimeout(8, TimeUnit.SECONDS).start();
+    @Test
+    public void testRun_Help() {
 
-		CommandOutcome outcome = runtime.getOutcome().get();
-		assertEquals(0, outcome.getExitCode());
+        TestIO io = TestIO.noTrace();
 
-		String help = runtime.getStdout();
+        BQRuntime runtime = app.app("--help")
+                .bootLogger(io.getBootLogger())
+                .startupAndWaitCheck()
+                // using longer startup timeout .. sometimes this fails on Travis..
+                .startupTimeout(8, TimeUnit.SECONDS)
+                .start();
 
-		assertTrue(help.contains("--help"));
-		assertTrue(help.contains("--config"));
-	}
+        CommandOutcome outcome = app.getOutcome(runtime).get();
+        assertEquals(0, outcome.getExitCode());
 
-	@Test
-	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
+        assertTrue(io.getStdout().contains("--help"));
+        assertTrue(io.getStdout().contains("--config"));
+    }
 
-		// using longer startup timeout .. sometimes this fails on Travis..
-		app.app("--config=src/test/resources/io/bootique/bom/linkrest/test.yml")
-				.startupTimeout(8, TimeUnit.SECONDS)
-				.start();
+    @Test
+    public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
 
-		WebTarget base = ClientBuilder.newClient().target("http://localhost:12011/");
+        // using longer startup timeout .. sometimes this fails on Travis..
+        app.app("--config=src/test/resources/io/bootique/bom/linkrest/test.yml")
+                .startupTimeout(8, TimeUnit.SECONDS)
+                .start();
 
-		// added as a part of a package
-		Response r1 = base.path("/lr/lrservlet/lr1").request().get();
-		assertEquals(Status.OK.getStatusCode(), r1.getStatus());
-		String expected1 = "{\"data\":[{\"id\":5,\"name\":\"name5\"},{\"id\":6,\"name\":\"name6\"}],\"total\":2}";
-		assertEquals(expected1, r1.readEntity(String.class));
-	}
+        WebTarget base = ClientBuilder.newClient().target("http://localhost:12011/");
+
+        // added as a part of a package
+        Response r1 = base.path("/lr/lrservlet/lr1").request().get();
+        assertEquals(Status.OK.getStatusCode(), r1.getStatus());
+        String expected1 = "{\"data\":[{\"id\":5,\"name\":\"name5\"},{\"id\":6,\"name\":\"name6\"}],\"total\":2}";
+        assertEquals(expected1, r1.readEntity(String.class));
+    }
 
 }
