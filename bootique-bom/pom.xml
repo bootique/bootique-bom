@@ -191,17 +191,17 @@
             <dependency>
                 <groupId>io.bootique.shiro</groupId>
                 <artifactId>bootique-shiro</artifactId>
-                <version>0.1</version>
+                <version>0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.shiro</groupId>
                 <artifactId>bootique-shiro-jdbc</artifactId>
-                <version>0.1</version>
+                <version>0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.shiro</groupId>
                 <artifactId>bootique-shiro-web</artifactId>
-                <version>0.1</version>
+                <version>0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.swagger</groupId>
