@@ -146,12 +146,12 @@
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove</artifactId>
-                <version>0.14</version>
+                <version>0.15-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkrest</groupId>
                 <artifactId>bootique-linkrest</artifactId>
-                <version>0.15</version>
+                <version>0.16-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.liquibase</groupId>
