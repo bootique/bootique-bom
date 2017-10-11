@@ -18,6 +18,10 @@
 		Parent POM of bootique-bom and related modules.
 	</description>
 
+	<properties>
+		<bootique-version>${project.version}</bootique-version>
+	</properties>
+
 	<modules>
 		<module>bootique-bom</module>
 		<module>bootique-bom-tests</module>
