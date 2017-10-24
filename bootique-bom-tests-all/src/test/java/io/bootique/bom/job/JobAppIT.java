@@ -75,16 +75,15 @@ public class JobAppIT {
 		// since ScheduleCommand main thread blocks, run the server in a
 		// separate thread...
 
-		Future<CommandOutcome> result = executor.submit(() -> {
-			return app.run("--config=classpath:io/bootique/bom/job/test.yml", "--schedule");
-		});
+		Future<CommandOutcome> result = executor.submit(() ->
+				app.run("--config=classpath:io/bootique/bom/job/test.yml", "--schedule"));
 
 		// wait for scheduler to start and run some jobs...
 		Thread.sleep(3000);
 
-		// since we exited via interrupt, the result of the --schedule command
-		// will look like a failure
 		executor.shutdownNow();
+
+		// jobs failed, but scheduler did not fail, so the outcome should be success
 		CommandOutcome outcome = result.get(3, TimeUnit.SECONDS);
 		assertEquals(0, outcome.getExitCode());
 		
