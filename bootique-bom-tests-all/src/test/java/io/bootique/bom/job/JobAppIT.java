@@ -86,7 +86,7 @@ public class JobAppIT {
 		// will look like a failure
 		executor.shutdownNow();
 		CommandOutcome outcome = result.get(3, TimeUnit.SECONDS);
-		assertEquals(1, outcome.getExitCode());
+		assertEquals(0, outcome.getExitCode());
 		
 		assertTrue(BomJob.COUNTER.get() > 3);
 		assertTrue(BomParameterizedJob.COUNTER.get() > 17 * 3);
