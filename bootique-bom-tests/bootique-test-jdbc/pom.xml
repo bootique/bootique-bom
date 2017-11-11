@@ -38,7 +38,7 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.jdbc</groupId>
-            <artifactId>bootique-jdbc-instrumented</artifactId>
+            <artifactId>bootique-jdbc-tomcat-instrumented</artifactId>
             <scope>compile</scope>
         </dependency>
     </dependencies>

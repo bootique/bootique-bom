@@ -6,12 +6,13 @@ import io.bootique.BQCoreModule;
 import io.bootique.Bootique;
 import io.bootique.bom.BomTestApp;
 import io.bootique.jdbc.JdbcModule;
+import io.bootique.jdbc.tomcat.TomcatJdbcModule;
 
 public class JdbcApp extends BomTestApp implements Module {
 
 	@Override
 	protected void configure(Bootique bootique) {
-		bootique.module(JdbcModule.class).module(this);
+		bootique.modules(JdbcModule.class, TomcatJdbcModule.class).module(this);
 	}
 
 	@Override
