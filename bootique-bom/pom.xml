@@ -184,6 +184,11 @@
                 <version>${bootique-version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.metrics</groupId>
+                <artifactId>bootique-metrics-healthchecks</artifactId>
+                <version>${bootique-version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.mvc</groupId>
                 <artifactId>bootique-mvc</artifactId>
                 <version>${bootique-version}</version>
