@@ -27,15 +27,15 @@ public class DerbyHealthChecksIT {
 
         assertEquals(3, results.size());
 
-        HealthCheckOutcome one = results.get("bq.jdbc.derby1.canConnect");
+        HealthCheckOutcome one = results.get("bq.jdbc.canConnect.derby1");
         assertNotNull(one);
         assertEquals(HealthCheckStatus.OK, one.getStatus());
 
-        HealthCheckOutcome two = results.get("bq.jdbc.derby2.canConnect");
+        HealthCheckOutcome two = results.get("bq.jdbc.canConnect.derby2");
         assertNotNull(two);
         assertEquals(HealthCheckStatus.OK, two.getStatus());
 
-        HealthCheckOutcome three = results.get("bq.jdbc.derby3.canConnect");
+        HealthCheckOutcome three = results.get("bq.jdbc.canConnect.derby3");
         assertNotNull(three);
         assertEquals(HealthCheckStatus.CRITICAL, three.getStatus());
     }
