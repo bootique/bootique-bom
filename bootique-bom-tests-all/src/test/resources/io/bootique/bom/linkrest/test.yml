@@ -8,7 +8,7 @@ jersey:
 
 jetty:
   context: /lr
-  connector:
-    port: 12011
+  connectors:
+    - port: 12011
 
 

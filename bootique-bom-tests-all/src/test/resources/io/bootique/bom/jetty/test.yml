@@ -1,4 +1,4 @@
 jetty:
   context: /testc
-  connector:
-    port: 11234
+  connectors:
+    - port: 11234

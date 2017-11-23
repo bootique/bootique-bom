@@ -3,7 +3,7 @@ jersey:
 
 jetty:
   context: /jt
-  connector:
-    port: 12009
+  connectors:
+    - port: 12009
 
 
