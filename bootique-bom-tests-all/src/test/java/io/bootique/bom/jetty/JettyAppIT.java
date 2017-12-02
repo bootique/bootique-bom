@@ -8,8 +8,6 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeoutException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -30,7 +28,7 @@ public class JettyAppIT {
 	}
 
 	@Test
-	public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
+	public void testRun() throws InterruptedException {
 
 		app.app("--config=src/test/resources/io/bootique/bom/jetty/test.yml").start();
 
