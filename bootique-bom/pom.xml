@@ -86,7 +86,7 @@
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-hikaricp</artifactId>
-                <version>${bootique-jdbc}</version>
+                <version>${bootique-version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
