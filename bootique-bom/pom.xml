@@ -84,6 +84,11 @@
                 <version>${bootique-version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.jdbc</groupId>
+                <artifactId>bootique-jdbc-hikari</artifactId>
+                <version>${bootique-jdbc}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey</artifactId>
                 <version>${bootique-version}</version>
@@ -141,6 +146,26 @@
             <dependency>
                 <groupId>io.bootique.kotlin</groupId>
                 <artifactId>bootique-kotlin</artifactId>
+                <version>${bootique-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.kotlin</groupId>
+                <artifactId>bootique-kotlin-config</artifactId>
+                <version>${bootique-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.kotlin</groupId>
+                <artifactId>bootique-kotlin-jetty</artifactId>
+                <version>${bootique-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.kotlin</groupId>
+                <artifactId>bootique-kotlin-logback</artifactId>
+                <version>${bootique-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.kotlin</groupId>
+                <artifactId>bootique-kotlin-jackson</artifactId>
                 <version>${bootique-version}</version>
             </dependency>
             <dependency>
