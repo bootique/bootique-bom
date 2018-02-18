@@ -1,7 +1,11 @@
 package io.bootique.bom.job;
 
 import io.bootique.command.CommandOutcome;
-import org.junit.Before;
+import io.bootique.job.runtime.JobModule;
+import io.bootique.job.runtime.JobModuleProvider;
+import io.bootique.test.TestIO;
+import io.bootique.test.junit.BQTestFactory;
+import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,19 +13,23 @@ import static org.junit.Assert.assertTrue;
 
 public class JobAppIT {
 
-    private JobApp app;
+    @Rule
+    public BQTestFactory testFactory = new BQTestFactory();
 
-    @Before
-    public void before() {
-        this.app = new JobApp();
+    private BQTestFactory.Builder appBuilder(String... args) {
+        return testFactory.app(args)
+                .module(new JobModuleProvider())
+                .module(b -> JobModule.extend(b).addJob(BomJob.class).addJob(BomParameterizedJob.class));
     }
 
     @Test
     public void testRun_Help() {
-        CommandOutcome outcome = app.run("--help");
+
+        TestIO io = TestIO.noTrace();
+        CommandOutcome outcome = appBuilder("--help").bootLogger(io.getBootLogger()).run();
         assertEquals(0, outcome.getExitCode());
 
-        String help = app.getStdout();
+        String help = io.getStdout();
 
         assertTrue(help.contains("--exec"));
         assertTrue(help.contains("--list"));
@@ -33,11 +41,11 @@ public class JobAppIT {
 
     @Test
     public void testList() {
-        CommandOutcome outcome = app.run("--list");
-        assertEquals(0, outcome.getExitCode());
+        TestIO io = TestIO.noTrace();
+        CommandOutcome outcome = appBuilder("--list").bootLogger(io.getBootLogger()).run();
 
-        String stdout = app.getStdout();
-        assertTrue(stdout.contains("- bom"));
+        assertEquals(0, outcome.getExitCode());
+        assertTrue(io.getStdout().contains("- bom"));
     }
 
     @Test
@@ -45,26 +53,21 @@ public class JobAppIT {
 
         BomJob.COUNTER.set(0);
 
-        CommandOutcome outcome = app.run("--exec", "--job=bom");
+        CommandOutcome outcome = appBuilder("--exec", "--job=bom").run();
         assertEquals(0, outcome.getExitCode());
         assertEquals(1l, BomJob.COUNTER.get());
     }
 
     @Test
-    public void testSchedule() {
+    public void testSchedule() throws InterruptedException {
 
         BomJob.COUNTER.set(0);
         BomParameterizedJob.COUNTER.set(0);
 
-        CommandOutcome outcome = app.run(r -> {
-                    // wait for scheduler to run jobs...
-                    try {
-                        Thread.sleep(3000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                },
-                "--schedule", "-c", "classpath:io/bootique/bom/job/test.yml");
+        CommandOutcome outcome = appBuilder("--schedule", "-c", "classpath:io/bootique/bom/job/test.yml").run();
+
+        // wait for scheduler to run jobs...
+        Thread.sleep(3000);
 
         assertEquals(0, outcome.getExitCode());
 
