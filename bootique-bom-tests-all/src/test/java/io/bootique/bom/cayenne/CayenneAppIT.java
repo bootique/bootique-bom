@@ -1,40 +1,57 @@
 package io.bootique.bom.cayenne;
 
+import io.bootique.BQCoreModule;
+import io.bootique.cayenne.CayenneModuleProvider;
 import io.bootique.command.CommandOutcome;
-import org.junit.Before;
+import io.bootique.jdbc.tomcat.TomcatJdbcModule;
+import io.bootique.test.TestIO;
+import io.bootique.test.junit.BQTestFactory;
+import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class CayenneAppIT {
-	private CayenneApp app;
 
-	@Before
-	public void before() {
-		this.app = new CayenneApp();
-	}
+    @Rule
+    public BQTestFactory testFactory = new BQTestFactory();
 
-	@Test
-	public void testRun_Help() {
-		CommandOutcome outcome = app.run("--help");
-		assertEquals(0, outcome.getExitCode());
+    private BQTestFactory.Builder appBuilder(String... args) {
+        return testFactory.app(args)
+                .module(new CayenneModuleProvider())
+                .module(new TomcatJdbcModule())
+                .module(b -> BQCoreModule.extend(b).addCommand(RunQueryCommand.class));
+    }
 
-		String help = app.getStdout();
+    @Test
+    public void testRun_Help() {
 
-		assertTrue(help.contains("--run-query"));
-		assertTrue(help.contains("--key"));
-		assertTrue(help.contains("--value"));
-		assertTrue(help.contains("--config"));
-	}
+        TestIO io = TestIO.noTrace();
+        CommandOutcome outcome = appBuilder("--help").bootLogger(io.getBootLogger()).run();
+        assertEquals(0, outcome.getExitCode());
 
-	@Test
-	public void testRun_Query() {
-		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/cayenne/test.yml",
-				"--run-query", "--key=name", "--value=n5");
-		assertEquals(0, outcome.getExitCode());
-		String data = app.getStdout();
+        String help = io.getStdout();
 
-		assertTrue(data.contains("n5"));
-	}
+        assertTrue(help.contains("--run-query"));
+        assertTrue(help.contains("--key"));
+        assertTrue(help.contains("--value"));
+        assertTrue(help.contains("--config"));
+    }
+
+    @Test
+    public void testRun_Query() {
+
+        TestIO io = TestIO.noTrace();
+        CommandOutcome outcome = appBuilder(
+                "--config=src/test/resources/io/bootique/bom/cayenne/test.yml",
+                "--run-query",
+                "--key=name",
+                "--value=n5")
+                .bootLogger(io.getBootLogger())
+                .run();
+
+        assertEquals(0, outcome.getExitCode());
+        assertTrue(io.getStdout().contains("n5"));
+    }
 }

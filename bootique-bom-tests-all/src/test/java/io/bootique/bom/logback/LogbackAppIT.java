@@ -1,8 +1,11 @@
 package io.bootique.bom.logback;
 
+import io.bootique.BQCoreModule;
 import io.bootique.BQRuntime;
 import io.bootique.command.CommandOutcome;
+import io.bootique.logback.LogbackModuleProvider;
 import io.bootique.test.TestIO;
+import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -11,12 +14,20 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 import static java.util.stream.Collectors.joining;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class LogbackAppIT {
 
     @Rule
-    public LogbackApp app = new LogbackApp();
+    public BQTestFactory testFactory = new BQTestFactory();
+
+    private BQTestFactory.Builder appBuilder(String... args) {
+        return testFactory.app(args)
+                .module(new LogbackModuleProvider())
+                .module(b -> BQCoreModule.extend(b).addCommand(LogbackTestCommand.class));
+    }
 
     private File prepareLogFile(String name) {
         File logFile = new File(name);
@@ -27,23 +38,27 @@ public class LogbackAppIT {
     }
 
     @Test
-    public void testRun_Help() {
+    public void testHelp() {
 
         TestIO io = TestIO.noTrace();
 
-        CommandOutcome outcome = app.app("--help").bootLogger(io.getBootLogger()).createRuntime().run();
+        CommandOutcome outcome = appBuilder("--help").bootLogger(io.getBootLogger()).run();
         assertEquals(0, outcome.getExitCode());
 
         assertTrue(io.getStdout().contains("--help"));
         assertTrue(io.getStdout().contains("--config"));
+        assertTrue(io.getStdout().contains("--logback-test"));
     }
 
     @Test
-    public void testRun_Debug() throws IOException {
+    public void testLogToFile_Debug() throws IOException {
         File logFile = prepareLogFile("target/logback/testRun_Debug.log");
 
-        BQRuntime runtime = app
-                .app("--config=src/test/resources/io/bootique/bom/logback/test-debug.yml").createRuntime();
+        BQRuntime runtime = appBuilder(
+                "--config=src/test/resources/io/bootique/bom/logback/test-debug.yml",
+                "--logback-test")
+                .createRuntime();
+
         CommandOutcome outcome = runtime.run();
 
         // stopping runtime to ensure the logs are flushed before we start making assertions...
@@ -61,10 +76,12 @@ public class LogbackAppIT {
     }
 
     @Test
-    public void testRun_Warn() throws IOException {
+    public void testLogToFile_Warn() throws IOException {
         File logFile = prepareLogFile("target/logback/testRun_Warn.log");
 
-        BQRuntime runtime = app.app("--config=src/test/resources/io/bootique/bom/logback/test-warn.yml")
+        BQRuntime runtime = appBuilder(
+                "--config=src/test/resources/io/bootique/bom/logback/test-warn.yml",
+                "--logback-test")
                 .createRuntime();
         CommandOutcome outcome = runtime.run();
 
@@ -82,5 +99,4 @@ public class LogbackAppIT {
                 logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-warn"));
         assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-error"));
     }
-
 }

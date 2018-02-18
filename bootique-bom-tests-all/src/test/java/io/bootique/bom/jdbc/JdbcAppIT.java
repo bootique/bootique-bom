@@ -1,7 +1,11 @@
 package io.bootique.bom.jdbc;
 
+import io.bootique.BQCoreModule;
 import io.bootique.command.CommandOutcome;
-import org.junit.Before;
+import io.bootique.jdbc.tomcat.TomcatJdbcModuleProvider;
+import io.bootique.test.TestIO;
+import io.bootique.test.junit.BQTestFactory;
+import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -10,30 +14,40 @@ import static org.junit.Assert.assertTrue;
 
 public class JdbcAppIT {
 
-	private JdbcApp app;
+	@Rule
+	public BQTestFactory testFactory = new BQTestFactory();
 
-	@Before
-	public void before() {
-		this.app = new JdbcApp();
+	private BQTestFactory.Builder appBuilder(String... args) {
+		return testFactory.app(args)
+				.module(new TomcatJdbcModuleProvider())
+				.module(b -> BQCoreModule.extend(b).addCommand(RunSQLCommand.class));
 	}
 
 	@Test
 	public void testRun_Help() {
-		CommandOutcome outcome = app.run("--help");
+
+		TestIO io = TestIO.noTrace();
+		CommandOutcome outcome = appBuilder("--help").bootLogger(io.getBootLogger()).run();
 		assertEquals(0, outcome.getExitCode());
 
-		String help = app.getStdout();
-
+		String help = io.getStdout();
 		assertTrue(help.contains("--run-sql"));
 		assertTrue(help.contains("--sql"));
 	}
 
 	@Test
 	public void testRun_SQL_1() {
-		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/jdbc/test.yml", "--run-sql",
-				"--sql=SELECT * FROM T1");
+
+        TestIO io = TestIO.noTrace();
+        CommandOutcome outcome = appBuilder(
+                "--config=src/test/resources/io/bootique/bom/jdbc/test.yml",
+                "--run-sql",
+				"--sql=SELECT * FROM T1")
+                .bootLogger(io.getBootLogger())
+                .run();
+
 		assertEquals(0, outcome.getExitCode());
-		String data = app.getStdout();
+		String data = io.getStdout();
 
 		assertTrue(data.contains("1,aa"));
 		assertTrue(data.contains("2,bb"));
@@ -41,10 +55,18 @@ public class JdbcAppIT {
 
 	@Test
 	public void testRun_SQL_2() {
-		CommandOutcome outcome = app.run("--config=src/test/resources/io/bootique/bom/jdbc/test.yml", "--run-sql",
-				"--sql=SELECT * FROM T1 WHERE ID = 2");
+
+        TestIO io = TestIO.noTrace();
+
+		CommandOutcome outcome = appBuilder(
+		        "--config=src/test/resources/io/bootique/bom/jdbc/test.yml",
+                "--run-sql",
+				"--sql=SELECT * FROM T1 WHERE ID = 2")
+                .bootLogger(io.getBootLogger())
+                .run();
+
 		assertEquals(0, outcome.getExitCode());
-		String data = app.getStdout();
+		String data = io.getStdout();
 
 		assertFalse(data.contains("1,aa"));
 		assertTrue(data.contains("2,bb"));
