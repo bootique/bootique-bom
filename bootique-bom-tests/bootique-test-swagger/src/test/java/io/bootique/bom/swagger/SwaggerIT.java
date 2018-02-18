@@ -1,7 +1,7 @@
 package io.bootique.bom.swagger;
 
 
-import io.bootique.jetty.test.junit.JettyTestFactory;
+import io.bootique.test.junit.BQTestFactory;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
@@ -17,15 +17,15 @@ import static org.junit.Assert.assertEquals;
 public class SwaggerIT {
 
     @ClassRule
-    public static JettyTestFactory SERVER = new JettyTestFactory();
+    public static BQTestFactory TEST_FACTORY = new BQTestFactory();
     public static WebTarget BASE_TARGET = ClientBuilder.newClient().target("http://127.0.0.1:8080/");
 
     @BeforeClass
     public static void beforeClass() {
-        SERVER.app()
+        TEST_FACTORY.app("--server")
                 .autoLoadModules()
                 .module(SwaggerApp.class)
-                .start();
+                .run();
     }
 
     @Test

@@ -21,8 +21,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-test</artifactId>
+            <groupId>io.bootique</groupId>
+            <artifactId>bootique-test</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
