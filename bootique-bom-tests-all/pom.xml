@@ -137,11 +137,6 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.bootique.jetty</groupId>
-			<artifactId>bootique-jetty-test</artifactId>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
 			<groupId>io.bootique.job</groupId>
 			<artifactId>bootique-job</artifactId>
 			<scope>compile</scope>

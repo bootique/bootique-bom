@@ -1,8 +1,12 @@
 package io.bootique.bom.linkrest;
 
-import io.bootique.BQRuntime;
+import io.bootique.bom.linkrest.r1.LrResource1;
 import io.bootique.command.CommandOutcome;
+import io.bootique.jdbc.tomcat.TomcatJdbcModuleProvider;
+import io.bootique.jersey.JerseyModule;
+import io.bootique.linkrest.LinkRestModuleProvider;
 import io.bootique.test.TestIO;
+import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -10,9 +14,6 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -20,21 +21,21 @@ import static org.junit.Assert.assertTrue;
 public class LinkRestAppIT {
 
     @Rule
-    public LinkRestApp app = new LinkRestApp();
+    public BQTestFactory testFactory = new BQTestFactory();
+
+    private BQTestFactory.Builder appBuilder(String... args) {
+        return testFactory.app(args)
+                .module(new LinkRestModuleProvider())
+                .module(new TomcatJdbcModuleProvider())
+                .module(b -> JerseyModule.extend(b).addResource(LrResource1.class));
+    }
 
     @Test
     public void testRun_Help() {
 
         TestIO io = TestIO.noTrace();
 
-        BQRuntime runtime = app.app("--help")
-                .bootLogger(io.getBootLogger())
-                .startupAndWaitCheck()
-                // using longer startup timeout .. sometimes this fails on Travis..
-                .startupTimeout(8, TimeUnit.SECONDS)
-                .start();
-
-        CommandOutcome outcome = app.getOutcome(runtime).get();
+        CommandOutcome outcome = appBuilder("--help").bootLogger(io.getBootLogger()).run();
         assertEquals(0, outcome.getExitCode());
 
         assertTrue(io.getStdout().contains("--help"));
@@ -42,12 +43,9 @@ public class LinkRestAppIT {
     }
 
     @Test
-    public void testRun() throws InterruptedException, ExecutionException, TimeoutException {
+    public void testRun() {
 
-        // using longer startup timeout .. sometimes this fails on Travis..
-        app.app("--config=src/test/resources/io/bootique/bom/linkrest/test.yml")
-                .startupTimeout(8, TimeUnit.SECONDS)
-                .start();
+        appBuilder("--config=src/test/resources/io/bootique/bom/linkrest/test.yml", "--server").run();
 
         WebTarget base = ClientBuilder.newClient().target("http://localhost:12011/");
 
