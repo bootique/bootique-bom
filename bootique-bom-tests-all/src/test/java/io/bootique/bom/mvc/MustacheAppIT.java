@@ -2,9 +2,7 @@ package io.bootique.bom.mvc;
 
 import io.bootique.bom.mvc.r1.MustacheResource;
 import io.bootique.jersey.JerseyModule;
-import io.bootique.jetty.JettyModule;
-import io.bootique.mvc.MvcModule;
-import io.bootique.mvc.mustache.MvcMustacheModule;
+import io.bootique.mvc.mustache.MvcMustacheModuleProvider;
 import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
 import org.junit.Test;
@@ -25,7 +23,7 @@ public class MustacheAppIT {
     public void testRun() {
 
         testFactory.app("--config=src/test/resources/io/bootique/bom/mvc/test.yml", "--server")
-                .modules(JettyModule.class, JerseyModule.class, MvcModule.class, MvcMustacheModule.class)
+                .module(new MvcMustacheModuleProvider())
                 .module(binder -> JerseyModule.extend(binder).addResource(MustacheResource.class))
                 .run();
 
