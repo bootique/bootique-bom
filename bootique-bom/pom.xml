@@ -169,6 +169,11 @@
                 <version>${bootique-version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.kotlin</groupId>
+                <artifactId>bootique-kotlin-undertow</artifactId>
+                <version>${bootique-version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.kafka.client</groupId>
                 <artifactId>bootique-kafka-client</artifactId>
                 <version>${bootique-version}</version>
