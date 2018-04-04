@@ -8,8 +8,6 @@ import org.apache.cayenne.configuration.server.ServerRuntime;
 import org.junit.Rule;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-
 public class SchemaCreationListenerIT {
 
     @Rule
@@ -35,8 +33,8 @@ public class SchemaCreationListenerIT {
 
         Table t1 = DatabaseChannel.get(runtime).newTable("T1").columnNames("id", "name").build();
 
-        assertEquals(0, t1.getRowCount());
+        t1.matcher().assertNoMatches();
         t1.insert(1, "one").insert(2, "two");
-        assertEquals(2, t1.getRowCount());
+        t1.matcher().assertMatches(2);
     }
 }
