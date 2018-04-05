@@ -124,11 +124,6 @@
                 <version>${bootique-version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty-test</artifactId>
-                <version>${bootique-version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.bootique.job</groupId>
                 <artifactId>bootique-job</artifactId>
                 <version>${bootique-version}</version>
