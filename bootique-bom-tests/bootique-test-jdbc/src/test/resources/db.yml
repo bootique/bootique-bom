@@ -10,5 +10,5 @@ jdbc:
   # this emulates a bad DB
   derby3:
     url: "jdbc:derby:target/derby/3;create=false"
-    initialSize: 1
+    initialSize: 0
     username: sa
