@@ -2,7 +2,7 @@ package io.bootique.bom.linkrest;
 
 import io.bootique.bom.linkrest.r1.LrResource1;
 import io.bootique.command.CommandOutcome;
-import io.bootique.jdbc.tomcat.TomcatJdbcModuleProvider;
+import io.bootique.jdbc.tomcat.JdbcTomcatModuleProvider;
 import io.bootique.jersey.JerseyModule;
 import io.bootique.linkrest.LinkRestModuleProvider;
 import io.bootique.test.TestIO;
@@ -26,7 +26,7 @@ public class LinkRestAppIT {
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
                 .module(new LinkRestModuleProvider())
-                .module(new TomcatJdbcModuleProvider())
+                .module(new JdbcTomcatModuleProvider())
                 .module(b -> JerseyModule.extend(b).addResource(LrResource1.class));
     }
 

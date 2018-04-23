@@ -2,7 +2,7 @@ package io.bootique.bom.jdbc;
 
 import io.bootique.BQCoreModule;
 import io.bootique.command.CommandOutcome;
-import io.bootique.jdbc.tomcat.TomcatJdbcModuleProvider;
+import io.bootique.jdbc.tomcat.JdbcTomcatModuleProvider;
 import io.bootique.test.TestIO;
 import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
@@ -19,7 +19,7 @@ public class JdbcAppIT {
 
 	private BQTestFactory.Builder appBuilder(String... args) {
 		return testFactory.app(args)
-				.module(new TomcatJdbcModuleProvider())
+				.module(new JdbcTomcatModuleProvider())
 				.module(b -> BQCoreModule.extend(b).addCommand(RunSQLCommand.class));
 	}
 

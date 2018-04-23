@@ -3,7 +3,7 @@ package io.bootique.bom.cayenne;
 import io.bootique.BQCoreModule;
 import io.bootique.cayenne.CayenneModuleProvider;
 import io.bootique.command.CommandOutcome;
-import io.bootique.jdbc.tomcat.TomcatJdbcModule;
+import io.bootique.jdbc.tomcat.JdbcTomcatModule;
 import io.bootique.test.TestIO;
 import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
@@ -20,7 +20,7 @@ public class CayenneAppIT {
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
                 .module(new CayenneModuleProvider())
-                .module(new TomcatJdbcModule())
+                .module(new JdbcTomcatModule())
                 .module(b -> BQCoreModule.extend(b).addCommand(RunQueryCommand.class));
     }
 
