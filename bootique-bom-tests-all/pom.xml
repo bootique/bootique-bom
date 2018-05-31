@@ -62,6 +62,16 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>io.bootique.aws</groupId>
+			<artifactId>bootique-aws</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.bootique.aws</groupId>
+			<artifactId>bootique-aws-s3</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>io.bootique</groupId>
 			<artifactId>bootique-test</artifactId>
 			<scope>compile</scope>
