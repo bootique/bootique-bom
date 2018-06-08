@@ -29,16 +29,13 @@ public class DerbyHealthChecksIT {
 
         // check before DataSources are started
         HealthCheckOutcome one = results.get(TomcatConnectivityCheck.healthCheckName("derby1"));
-        assertNotNull(one);
-        assertEquals(HealthCheckStatus.UNKNOWN, one.getStatus());
+        assertNull(one);
 
         HealthCheckOutcome two = results.get(TomcatConnectivityCheck.healthCheckName("derby2"));
-        assertNotNull(two);
-        assertEquals(HealthCheckStatus.UNKNOWN, two.getStatus());
+        assertNull(two);
 
         HealthCheckOutcome three = results.get(TomcatConnectivityCheck.healthCheckName("derby3"));
-        assertNotNull(three);
-        assertEquals(HealthCheckStatus.UNKNOWN, three.getStatus());
+        assertNull(three);
 
         // init DataSources and re-check
         runtime.getInstance(DataSourceFactory.class).forName("derby1");
