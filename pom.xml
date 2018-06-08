@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>io.bootique.modules.parent</groupId>
 		<artifactId>bootique-modules-parent</artifactId>
-		<version>0.8</version>
+		<version>0.9</version>
 	</parent>
 	<groupId>io.bootique.bom</groupId>
 	<artifactId>bootique-bom-parent</artifactId>
@@ -19,7 +19,7 @@
 	</description>
 
 	<properties>
-		<bootique-version>${project.version}</bootique-version>
+		<bootique.version>${project.version}</bootique.version>
 	</properties>
 
 	<modules>
