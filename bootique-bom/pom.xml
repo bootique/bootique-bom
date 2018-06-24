@@ -284,7 +284,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.swagger</groupId>
-                <artifactId>bootique-swagger-console</artifactId>
+                <artifactId>bootique-swagger-ui</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
