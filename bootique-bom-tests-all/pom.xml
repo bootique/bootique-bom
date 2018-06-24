@@ -252,7 +252,7 @@
 		</dependency>
 		<dependency>
 			<groupId>io.bootique.swagger</groupId>
-			<artifactId>bootique-swagger</artifactId>
+			<artifactId>bootique-swagger-console</artifactId>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>

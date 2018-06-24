@@ -283,6 +283,11 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.swagger</groupId>
+                <artifactId>bootique-swagger-console</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.tapestry</groupId>
                 <artifactId>bootique-tapestry</artifactId>
                 <version>${bootique.version}</version>
