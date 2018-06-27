@@ -280,5 +280,26 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-
+	<profiles>
+		<profile>
+			<id>rat</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.rat</groupId>
+						<artifactId>apache-rat-plugin</artifactId>
+						<configuration>
+							<excludes >
+								<exclude>src/test/resources/cayenne-project.xml</exclude>
+								<exclude>src/test/resources/datamap.map.xml</exclude>
+								<exclude>**/test*.yml</exclude>
+								<exclude>src/main/resources/templates/io/bootique/bom/mvc/r1/t1.mustache</exclude>
+								<exclude>derby.log</exclude>
+							</excludes>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
