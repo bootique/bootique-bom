@@ -84,7 +84,7 @@
                         <groupId>org.apache.rat</groupId>
                         <artifactId>apache-rat-plugin</artifactId>
                         <configuration>
-                            <excludes >
+                            <excludes>
                                 <exclude>src/test/resources/response1.json</exclude>
                                 <exclude>src/test/resources/response1.yml</exclude>
                             </excludes>
