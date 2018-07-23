@@ -166,6 +166,16 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>io.bootique.job</groupId>
+			<artifactId>bootique-job-instrumented</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.bootique.job</groupId>
+			<artifactId>bootique-job-zookeeper</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>io.bootique.jooq</groupId>
 			<artifactId>bootique-jooq</artifactId>
 			<scope>compile</scope>
