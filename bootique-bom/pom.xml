@@ -73,6 +73,21 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.cayenne</groupId>
+                <artifactId>bootique-cayenne41</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.cayenne</groupId>
+                <artifactId>bootique-cayenne41-jcache</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.cayenne</groupId>
+                <artifactId>bootique-cayenne41-test</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.curator</groupId>
                 <artifactId>bootique-curator</artifactId>
                 <version>${bootique.version}</version>
