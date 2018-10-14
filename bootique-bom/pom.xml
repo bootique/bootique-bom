@@ -223,12 +223,12 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.kafka.client</groupId>
+                <groupId>io.bootique.kafka</groupId>
                 <artifactId>bootique-kafka-client</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.kafka.client</groupId>
+                <groupId>io.bootique.kafka</groupId>
                 <artifactId>bootique-kafka-client-0.8</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
