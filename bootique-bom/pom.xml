@@ -233,6 +233,11 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.kafka</groupId>
+                <artifactId>bootique-kafka-streams</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove</artifactId>
                 <version>${bootique.version}</version>

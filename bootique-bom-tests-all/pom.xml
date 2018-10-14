@@ -216,6 +216,11 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>io.bootique.kafka</groupId>
+			<artifactId>bootique-kafka-streams</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>io.bootique.kotlin</groupId>
 			<artifactId>bootique-kotlin</artifactId>
 			<scope>compile</scope>
