@@ -48,6 +48,11 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws-s3</artifactId>
                 <version>${bootique.version}</version>
