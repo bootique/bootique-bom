@@ -81,6 +81,16 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
+			<groupId>io.bootique.agrest</groupId>
+			<artifactId>bootique-agrest</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.bootique.agrest</groupId>
+			<artifactId>bootique-linkrest</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>io.bootique.aws</groupId>
 			<artifactId>bootique-aws</artifactId>
 			<scope>compile</scope>
@@ -183,11 +193,6 @@
 		<dependency>
 			<groupId>io.bootique.linkmove</groupId>
 			<artifactId>bootique-linkmove</artifactId>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.bootique.linkrest</groupId>
-			<artifactId>bootique-linkrest</artifactId>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>

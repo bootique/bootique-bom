@@ -253,7 +253,7 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.linkrest</groupId>
+                <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-linkrest</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
