@@ -98,11 +98,6 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.cxf</groupId>
-                <artifactId>bootique-cxf</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.bootique.flyway</groupId>
                 <artifactId>bootique-flyway</artifactId>
                 <version>${bootique.version}</version>

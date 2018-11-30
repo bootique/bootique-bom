@@ -106,11 +106,6 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.bootique.cxf</groupId>
-			<artifactId>bootique-cxf</artifactId>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
 			<groupId>io.bootique.flyway</groupId>
 			<artifactId>bootique-flyway</artifactId>
 			<scope>compile</scope>
