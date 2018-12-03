@@ -29,7 +29,7 @@
 	<artifactId>bootique-bom-parent</artifactId>
 	
 	<!-- Keeping this version in sync with Bootique version -->
-	<version>1.0.RC2-SNAPSHOT</version>
+	<version>1.0.RC1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>bootique-bom-parent: Parent of bootique-bom</name>
