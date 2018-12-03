@@ -43,8 +43,8 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.aws</groupId>
-                <artifactId>bootique-aws</artifactId>
+                <groupId>io.bootique</groupId>
+                <artifactId>bootique-test</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
@@ -53,13 +53,18 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.aws</groupId>
-                <artifactId>bootique-aws-s3</artifactId>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-linkrest</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique</groupId>
-                <artifactId>bootique-test</artifactId>
+                <groupId>io.bootique.aws</groupId>
+                <artifactId>bootique-aws</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.aws</groupId>
+                <artifactId>bootique-aws-s3</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
@@ -164,6 +169,11 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
+                <artifactId>bootique-jetty-cors</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-instrumented</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
@@ -203,6 +213,21 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.kafka</groupId>
+                <artifactId>bootique-kafka-client</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.kafka</groupId>
+                <artifactId>bootique-kafka-client-0.8</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.kafka</groupId>
+                <artifactId>bootique-kafka-streams</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.kotlin</groupId>
                 <artifactId>bootique-kotlin</artifactId>
                 <version>${bootique.version}</version>
@@ -233,28 +258,8 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.kafka</groupId>
-                <artifactId>bootique-kafka-client</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.kafka</groupId>
-                <artifactId>bootique-kafka-client-0.8</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.kafka</groupId>
-                <artifactId>bootique-kafka-streams</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.agrest</groupId>
-                <artifactId>bootique-linkrest</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
@@ -285,6 +290,11 @@
             <dependency>
                 <groupId>io.bootique.mvc</groupId>
                 <artifactId>bootique-mvc</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.mvc</groupId>
+                <artifactId>bootique-mvc-freemarker</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
