@@ -103,6 +103,26 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.cxf</groupId>
+                <artifactId>bootique-cxf-core</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.cxf</groupId>
+                <artifactId>bootique-cxf-jaxrs</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.cxf</groupId>
+                <artifactId>bootique-cxf-jaxws-client</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.cxf</groupId>
+                <artifactId>bootique-cxf-server</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.flyway</groupId>
                 <artifactId>bootique-flyway</artifactId>
                 <version>${bootique.version}</version>
