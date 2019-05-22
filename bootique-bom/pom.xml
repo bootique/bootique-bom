@@ -54,6 +54,12 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest-cayenne41</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <!-- Deprecated -->
+            <dependency>
+                <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-linkrest</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
