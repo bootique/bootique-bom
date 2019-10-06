@@ -304,6 +304,16 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove-rest</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove-rest-cayenne41</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.liquibase</groupId>
                 <artifactId>bootique-liquibase</artifactId>
                 <version>${bootique.version}</version>
