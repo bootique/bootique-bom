@@ -19,8 +19,6 @@
 
 package io.bootique.bom.jdbc;
 
-import com.google.inject.Inject;
-import com.google.inject.Provider;
 import io.bootique.meta.application.CommandMetadata;
 import io.bootique.meta.application.OptionMetadata;
 import io.bootique.cli.Cli;
@@ -29,6 +27,8 @@ import io.bootique.command.CommandWithMetadata;
 import io.bootique.jdbc.DataSourceFactory;
 import io.bootique.log.BootLogger;
 
+import javax.inject.Inject;
+import javax.inject.Provider;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

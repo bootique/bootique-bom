@@ -19,9 +19,9 @@
 
 package io.bootique.bom.jersey.r1;
 
-import com.google.inject.Inject;
 import io.bootique.annotation.Args;
 
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
