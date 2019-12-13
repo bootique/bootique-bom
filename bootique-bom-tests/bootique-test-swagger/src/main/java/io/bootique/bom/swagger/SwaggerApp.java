@@ -19,12 +19,12 @@
 
 package io.bootique.bom.swagger;
 
-import com.google.inject.Binder;
-import com.google.inject.Module;
 import io.bootique.bom.swagger.api.Api1;
+import io.bootique.di.Binder;
+import io.bootique.di.BQModule;
 import io.bootique.jersey.JerseyModule;
 
-public class SwaggerApp implements Module {
+public class SwaggerApp implements BQModule {
 
     @Override
     public void configure(Binder binder) {
