@@ -1,6 +1,6 @@
 jdbc:
   ds:
-    url: jdbc:derby:target/derby/linkrest_noconfig;create=true
+    url: jdbc:derby:target/derby/agrest_noconfig;create=true
     initialSize: 1
 
 jersey:

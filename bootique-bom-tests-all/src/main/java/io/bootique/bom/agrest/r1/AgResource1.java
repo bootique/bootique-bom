@@ -17,12 +17,12 @@
  * under the License.
  */
 
-package io.bootique.bom.linkrest.r1;
+package io.bootique.bom.agrest.r1;
 
-import com.nhl.link.rest.DataResponse;
-import com.nhl.link.rest.LinkRest;
-import com.nhl.link.rest.SelectStage;
-import io.bootique.bom.linkrest.ITEntity;
+import io.agrest.Ag;
+import io.agrest.DataResponse;
+import io.agrest.SelectStage;
+import io.bootique.bom.agrest.ITEntity;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -35,14 +35,14 @@ import java.util.Arrays;
 
 @Path("/lr1")
 @Produces(MediaType.APPLICATION_JSON)
-public class LrResource1 {
+public class AgResource1 {
 
     @Context
     private Configuration config;
 
     @GET
     public DataResponse<ITEntity> get(UriInfo info) {
-        return LinkRest.select(ITEntity.class, config)
+        return Ag.select(ITEntity.class, config)
                 .uri(info)
                 .terminalStage(SelectStage.APPLY_SERVER_PARAMS, context -> {
                     ITEntity e1 = new ITEntity();
@@ -53,7 +53,7 @@ public class LrResource1 {
                     e2.setId(6);
                     e2.setName("name6");
 
-                    context.setObjects(Arrays.asList(e1, e2));
+                    context.getEntity().setResult(Arrays.asList(e1, e2));
                 })
                 .get();
     }

@@ -86,11 +86,6 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.bootique.agrest</groupId>
-			<artifactId>bootique-linkrest</artifactId>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
 			<groupId>io.bootique.aws</groupId>
 			<artifactId>bootique-aws</artifactId>
 			<scope>compile</scope>

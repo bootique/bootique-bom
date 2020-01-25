@@ -17,22 +17,22 @@
  * under the License.
  */
 
-package io.bootique.bom.linkrest;
+package io.bootique.bom.agrest;
 
-import com.nhl.link.rest.annotation.LrAttribute;
-import com.nhl.link.rest.annotation.LrId;
+import io.agrest.annotation.AgAttribute;
+import io.agrest.annotation.AgId;
 
 public class ITEntity {
 
 	private int id;
 	private String name;
 
-	@LrAttribute
+	@AgAttribute
 	public String getName() {
 		return name;
 	}
 
-	@LrId
+	@AgId
 	public int getId() {
 		return id;
 	}

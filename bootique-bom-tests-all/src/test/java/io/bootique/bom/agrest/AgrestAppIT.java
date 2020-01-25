@@ -17,13 +17,13 @@
  * under the License.
  */
 
-package io.bootique.bom.linkrest;
+package io.bootique.bom.agrest;
 
-import io.bootique.bom.linkrest.r1.LrResource1;
+import io.bootique.agrest.AgrestModuleProvider;
+import io.bootique.bom.agrest.r1.AgResource1;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jdbc.tomcat.JdbcTomcatModuleProvider;
 import io.bootique.jersey.JerseyModule;
-import io.bootique.linkrest.LinkRestModuleProvider;
 import io.bootique.test.TestIO;
 import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
@@ -37,16 +37,16 @@ import javax.ws.rs.core.Response.Status;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class LinkRestAppIT {
+public class AgrestAppIT {
 
     @Rule
     public BQTestFactory testFactory = new BQTestFactory();
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .module(new LinkRestModuleProvider())
+                .module(new AgrestModuleProvider())
                 .module(new JdbcTomcatModuleProvider())
-                .module(b -> JerseyModule.extend(b).addResource(LrResource1.class));
+                .module(b -> JerseyModule.extend(b).addResource(AgResource1.class));
     }
 
     @Test
@@ -64,7 +64,7 @@ public class LinkRestAppIT {
     @Test
     public void testRun() {
 
-        appBuilder("--config=src/test/resources/io/bootique/bom/linkrest/test.yml", "--server").run();
+        appBuilder("--config=src/test/resources/io/bootique/bom/agrest/test.yml", "--server").run();
 
         WebTarget base = ClientBuilder.newClient().target("http://localhost:12011/");
 
