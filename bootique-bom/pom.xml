@@ -239,11 +239,6 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.kafka</groupId>
-                <artifactId>bootique-kafka-client-0.8</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.kafka</groupId>
                 <artifactId>bootique-kafka-streams</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
