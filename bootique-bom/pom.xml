@@ -354,6 +354,11 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.mybatis</groupId>
+                <artifactId>bootique-mybatis</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.rabbitmq.client</groupId>
                 <artifactId>bootique-rabbitmq-client</artifactId>
                 <version>${bootique.version}</version>
