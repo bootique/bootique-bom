@@ -48,6 +48,11 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique</groupId>
+                <artifactId>bootique-test-junit5</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest</artifactId>
                 <version>${bootique.version}</version>
@@ -140,6 +145,11 @@
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-test</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jdbc</groupId>
+                <artifactId>bootique-jdbc-test-junit5</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
