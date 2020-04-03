@@ -151,12 +151,12 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.bootique.jersey.client</groupId>
+			<groupId>io.bootique.jersey</groupId>
 			<artifactId>bootique-jersey-client</artifactId>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.bootique.jersey.client</groupId>
+			<groupId>io.bootique.jersey</groupId>
 			<artifactId>bootique-jersey-client-instrumented</artifactId>
 			<scope>compile</scope>
 		</dependency>
