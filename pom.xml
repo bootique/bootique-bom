@@ -39,6 +39,7 @@
 
 	<properties>
 		<bootique.version>${project.version}</bootique.version>
+		<derby.version>10.14.1.0</derby.version>
 	</properties>
 
 	<modules>
