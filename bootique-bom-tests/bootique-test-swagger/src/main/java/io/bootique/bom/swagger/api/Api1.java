@@ -19,13 +19,13 @@
 
 package io.bootique.bom.swagger.api;
 
-import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
-@Api
+@OpenAPIDefinition
 @Path("/api1")
 public class Api1 {
 

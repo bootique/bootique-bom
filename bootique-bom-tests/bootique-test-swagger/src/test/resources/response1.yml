@@ -1,18 +1,19 @@
----
-swagger: "2.0"
+openapi: 3.0.1
 paths:
   /api1/{id}:
     get:
-      operationId: "getById"
+      operationId: getById
       parameters:
-      - name: "id"
-        in: "path"
+      - name: id
+        in: path
         required: true
-        type: "integer"
-        format: "int32"
+        schema:
+          type: integer
+          format: int32
       responses:
-        "200":
-          description: "successful operation"
-          schema:
-            type: "string"
-          headers: {}
+        default:
+          description: default response
+          content:
+            '*/*':
+              schema:
+                type: string

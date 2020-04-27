@@ -41,7 +41,7 @@ public class SwaggerIT {
 
     @BeforeClass
     public static void beforeClass() {
-        TEST_FACTORY.app("--server")
+        TEST_FACTORY.app("--server", "-c", "classpath:config.yml")
                 .autoLoadModules()
                 .module(SwaggerApp.class)
                 .run();
@@ -49,14 +49,14 @@ public class SwaggerIT {
 
     @Test
     public void testApi_Yaml() {
-        Response r = BASE_TARGET.path("/swagger.yaml").request().get();
+        Response r = BASE_TARGET.path("/openapi.yaml").request().get();
         assertEquals(200, r.getStatus());
         assertEqualsToResourceContents("response1.yml", r.readEntity(String.class));
     }
 
     @Test
     public void testApi_Json() {
-        Response r = BASE_TARGET.path("/swagger.json").request().get();
+        Response r = BASE_TARGET.path("/openapi.json").request().get();
         assertEquals(200, r.getStatus());
         assertEqualsToResourceContents("response1.json", r.readEntity(String.class) + "\n");
     }
