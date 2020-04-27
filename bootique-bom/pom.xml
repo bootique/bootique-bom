@@ -399,11 +399,6 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.swagger</groupId>
-                <artifactId>bootique-swagger-openapi</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.swagger</groupId>
                 <artifactId>bootique-swagger-ui</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
