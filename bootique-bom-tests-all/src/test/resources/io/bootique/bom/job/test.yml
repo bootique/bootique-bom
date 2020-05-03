@@ -9,9 +9,9 @@ scheduler:
   triggers:
     - job: bom
       trigger: trigger1
-      fixedDelayMs: 301
-      initialDelayMs: 0
+      fixedDelay: 301ms
+      initialDelay: 0ms
     - job: bomparameterized
       trigger: trigger2
-      fixedDelayMs: 318
-      initialDelayMs: 0
+      fixedDelay: 318ms
+      initialDelay: 0ms
