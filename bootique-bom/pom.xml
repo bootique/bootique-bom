@@ -393,6 +393,11 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.simplejavamail</groupId>
+                <artifactId>bootique-simplejavamail</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.swagger</groupId>
                 <artifactId>bootique-swagger</artifactId>
                 <version>${bootique.version}</version>
