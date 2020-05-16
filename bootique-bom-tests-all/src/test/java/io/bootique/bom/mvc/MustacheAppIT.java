@@ -42,7 +42,7 @@ public class MustacheAppIT {
     public void testRun() {
 
         testFactory.app("--config=src/test/resources/io/bootique/bom/mvc/test.yml", "--server")
-                .module(new MvcMustacheModuleProvider())
+                .moduleProvider(new MvcMustacheModuleProvider())
                 .module(binder -> JerseyModule.extend(binder).addResource(MustacheResource.class))
                 .run();
 

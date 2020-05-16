@@ -41,7 +41,7 @@ public class JettyAppIT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .module(new JettyModuleProvider())
+                .moduleProvider(new JettyModuleProvider())
                 .module(b -> JettyModule.extend(b).addServlet(BomServlet.class).addFilter(BomFilter.class));
     }
 

@@ -44,7 +44,7 @@ public class JerseyAppIT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .module(new JerseyModuleProvider())
+                .moduleProvider(new JerseyModuleProvider())
                 .module(b -> JerseyModule.extend(b)
                         .addFeature(JerseyAppFeature.class)
                         .addPackage(Resource1.class.getPackage())

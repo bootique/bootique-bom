@@ -37,7 +37,7 @@ public class JobAppIT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .module(new JobModuleProvider())
+                .moduleProvider(new JobModuleProvider())
                 .module(b -> JobModule.extend(b).addJob(BomJob.class).addJob(BomParameterizedJob.class));
     }
 

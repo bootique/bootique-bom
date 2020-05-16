@@ -38,7 +38,7 @@ public class JdbcAppIT {
 
 	private BQTestFactory.Builder appBuilder(String... args) {
 		return testFactory.app(args)
-				.module(new JdbcTomcatModuleProvider())
+				.moduleProvider(new JdbcTomcatModuleProvider())
 				.module(b -> BQCoreModule.extend(b).addCommand(RunSQLCommand.class));
 	}
 

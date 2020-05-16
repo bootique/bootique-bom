@@ -44,8 +44,8 @@ public class AgrestAppIT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .module(new AgrestModuleProvider())
-                .module(new JdbcTomcatModuleProvider())
+                .moduleProvider(new AgrestModuleProvider())
+                .moduleProvider(new JdbcTomcatModuleProvider())
                 .module(b -> JerseyModule.extend(b).addResource(AgResource1.class));
     }
 

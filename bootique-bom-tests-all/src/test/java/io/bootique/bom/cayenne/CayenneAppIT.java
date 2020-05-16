@@ -38,7 +38,7 @@ public class CayenneAppIT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .module(new CayenneModuleProvider())
+                .moduleProvider(new CayenneModuleProvider())
                 .module(new JdbcTomcatModule())
                 .module(b -> BQCoreModule.extend(b).addCommand(RunQueryCommand.class));
     }
