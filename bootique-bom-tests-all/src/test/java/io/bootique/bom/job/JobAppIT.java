@@ -22,7 +22,7 @@ package io.bootique.bom.job;
 import io.bootique.command.CommandOutcome;
 import io.bootique.job.runtime.JobModule;
 import io.bootique.job.runtime.JobModuleProvider;
-import io.bootique.test.TestIO;
+import io.bootique.junit5.TestIO;
 import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
 import org.junit.Test;

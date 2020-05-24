@@ -23,7 +23,7 @@ import io.bootique.BQCoreModule;
 import io.bootique.cayenne.CayenneModuleProvider;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jdbc.tomcat.JdbcTomcatModule;
-import io.bootique.test.TestIO;
+import io.bootique.junit5.TestIO;
 import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
 import org.junit.Test;

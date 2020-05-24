@@ -21,7 +21,7 @@ package io.bootique.bom.jetty;
 
 import io.bootique.jetty.JettyModule;
 import io.bootique.jetty.JettyModuleProvider;
-import io.bootique.test.TestIO;
+import io.bootique.junit5.TestIO;
 import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
 import org.junit.Test;

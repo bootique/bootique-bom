@@ -22,7 +22,7 @@ package io.bootique.bom.jdbc;
 import io.bootique.BQCoreModule;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jdbc.tomcat.JdbcTomcatModuleProvider;
-import io.bootique.test.TestIO;
+import io.bootique.junit5.TestIO;
 import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
 import org.junit.Test;
