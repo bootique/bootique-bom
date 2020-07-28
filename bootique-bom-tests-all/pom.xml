@@ -251,7 +251,7 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.bootique.rabbitmq.client</groupId>
+			<groupId>io.bootique.rabbitmq</groupId>
 			<artifactId>bootique-rabbitmq-client</artifactId>
 			<scope>compile</scope>
 		</dependency>
