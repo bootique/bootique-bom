@@ -414,6 +414,11 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.rabbitmq</groupId>
+                <artifactId>bootique-rabbitmq-junit5</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.shiro</groupId>
                 <artifactId>bootique-shiro</artifactId>
                 <version>${bootique.version}</version>
