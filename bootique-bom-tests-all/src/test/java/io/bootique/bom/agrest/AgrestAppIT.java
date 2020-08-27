@@ -24,8 +24,8 @@ import io.bootique.bom.agrest.r1.AgResource1;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jdbc.tomcat.JdbcTomcatModuleProvider;
 import io.bootique.jersey.JerseyModule;
-import io.bootique.junit5.TestIO;
 import io.bootique.test.junit.BQTestFactory;
+import io.bootique.test.junit.TestIO;
 import org.junit.Rule;
 import org.junit.Test;
 

@@ -23,8 +23,8 @@ import io.bootique.BQCoreModule;
 import io.bootique.BQRuntime;
 import io.bootique.command.CommandOutcome;
 import io.bootique.logback.LogbackModuleProvider;
-import io.bootique.junit5.TestIO;
 import io.bootique.test.junit.BQTestFactory;
+import io.bootique.test.junit.TestIO;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -33,9 +33,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 
 import static java.util.stream.Collectors.joining;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class LogbackAppIT {
 

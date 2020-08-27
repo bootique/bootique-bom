@@ -22,14 +22,12 @@ package io.bootique.bom.jdbc;
 import io.bootique.BQCoreModule;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jdbc.tomcat.JdbcTomcatModuleProvider;
-import io.bootique.junit5.TestIO;
 import io.bootique.test.junit.BQTestFactory;
+import io.bootique.test.junit.TestIO;
 import org.junit.Rule;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class JdbcAppIT {
 

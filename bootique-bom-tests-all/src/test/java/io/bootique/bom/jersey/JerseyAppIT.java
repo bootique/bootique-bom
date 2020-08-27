@@ -24,8 +24,8 @@ import io.bootique.bom.jersey.r2.Resource2;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jersey.JerseyModule;
 import io.bootique.jersey.JerseyModuleProvider;
-import io.bootique.junit5.TestIO;
 import io.bootique.test.junit.BQTestFactory;
+import io.bootique.test.junit.TestIO;
 import org.junit.Rule;
 import org.junit.Test;
 
