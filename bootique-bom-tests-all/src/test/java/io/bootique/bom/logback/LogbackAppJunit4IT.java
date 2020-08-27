@@ -22,24 +22,25 @@ package io.bootique.bom.logback;
 import io.bootique.BQCoreModule;
 import io.bootique.BQRuntime;
 import io.bootique.command.CommandOutcome;
-import io.bootique.junit5.*;
 import io.bootique.logback.LogbackModuleProvider;
-import org.junit.jupiter.api.Test;
+import io.bootique.test.junit.BQTestFactory;
+import io.bootique.test.junit.TestIO;
+import org.junit.Rule;
+import org.junit.Test;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
 import static java.util.stream.Collectors.joining;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-@BQTest
-public class LogbackAppIT {
+public class LogbackAppJunit4IT {
 
-    @BQTestTool
-    final BQTestFactory testFactory = new BQTestFactory();
+    @Rule
+    public BQTestFactory testFactory = new BQTestFactory();
 
-    private TestRuntumeBuilder appBuilder(String... args) {
+    private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
                 .moduleProvider(new LogbackModuleProvider())
                 .module(b -> BQCoreModule.extend(b).addCommand(LogbackTestCommand.class));
@@ -111,8 +112,8 @@ public class LogbackAppIT {
         String logfileContents = Files.lines(logFile.toPath()).collect(joining("\n"));
         assertFalse(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-debug"));
         assertFalse(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-info"));
-        assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-warn"),
-                () -> "Logfile contents: " + logfileContents);
+        assertTrue("Logfile contents: " + logfileContents,
+                logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-warn"));
         assertTrue(logfileContents.contains("i.b.b.l.LogbackTestCommand: logback-test-error"));
     }
 }

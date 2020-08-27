@@ -22,27 +22,23 @@ package io.bootique.bom.cayenne;
 import io.bootique.BQCoreModule;
 import io.bootique.cayenne.v41.CayenneModuleProvider;
 import io.bootique.command.CommandOutcome;
-import io.bootique.jdbc.junit5.derby.DerbyTester;
 import io.bootique.jdbc.tomcat.JdbcTomcatModule;
-import io.bootique.junit5.*;
-import org.junit.jupiter.api.Test;
+import io.bootique.test.junit.BQTestFactory;
+import io.bootique.test.junit.TestIO;
+import org.junit.Rule;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-@BQTest
-public class CayenneAppIT {
+public class CayenneAppJunit4IT {
 
-    @BQTestTool
-    final DerbyTester db = DerbyTester.db();
+    @Rule
+    public BQTestFactory testFactory = new BQTestFactory();
 
-    @BQTestTool
-    final BQTestFactory testFactory = new BQTestFactory();
-
-    private TestRuntumeBuilder appBuilder(String... args) {
+    private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
                 .moduleProvider(new CayenneModuleProvider())
-                .module(db.moduleWithTestDataSource("test2"))
                 .module(new JdbcTomcatModule())
                 .module(b -> BQCoreModule.extend(b).addCommand(RunQueryCommand.class));
     }

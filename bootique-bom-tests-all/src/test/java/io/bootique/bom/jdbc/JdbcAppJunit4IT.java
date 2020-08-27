@@ -21,25 +21,21 @@ package io.bootique.bom.jdbc;
 
 import io.bootique.BQCoreModule;
 import io.bootique.command.CommandOutcome;
-import io.bootique.jdbc.junit5.derby.DerbyTester;
 import io.bootique.jdbc.tomcat.JdbcTomcatModuleProvider;
-import io.bootique.junit5.*;
-import org.junit.jupiter.api.Test;
+import io.bootique.test.junit.BQTestFactory;
+import io.bootique.test.junit.TestIO;
+import org.junit.Rule;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-@BQTest
-public class JdbcAppIT {
+public class JdbcAppJunit4IT {
 
-	@BQTestTool
-	final DerbyTester db = DerbyTester.db();
+	@Rule
+	public BQTestFactory testFactory = new BQTestFactory();
 
-	@BQTestTool
-	final BQTestFactory testFactory = new BQTestFactory();
-
-	private TestRuntumeBuilder appBuilder(String... args) {
+	private BQTestFactory.Builder appBuilder(String... args) {
 		return testFactory.app(args)
-				.module(db.moduleWithTestDataSource("test1"))
 				.moduleProvider(new JdbcTomcatModuleProvider())
 				.module(b -> BQCoreModule.extend(b).addCommand(RunSQLCommand.class));
 	}
@@ -61,6 +57,7 @@ public class JdbcAppIT {
 
         TestIO io = TestIO.noTrace();
         CommandOutcome outcome = appBuilder(
+                "--config=src/test/resources/io/bootique/bom/jdbc/test.yml",
                 "--run-sql",
 				"--sql=SELECT * FROM T1")
                 .bootLogger(io.getBootLogger())
@@ -79,6 +76,7 @@ public class JdbcAppIT {
         TestIO io = TestIO.noTrace();
 
 		CommandOutcome outcome = appBuilder(
+		        "--config=src/test/resources/io/bootique/bom/jdbc/test.yml",
                 "--run-sql",
 				"--sql=SELECT * FROM T1 WHERE ID = 2")
                 .bootLogger(io.getBootLogger())

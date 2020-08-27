@@ -22,19 +22,20 @@ package io.bootique.bom.job;
 import io.bootique.command.CommandOutcome;
 import io.bootique.job.runtime.JobModule;
 import io.bootique.job.runtime.JobModuleProvider;
-import io.bootique.junit5.*;
-import org.junit.jupiter.api.Test;
+import io.bootique.test.junit.BQTestFactory;
+import io.bootique.test.junit.TestIO;
+import org.junit.Rule;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-@BQTest
-public class JobAppIT {
+public class JobAppJunit4IT {
 
-    @BQTestTool
-    final BQTestFactory testFactory = new BQTestFactory();
+    @Rule
+    public BQTestFactory testFactory = new BQTestFactory();
 
-    private TestRuntumeBuilder appBuilder(String... args) {
+    private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
                 .moduleProvider(new JobModuleProvider())
                 .module(b -> JobModule.extend(b).addJob(BomJob.class).addJob(BomParameterizedJob.class));
@@ -89,7 +90,7 @@ public class JobAppIT {
 
         assertEquals(0, outcome.getExitCode());
 
-        assertTrue(BomJob.COUNTER.get() > 3, () -> "Unexpected job count: " + BomJob.COUNTER.get());
+        assertTrue("Unexpected job count: " + BomJob.COUNTER.get(), BomJob.COUNTER.get() > 3);
         assertTrue(BomParameterizedJob.COUNTER.get() > 17 * 3);
         assertEquals(0, BomParameterizedJob.COUNTER.get() % 17);
     }

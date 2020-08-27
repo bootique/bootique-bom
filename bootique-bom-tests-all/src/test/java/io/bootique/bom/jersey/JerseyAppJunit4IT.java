@@ -24,26 +24,25 @@ import io.bootique.bom.jersey.r2.Resource2;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jersey.JerseyModule;
 import io.bootique.jersey.JerseyModuleProvider;
-import io.bootique.junit5.*;
-import org.junit.jupiter.api.Test;
-
+import io.bootique.test.junit.BQTestFactory;
+import io.bootique.test.junit.TestIO;
+import org.junit.Rule;
+import org.junit.Test;
 
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
+public class JerseyAppJunit4IT {
 
-@BQTest
-public class JerseyAppIT {
+    @Rule
+    public BQTestFactory testFactory = new BQTestFactory();
 
-    @BQTestTool
-    final BQTestFactory testFactory = new BQTestFactory();
-
-    private TestRuntumeBuilder appBuilder(String... args) {
+    private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
                 .moduleProvider(new JerseyModuleProvider())
                 .module(b -> JerseyModule.extend(b)

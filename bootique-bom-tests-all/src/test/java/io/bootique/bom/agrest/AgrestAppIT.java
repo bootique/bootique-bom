@@ -22,28 +22,32 @@ package io.bootique.bom.agrest;
 import io.bootique.agrest.cayenne41.AgrestModuleProvider;
 import io.bootique.bom.agrest.r1.AgResource1;
 import io.bootique.command.CommandOutcome;
+import io.bootique.jdbc.junit5.derby.DerbyTester;
 import io.bootique.jdbc.tomcat.JdbcTomcatModuleProvider;
 import io.bootique.jersey.JerseyModule;
-import io.bootique.test.junit.BQTestFactory;
-import io.bootique.test.junit.TestIO;
-import org.junit.Rule;
-import org.junit.Test;
+import io.bootique.junit5.*;
+import org.junit.jupiter.api.Test;
 
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@BQTest
 public class AgrestAppIT {
 
-    @Rule
-    public BQTestFactory testFactory = new BQTestFactory();
+    @BQTestTool
+    final DerbyTester db = DerbyTester.db();
 
-    private BQTestFactory.Builder appBuilder(String... args) {
+    @BQTestTool
+    final BQTestFactory testFactory = new BQTestFactory();
+
+    private TestRuntumeBuilder appBuilder(String... args) {
         return testFactory.app(args)
+                .module(db.moduleWithTestDataSource("ds"))
                 .moduleProvider(new AgrestModuleProvider())
                 .moduleProvider(new JdbcTomcatModuleProvider())
                 .module(b -> JerseyModule.extend(b).addResource(AgResource1.class));

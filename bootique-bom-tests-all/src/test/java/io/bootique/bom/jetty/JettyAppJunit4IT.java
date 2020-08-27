@@ -21,24 +21,25 @@ package io.bootique.bom.jetty;
 
 import io.bootique.jetty.JettyModule;
 import io.bootique.jetty.JettyModuleProvider;
-import io.bootique.junit5.*;
-import org.junit.jupiter.api.Test;
+import io.bootique.test.junit.BQTestFactory;
+import io.bootique.test.junit.TestIO;
+import org.junit.Rule;
+import org.junit.Test;
 
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-@BQTest
-public class JettyAppIT {
+public class JettyAppJunit4IT {
 
-    @BQTestTool
-    final BQTestFactory testFactory = new BQTestFactory();
+    @Rule
+    public BQTestFactory testFactory = new BQTestFactory();
 
-    private TestRuntumeBuilder appBuilder(String... args) {
+    private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
                 .moduleProvider(new JettyModuleProvider())
                 .module(b -> JettyModule.extend(b).addServlet(BomServlet.class).addFilter(BomFilter.class));
@@ -46,6 +47,7 @@ public class JettyAppIT {
 
     @Test
     public void testRun_Help() {
+
         TestIO io = TestIO.noTrace();
         appBuilder("--help").bootLogger(io.getBootLogger()).run();
 

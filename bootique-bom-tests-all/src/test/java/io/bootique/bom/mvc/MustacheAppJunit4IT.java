@@ -19,39 +19,36 @@
 
 package io.bootique.bom.mvc;
 
-import io.bootique.BQRuntime;
-import io.bootique.Bootique;
 import io.bootique.bom.mvc.r1.MustacheResource;
 import io.bootique.jersey.JerseyModule;
-import io.bootique.jetty.junit5.JettyTester;
-import io.bootique.junit5.BQApp;
-import io.bootique.junit5.BQTest;
 import io.bootique.mvc.mustache.MvcMustacheModuleProvider;
-import org.junit.jupiter.api.Test;
+import io.bootique.test.junit.BQTestFactory;
+import org.junit.Rule;
+import org.junit.Test;
 
+import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-@BQTest
-public class MustacheAppIT {
+public class MustacheAppJunit4IT {
 
-    static final JettyTester jetty = JettyTester.create();
-
-    @BQApp
-    final BQRuntime app = Bootique.app("-c", "classpath:io/bootique/bom/mvc/test.yml", "-s")
-            .moduleProvider(new MvcMustacheModuleProvider())
-            .module(b -> JerseyModule.extend(b).addResource(MustacheResource.class))
-            .module(jetty.moduleReplacingConnectors())
-            .createRuntime();
+    @Rule
+    public BQTestFactory testFactory = new BQTestFactory();
 
     @Test
     public void testRun() {
 
-        WebTarget base = jetty.getTarget();
+        testFactory.app("--config=src/test/resources/io/bootique/bom/mvc/test.yml", "--server")
+                .moduleProvider(new MvcMustacheModuleProvider())
+                .module(binder -> JerseyModule.extend(binder).addResource(MustacheResource.class))
+                .run();
 
+        WebTarget base = ClientBuilder.newClient().target("http://localhost:8080/");
+
+        // added as a part of a package
         Response r1 = base.path("/mustache").request().get();
         assertEquals(Status.OK.getStatusCode(), r1.getStatus());
         assertEquals("hi_myname.", r1.readEntity(String.class));
