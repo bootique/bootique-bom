@@ -103,7 +103,7 @@
 		</dependency>
 		<dependency>
 			<groupId>io.bootique.cxf</groupId>
-			<artifactId>bootique-cxf-server</artifactId>
+			<artifactId>bootique-cxf-jaxws-server</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>io.bootique.flyway</groupId>

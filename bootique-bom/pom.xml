@@ -155,7 +155,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.cxf</groupId>
-                <artifactId>bootique-cxf-server</artifactId>
+                <artifactId>bootique-cxf-jaxws-server</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
