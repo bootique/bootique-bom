@@ -39,7 +39,7 @@
 
 	<properties>
 		<bootique.version>${project.version}</bootique.version>
-		<derby.version>10.14.1.0</derby.version>
+		<ehcache.version>3.5.2</ehcache.version>
 	</properties>
 
 	<modules>
