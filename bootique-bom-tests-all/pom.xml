@@ -60,9 +60,12 @@
 
         <!-- Compile dependencies -->
         <!-- Include all non-test modules from the BOM to ensure the BOM itself contains existing versions... -->
-        <!-- Exception is version-specific modules:  -->
+        <!-- Exception is version-specific modules and a few other mutually exclusive modules:  -->
         <!-- 	* cayenne41 -->
         <!-- 	* tapestry55 -->
+        <!-- 	* bootique-kotlin-jackson (conflicts with bootique-kotlin-config) -->
+        <!-- 	* bootique-job-zookeeper (conflicts with bootique-job-consul) -->
+        <!--    * bootique-undertow (conflicts with bootique-jetty -->
         <dependency>
             <groupId>io.bootique.di</groupId>
             <artifactId>bootique-di</artifactId>
@@ -192,10 +195,6 @@
             <artifactId>bootique-job-instrumented</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.bootique.job</groupId>
-            <artifactId>bootique-job-zookeeper</artifactId>
-        </dependency>
-        <dependency>
             <groupId>io.bootique.jooq</groupId>
             <artifactId>bootique-jooq</artifactId>
         </dependency>
@@ -222,14 +221,6 @@
         <dependency>
             <groupId>io.bootique.kotlin</groupId>
             <artifactId>bootique-kotlin-logback</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.kotlin</groupId>
-            <artifactId>bootique-kotlin-jackson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.kotlin</groupId>
-            <artifactId>bootique-kotlin-undertow</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
@@ -314,10 +305,6 @@
         <dependency>
             <groupId>io.bootique.tapestry</groupId>
             <artifactId>bootique-tapestry55</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.undertow</groupId>
-            <artifactId>bootique-undertow</artifactId>
         </dependency>
 
         <!-- Non-Bootique dependencies needed for the stack to run -->
