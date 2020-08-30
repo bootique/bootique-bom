@@ -24,19 +24,28 @@ import io.bootique.Bootique;
 import io.bootique.junit5.BQApp;
 import io.bootique.junit5.BQTest;
 import org.eclipse.jetty.server.Server;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @BQTest
 public class AutoLoadingIT {
 
-    @BQApp
+    @BQApp(skipRun = true)
     static final BQRuntime app = Bootique.app("--help")
             .autoLoadModules()
             .createRuntime();
 
     @Test
+    @DisplayName("App must run --help command without startup errors due to eager initialization in modules")
     public void testServices() {
+
+        // check DI is in good shape
         app.getInstance(AgRuntime.class);
         app.getInstance(Server.class);
+
+        // check we can run a command
+        assertTrue(app.run().isSuccess());
     }
 }
