@@ -68,6 +68,11 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest-junit5</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws</artifactId>
                 <version>${bootique.version}</version>

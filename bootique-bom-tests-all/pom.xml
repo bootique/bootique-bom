@@ -93,6 +93,10 @@
             <artifactId>bootique-agrest-cayenne41</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.bootique.agrest</groupId>
+            <artifactId>bootique-agrest-junit5</artifactId>
+        </dependency>
+        <dependency>
             <groupId>io.bootique.aws</groupId>
             <artifactId>bootique-aws</artifactId>
         </dependency>
