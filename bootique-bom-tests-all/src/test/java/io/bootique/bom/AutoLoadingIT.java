@@ -24,12 +24,14 @@ import io.bootique.Bootique;
 import io.bootique.junit5.BQApp;
 import io.bootique.junit5.BQTest;
 import org.eclipse.jetty.server.Server;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @BQTest
+@Disabled
 public class AutoLoadingIT {
 
     @BQApp(skipRun = true)

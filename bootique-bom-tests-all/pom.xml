@@ -54,17 +54,12 @@
             </dependency>
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-script-util</artifactId>
+                <artifactId>kotlin-scripting-jvm-host</artifactId>
                 <version>${kotlin.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-reflect</artifactId>
-                <version>${kotlin.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-compiler-embeddable</artifactId>
                 <version>${kotlin.version}</version>
             </dependency>
         </dependencies>
@@ -224,22 +219,22 @@
             <groupId>io.bootique.kafka</groupId>
             <artifactId>bootique-kafka-streams</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>io.bootique.kotlin</groupId>-->
-<!--            <artifactId>bootique-kotlin</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>io.bootique.kotlin</groupId>-->
-<!--            <artifactId>bootique-kotlin-config</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>io.bootique.kotlin</groupId>-->
-<!--            <artifactId>bootique-kotlin-jetty</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>io.bootique.kotlin</groupId>-->
-<!--            <artifactId>bootique-kotlin-logback</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>io.bootique.kotlin</groupId>
+            <artifactId>bootique-kotlin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.bootique.kotlin</groupId>
+            <artifactId>bootique-kotlin-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.bootique.kotlin</groupId>
+            <artifactId>bootique-kotlin-jetty</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.bootique.kotlin</groupId>
+            <artifactId>bootique-kotlin-logback</artifactId>
+        </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
             <artifactId>bootique-linkmove-cayenne41</artifactId>
@@ -336,15 +331,11 @@
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-script-util</artifactId>
+            <artifactId>kotlin-scripting-jvm-host</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-compiler-embeddable</artifactId>
         </dependency>
 
         <!-- Test dependencies -->
