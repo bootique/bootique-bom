@@ -27,11 +27,11 @@
         <version>2.0.B1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bootique-bom-tests-all</artifactId>
+    <artifactId>bootique-bom-tests-all-kotlin</artifactId>
     <packaging>jar</packaging>
 
-    <name>bootique-bom-tests-all: Bootique BOM integration tests</name>
-    <description>Runs simple integration tests for the integrated dependencies.</description>
+    <name>bootique-bom-tests-all-kotlin: Bootique BOM integration tests with Kotlin config</name>
+    <description>Runs simple integration tests for the integrated dependencies in the Kotlin env.</description>
 
     <dependencyManagement>
         <dependencies>
@@ -46,6 +46,21 @@
                 <groupId>org.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
                 <version>${ehcache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-stdlib-jdk8</artifactId>
+                <version>${kotlin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-scripting-jvm-host</artifactId>
+                <version>${kotlin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-reflect</artifactId>
+                <version>${kotlin.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -205,6 +220,22 @@
             <artifactId>bootique-kafka-streams</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.bootique.kotlin</groupId>
+            <artifactId>bootique-kotlin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.bootique.kotlin</groupId>
+            <artifactId>bootique-kotlin-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.bootique.kotlin</groupId>
+            <artifactId>bootique-kotlin-jetty</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.bootique.kotlin</groupId>
+            <artifactId>bootique-kotlin-logback</artifactId>
+        </dependency>
+        <dependency>
             <groupId>io.bootique.linkmove</groupId>
             <artifactId>bootique-linkmove-cayenne41</artifactId>
         </dependency>
@@ -293,6 +324,18 @@
         <dependency>
             <groupId>org.ehcache</groupId>
             <artifactId>ehcache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-scripting-jvm-host</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-reflect</artifactId>
         </dependency>
 
         <!-- Test dependencies -->

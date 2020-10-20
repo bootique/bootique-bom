@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package io.bootique.bom;
+package io.bootique.bom.kotlin;
 
 import io.agrest.runtime.AgRuntime;
 import io.bootique.BQRuntime;
@@ -24,12 +24,14 @@ import io.bootique.Bootique;
 import io.bootique.junit5.BQApp;
 import io.bootique.junit5.BQTest;
 import org.eclipse.jetty.server.Server;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @BQTest
+@Disabled
 public class AutoLoadingIT {
 
     @BQApp(skipRun = true)
