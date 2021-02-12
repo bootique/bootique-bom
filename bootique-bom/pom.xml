@@ -359,17 +359,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove-cayenne41</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove-json</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove-json-cayenne41</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
@@ -379,7 +369,32 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove-cayenne41</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove-json-cayenne41</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove-rest-cayenne41</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove-cayenne42</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove-json-cayenne42</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove-rest-cayenne42</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
