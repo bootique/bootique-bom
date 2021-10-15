@@ -98,6 +98,21 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.aws</groupId>
+                <artifactId>bootique-aws2</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.aws</groupId>
+                <artifactId>bootique-aws2-secrets</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.aws</groupId>
+                <artifactId>bootique-aws2-s3</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne</artifactId>
                 <version>${bootique.version}</version>
