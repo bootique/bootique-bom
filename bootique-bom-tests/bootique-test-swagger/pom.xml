@@ -18,7 +18,8 @@
   under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -33,23 +34,6 @@
     <name>bootique-test-swagger: bootique-swagger integration tests.</name>
 
     <dependencies>
-        <!-- unit test deps -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique</groupId>
-            <artifactId>bootique-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <scope>test</scope>
-        </dependency>
-
         <dependency>
             <groupId>io.bootique.logback</groupId>
             <artifactId>bootique-logback</artifactId>
@@ -59,6 +43,18 @@
             <groupId>io.bootique.swagger</groupId>
             <artifactId>bootique-swagger</artifactId>
             <scope>compile</scope>
+        </dependency>
+
+        <!-- unit test deps -->
+        <dependency>
+            <groupId>io.bootique.jetty</groupId>
+            <artifactId>bootique-jetty-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

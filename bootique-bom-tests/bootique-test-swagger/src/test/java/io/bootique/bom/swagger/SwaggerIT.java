@@ -20,43 +20,43 @@
 package io.bootique.bom.swagger;
 
 
-import io.bootique.test.junit.BQTestFactory;
-import org.junit.BeforeClass;
-import org.junit.ClassRule;
-import org.junit.Test;
+import io.bootique.BQRuntime;
+import io.bootique.Bootique;
+import io.bootique.jetty.junit5.JettyTester;
+import io.bootique.junit5.BQApp;
+import io.bootique.junit5.BQTest;
+import io.bootique.junit5.BQTestTool;
+import org.junit.jupiter.api.Test;
 
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import java.util.Objects;
 import java.util.Scanner;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@BQTest
 public class SwaggerIT {
 
-    @ClassRule
-    public static BQTestFactory TEST_FACTORY = new BQTestFactory();
-    public static WebTarget BASE_TARGET = ClientBuilder.newClient().target("http://127.0.0.1:8080/");
+    @BQTestTool
+    static JettyTester jetty = JettyTester.create();
 
-    @BeforeClass
-    public static void beforeClass() {
-        TEST_FACTORY.app("--server", "-c", "classpath:config.yml")
-                .autoLoadModules()
-                .module(SwaggerApp.class)
-                .run();
-    }
+    @BQApp
+    static BQRuntime app = Bootique.app("--server", "-c", "classpath:config.yml")
+            .autoLoadModules()
+            .module(SwaggerApp.class)
+            .module(jetty.moduleReplacingConnectors())
+            .createRuntime();
 
     @Test
     public void testApi_Yaml() {
-        Response r = BASE_TARGET.path("/openapi.yaml").request().get();
+        Response r = jetty.getTarget().path("/openapi.yaml").request().get();
         assertEquals(200, r.getStatus());
         assertEqualsToResourceContents("response1.yml", r.readEntity(String.class));
     }
 
     @Test
     public void testApi_Json() {
-        Response r = BASE_TARGET.path("/openapi.json").request().get();
+        Response r = jetty.getTarget().path("/openapi.json").request().get();
         assertEquals(200, r.getStatus());
         assertEqualsToResourceContents("response1.json", r.readEntity(String.class) + "\n");
     }
