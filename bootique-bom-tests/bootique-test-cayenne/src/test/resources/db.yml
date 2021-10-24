@@ -1,5 +1,0 @@
-jdbc:
-  db:
-    url: "jdbc:derby:target/derby/db;create=true"
-    initialSize: 1
-    username: sa

@@ -22,21 +22,22 @@ package io.bootique.bom.jdbc;
 import io.bootique.BQRuntime;
 import io.bootique.jdbc.DataSourceFactory;
 import io.bootique.jdbc.instrumented.tomcat.healthcheck.TomcatConnectivityCheck;
+import io.bootique.junit5.BQTest;
+import io.bootique.junit5.BQTestFactory;
+import io.bootique.junit5.BQTestTool;
 import io.bootique.metrics.health.HealthCheckOutcome;
 import io.bootique.metrics.health.HealthCheckRegistry;
 import io.bootique.metrics.health.HealthCheckStatus;
-import io.bootique.test.junit.BQTestFactory;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Map;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.Assert.*;
-
+@BQTest
 public class DerbyHealthChecksIT {
 
-    @Rule
-    public BQTestFactory testFactory = new BQTestFactory();
+    @BQTestTool
+    final BQTestFactory testFactory = new BQTestFactory();
 
     @Test
     public void testDerbyHealth() {

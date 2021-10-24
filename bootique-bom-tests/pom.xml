@@ -36,7 +36,6 @@
     </description>
 
     <modules>
-        <module>bootique-test-cayenne</module>
         <module>bootique-test-jdbc</module>
         <module>bootique-test-swagger</module>
     </modules>
