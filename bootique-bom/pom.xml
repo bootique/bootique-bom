@@ -504,11 +504,6 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.tapestry</groupId>
-                <artifactId>bootique-tapestry</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.tapestry</groupId>
                 <artifactId>bootique-tapestry55</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
