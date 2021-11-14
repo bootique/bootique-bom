@@ -507,6 +507,21 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.mvc</groupId>
+                <artifactId>bootique-mvc-jakarta</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.mvc</groupId>
+                <artifactId>bootique-mvc-jakarta-freemarker</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.mvc</groupId>
+                <artifactId>bootique-mvc-jakarta-mustache</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.mybatis</groupId>
                 <artifactId>bootique-mybatis</artifactId>
                 <version>${bootique.version}</version>
