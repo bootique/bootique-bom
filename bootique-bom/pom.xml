@@ -333,27 +333,27 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty11</artifactId>
+                <artifactId>bootique-jetty-jakarta</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty11-cors</artifactId>
+                <artifactId>bootique-jetty-jakarta-cors</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty11-instrumented</artifactId>
+                <artifactId>bootique-jetty-jakarta-instrumented</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty11-websocket</artifactId>
+                <artifactId>bootique-jetty-jakarta-websocket</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty11-junit5</artifactId>
+                <artifactId>bootique-jetty-jakarta-junit5</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
