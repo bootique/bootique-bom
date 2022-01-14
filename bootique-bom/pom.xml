@@ -418,21 +418,6 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove-json</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove-rest</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove-cayenne41</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
