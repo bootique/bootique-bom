@@ -109,26 +109,6 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
-                <artifactId>bootique-cayenne</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.cayenne</groupId>
-                <artifactId>bootique-cayenne-jcache</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.cayenne</groupId>
-                <artifactId>bootique-cayenne-test</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.cayenne</groupId>
-                <artifactId>bootique-cayenne-junit5</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne41</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
