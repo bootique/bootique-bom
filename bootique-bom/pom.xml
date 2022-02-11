@@ -168,6 +168,11 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.docker</groupId>
+                <artifactId>bootique-docker</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.flyway</groupId>
                 <artifactId>bootique-flyway</artifactId>
                 <version>${bootique.version}</version>
