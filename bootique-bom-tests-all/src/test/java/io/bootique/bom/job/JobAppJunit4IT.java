@@ -20,8 +20,8 @@
 package io.bootique.bom.job;
 
 import io.bootique.command.CommandOutcome;
-import io.bootique.job.runtime.JobModule;
-import io.bootique.job.runtime.JobModuleProvider;
+import io.bootique.job.JobModule;
+import io.bootique.job.JobModuleProvider;
 import io.bootique.test.junit.BQTestFactory;
 import io.bootique.test.junit.TestIO;
 import org.junit.Rule;

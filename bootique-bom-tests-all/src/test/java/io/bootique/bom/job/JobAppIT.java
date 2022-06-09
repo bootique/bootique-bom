@@ -20,8 +20,8 @@
 package io.bootique.bom.job;
 
 import io.bootique.command.CommandOutcome;
-import io.bootique.job.runtime.JobModule;
-import io.bootique.job.runtime.JobModuleProvider;
+import io.bootique.job.JobModule;
+import io.bootique.job.JobModuleProvider;
 import io.bootique.junit5.*;
 import org.junit.jupiter.api.Test;
 
