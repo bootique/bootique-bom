@@ -99,12 +99,22 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
+                <artifactId>bootique-aws2-junit5</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws2-secrets</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws2-s3</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.aws</groupId>
+                <artifactId>bootique-aws2-s3-junit5</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
