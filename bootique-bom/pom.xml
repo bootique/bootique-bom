@@ -59,22 +59,22 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
-                <artifactId>bootique-agrest-cayenne41</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.agrest</groupId>
-                <artifactId>bootique-agrest-cayenne42</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.agrest</groupId>
-                <artifactId>bootique-agrest-cayenne42-swagger</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest-junit5</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest-jakarta-junit5</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest4</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest4-swagger</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
@@ -89,17 +89,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
-                <artifactId>bootique-agrest5-jakarta-junit5</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest5-jakarta-swagger</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.agrest</groupId>
-                <artifactId>bootique-agrest5-junit5</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
