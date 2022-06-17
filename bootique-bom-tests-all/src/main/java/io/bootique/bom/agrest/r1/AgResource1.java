@@ -21,7 +21,8 @@ package io.bootique.bom.agrest.r1;
 
 import io.agrest.Ag;
 import io.agrest.DataResponse;
-import io.agrest.SelectStage;
+import io.agrest.meta.AgEntity;
+import io.agrest.meta.AgEntityOverlay;
 import io.bootique.bom.agrest.ITEntity;
 
 import javax.ws.rs.GET;
@@ -31,7 +32,7 @@ import javax.ws.rs.core.Configuration;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriInfo;
-import java.util.Arrays;
+import java.util.List;
 
 @Path("/lr1")
 @Produces(MediaType.APPLICATION_JSON)
@@ -42,9 +43,9 @@ public class AgResource1 {
 
     @GET
     public DataResponse<ITEntity> get(UriInfo info) {
-        return Ag.select(ITEntity.class, config)
-                .uri(info)
-                .terminalStage(SelectStage.APPLY_SERVER_PARAMS, context -> {
+
+        AgEntityOverlay<ITEntity> overlay = AgEntity.overlay(ITEntity.class)
+                .redefineDataResolver(c -> {
                     ITEntity e1 = new ITEntity();
                     e1.setId(5);
                     e1.setName("name5");
@@ -53,8 +54,12 @@ public class AgResource1 {
                     e2.setId(6);
                     e2.setName("name6");
 
-                    context.getEntity().setResult(Arrays.asList(e1, e2));
-                })
+                    return List.of(e1, e2);
+                });
+
+        return Ag.select(ITEntity.class, config)
+                .uri(info)
+                .entityOverlay(overlay)
                 .get();
     }
 }

@@ -70,7 +70,7 @@
         <!-- Compile dependencies -->
         <!-- Include all non-test modules from the BOM to ensure the BOM itself contains existing versions... -->
         <!-- Exception is version-specific modules and a few other mutually exclusive modules:  -->
-        <!-- 	* cayenne41 -->
+        <!-- 	* cayenne42 -->
         <!-- 	* tapestry55 -->
         <!-- 	* bootique-kotlin-jackson (conflicts with bootique-kotlin-config) -->
         <!-- 	* bootique-job-zookeeper (conflicts with bootique-job-consul) -->
@@ -85,7 +85,7 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.agrest</groupId>
-            <artifactId>bootique-agrest-cayenne41</artifactId>
+            <artifactId>bootique-agrest4</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.agrest</groupId>
@@ -101,11 +101,11 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.cayenne</groupId>
-            <artifactId>bootique-cayenne41</artifactId>
+            <artifactId>bootique-cayenne42</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.cayenne</groupId>
-            <artifactId>bootique-cayenne41-jcache</artifactId>
+            <artifactId>bootique-cayenne42-jcache</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.curator</groupId>
@@ -237,15 +237,15 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
-            <artifactId>bootique-linkmove-cayenne41</artifactId>
+            <artifactId>bootique-linkmove-cayenne42</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
-            <artifactId>bootique-linkmove-json-cayenne41</artifactId>
+            <artifactId>bootique-linkmove-json-cayenne42</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
-            <artifactId>bootique-linkmove-rest-cayenne41</artifactId>
+            <artifactId>bootique-linkmove-rest-cayenne42</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.liquibase</groupId>
@@ -341,7 +341,7 @@
         <!-- Test dependencies -->
         <!-- Include all test modules from the BOM to ensure the BOM itself contains existing versions. -->
         <!-- Exception is version-specific modules:  -->
-        <!-- 	* cayenne41 -->
+        <!-- 	* cayenne42 -->
         <!-- 	* tapestry55 -->
         <dependency>
             <groupId>io.bootique</groupId>
@@ -353,11 +353,7 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.cayenne</groupId>
-            <artifactId>bootique-cayenne41-test</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.cayenne</groupId>
-            <artifactId>bootique-cayenne41-junit5</artifactId>
+            <artifactId>bootique-cayenne42-junit5</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jdbc</groupId>

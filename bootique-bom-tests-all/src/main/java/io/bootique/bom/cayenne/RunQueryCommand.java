@@ -19,15 +19,12 @@
 
 package io.bootique.bom.cayenne;
 
-import javax.inject.Inject;
-import javax.inject.Provider;
-
-import io.bootique.meta.application.CommandMetadata;
-import io.bootique.meta.application.OptionMetadata;
 import io.bootique.cli.Cli;
 import io.bootique.command.CommandOutcome;
 import io.bootique.command.CommandWithMetadata;
 import io.bootique.log.BootLogger;
+import io.bootique.meta.application.CommandMetadata;
+import io.bootique.meta.application.OptionMetadata;
 import org.apache.cayenne.CayenneDataObject;
 import org.apache.cayenne.DataObject;
 import org.apache.cayenne.ObjectContext;
@@ -37,6 +34,9 @@ import org.apache.cayenne.exp.Expression;
 import org.apache.cayenne.exp.ExpressionFactory;
 import org.apache.cayenne.query.ObjectSelect;
 import org.apache.cayenne.query.SQLTemplate;
+
+import javax.inject.Inject;
+import javax.inject.Provider;
 
 public class RunQueryCommand extends CommandWithMetadata {
 
@@ -85,7 +85,7 @@ public class RunQueryCommand extends CommandWithMetadata {
 		for (int i = 0; i < 10; i++) {
 
 			DataObject o = new CayenneDataObject();
-			o.setObjectId(new ObjectId("T1"));
+			o.setObjectId(ObjectId.of("T1"));
 			o.writeProperty("name", "n" + i);
 
 			context.registerNewObject(o);
