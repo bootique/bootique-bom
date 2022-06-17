@@ -78,6 +78,36 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest5</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest5-jakarta</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest5-jakarta-junit5</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest5-jakarta-swagger</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest5-junit5</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest5-swagger</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws</artifactId>
                 <version>${bootique.version}</version>
@@ -544,6 +574,16 @@
             <dependency>
                 <groupId>io.bootique.swagger</groupId>
                 <artifactId>bootique-swagger-ui</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.swagger</groupId>
+                <artifactId>bootique-swagger-jakarta</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.swagger</groupId>
+                <artifactId>bootique-swagger-jakarta-ui</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
