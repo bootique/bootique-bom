@@ -19,7 +19,7 @@
 
 package io.bootique.bom.agrest;
 
-import io.bootique.agrest4.AgrestModuleProvider;
+import io.bootique.agrest.v4.AgrestModuleProvider;
 import io.bootique.bom.agrest.r1.AgResource1;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jdbc.junit5.derby.DerbyTester;
