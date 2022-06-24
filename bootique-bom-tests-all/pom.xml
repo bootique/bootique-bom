@@ -336,13 +336,6 @@
             <groupId>io.bootique.rabbitmq</groupId>
             <artifactId>bootique-rabbitmq-junit5</artifactId>
         </dependency>
-
-        <!-- Non-Bootique test dependencies needed for the stack to run -->
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
