@@ -582,6 +582,11 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.tapestry</groupId>
+                <artifactId>bootique-tapestry58</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.undertow</groupId>
                 <artifactId>bootique-undertow</artifactId>
                 <version>${bootique.version}</version>
