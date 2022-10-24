@@ -206,15 +206,15 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
-            <artifactId>bootique-linkmove-cayenne42</artifactId>
+            <artifactId>bootique-linkmove2</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
-            <artifactId>bootique-linkmove-json-cayenne41</artifactId>
+            <artifactId>bootique-linkmove2-json</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
-            <artifactId>bootique-linkmove-rest-cayenne41</artifactId>
+            <artifactId>bootique-linkmove2-rest</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.liquibase</groupId>

@@ -20,7 +20,7 @@
 package io.bootique.bom.cayenne;
 
 import io.bootique.BQCoreModule;
-import io.bootique.cayenne.v41.CayenneModuleProvider;
+import io.bootique.cayenne.v42.CayenneModuleProvider;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jdbc.tomcat.JdbcTomcatModule;
 import io.bootique.test.junit.BQTestFactory;

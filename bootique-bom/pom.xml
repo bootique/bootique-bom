@@ -18,7 +18,8 @@
   under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -430,7 +431,44 @@
                 <groupId>io.bootique.kotlin</groupId>
                 <artifactId>bootique-kotlin-undertow</artifactId>
                 <version>${bootique.version}</version>
+
             </dependency>
+
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove2</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove2-json</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove2-rest</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove3</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove3-json</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove3-rest</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+
+            <!-- TODO: all these LM modules are already removed from Bootique. Keeping them in the BOM temporarily to
+                   allow early adopters some time to upgrade to the new module names. These must be removed before
+                   3.0.M1 is released.
+            -->
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove-cayenne41</artifactId>
@@ -461,6 +499,8 @@
                 <artifactId>bootique-linkmove-rest-cayenne42</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
+
+
             <dependency>
                 <groupId>io.bootique.liquibase</groupId>
                 <artifactId>bootique-liquibase</artifactId>
