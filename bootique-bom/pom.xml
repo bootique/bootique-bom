@@ -464,43 +464,6 @@
                 <artifactId>bootique-linkmove3-rest</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
-
-            <!-- TODO: all these LM modules are already removed from Bootique. Keeping them in the BOM temporarily to
-                   allow early adopters some time to upgrade to the new module names. These must be removed before
-                   3.0.M1 is released.
-            -->
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove-cayenne41</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove-json-cayenne41</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove-rest-cayenne41</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove-cayenne42</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove-json-cayenne42</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.linkmove</groupId>
-                <artifactId>bootique-linkmove-rest-cayenne42</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-
-
             <dependency>
                 <groupId>io.bootique.liquibase</groupId>
                 <artifactId>bootique-liquibase</artifactId>
