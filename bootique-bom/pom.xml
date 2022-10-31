@@ -479,6 +479,23 @@
                 <artifactId>bootique-logback-sentry</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>io.bootique.mongo</groupId>
+                <artifactId>bootique-mongo-client</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.mongo</groupId>
+                <artifactId>bootique-mongo-junit5</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.mongo</groupId>
+                <artifactId>bootique-mongo-morphia</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>io.bootique.metrics</groupId>
                 <artifactId>bootique-metrics</artifactId>
