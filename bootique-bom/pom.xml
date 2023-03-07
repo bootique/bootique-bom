@@ -309,8 +309,12 @@
                 <artifactId>bootique-jersey-jakarta-client-instrumented</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
-
-
+            <dependency>
+                <groupId>io.bootique.jersey</groupId>
+                <artifactId>bootique-jersey-jakarta-client-junit5-wiremock</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty</artifactId>
