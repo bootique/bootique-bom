@@ -311,6 +311,11 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
+                <artifactId>bootique-jersey-jakarta-client-jetty</artifactId>
+                <version>${bootique.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-jakarta-client-junit5-wiremock</artifactId>
                 <version>${bootique.version}</version>
             </dependency>
