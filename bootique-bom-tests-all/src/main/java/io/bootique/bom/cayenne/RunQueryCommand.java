@@ -40,58 +40,58 @@ import javax.inject.Provider;
 
 public class RunQueryCommand extends CommandWithMetadata {
 
-	private static final String KEY_OPTION = "key";
-	private static final String VALUE_OPTION = "value";
+    private static final String KEY_OPTION = "key";
+    private static final String VALUE_OPTION = "value";
 
-	@Inject
-	private BootLogger logger;
+    @Inject
+    private BootLogger logger;
 
-	@Inject
-	private Provider<ServerRuntime> cayenneProvider;
+    @Inject
+    private Provider<ServerRuntime> cayenneProvider;
 
-	public RunQueryCommand() {
-		super(CommandMetadata.builder(RunQueryCommand.class)
-				.addOption(OptionMetadata.builder(KEY_OPTION).valueRequired("property_name"))
-				.addOption(OptionMetadata.builder(VALUE_OPTION).valueRequired("property_value")));
-	}
+    public RunQueryCommand() {
+        super(CommandMetadata.builder(RunQueryCommand.class)
+                .addOption(OptionMetadata.builder(KEY_OPTION).valueRequired("property_name"))
+                .addOption(OptionMetadata.builder(VALUE_OPTION).valueRequired("property_value")).build());
+    }
 
-	@Override
-	public CommandOutcome run(Cli cli) {
+    @Override
+    public CommandOutcome run(Cli cli) {
 
-		prepareDB();
+        prepareDB();
 
-		ObjectContext context = cayenneProvider.get().newContext();
+        ObjectContext context = cayenneProvider.get().newContext();
 
-		String key = cli.optionString(KEY_OPTION);
-		String value = cli.optionString(VALUE_OPTION);
+        String key = cli.optionString(KEY_OPTION);
+        String value = cli.optionString(VALUE_OPTION);
 
-		Expression filter = createFilter(key, value);
+        Expression filter = createFilter(key, value);
 
-		ObjectSelect.query(DataObject.class, "T1").where(filter).select(context)
-				.forEach(o -> logger.stdout(String.format("(%s): %s", filter, o.readProperty("name"))));
+        ObjectSelect.query(DataObject.class, "T1").where(filter).select(context)
+                .forEach(o -> logger.stdout(String.format("(%s): %s", filter, o.readProperty("name"))));
 
-		return CommandOutcome.succeeded();
-	}
+        return CommandOutcome.succeeded();
+    }
 
-	private Expression createFilter(String key, String value) {
-		return key == null ? null : ExpressionFactory.matchExp(key, value);
-	}
+    private Expression createFilter(String key, String value) {
+        return key == null ? null : ExpressionFactory.matchExp(key, value);
+    }
 
-	private void prepareDB() {
-		ObjectContext context = cayenneProvider.get().newContext();
-		
-		context.performGenericQuery(new SQLTemplate("T1", "delete from T1"));
+    private void prepareDB() {
+        ObjectContext context = cayenneProvider.get().newContext();
 
-		for (int i = 0; i < 10; i++) {
+        context.performGenericQuery(new SQLTemplate("T1", "delete from T1"));
 
-			DataObject o = new CayenneDataObject();
-			o.setObjectId(ObjectId.of("T1"));
-			o.writeProperty("name", "n" + i);
+        for (int i = 0; i < 10; i++) {
 
-			context.registerNewObject(o);
-		}
+            DataObject o = new CayenneDataObject();
+            o.setObjectId(ObjectId.of("T1"));
+            o.writeProperty("name", "n" + i);
 
-		context.commitChanges();
-	}
+            context.registerNewObject(o);
+        }
+
+        context.commitChanges();
+    }
 
 }

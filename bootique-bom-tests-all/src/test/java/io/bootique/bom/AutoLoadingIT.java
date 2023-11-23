@@ -39,7 +39,7 @@ public class AutoLoadingIT {
 
     @Test
     @DisplayName("App must run --help command without startup errors due to eager initialization in modules")
-    public void testServices() {
+    public void services() {
 
         // check DI is in good shape
         app.getInstance(AgRuntime.class);

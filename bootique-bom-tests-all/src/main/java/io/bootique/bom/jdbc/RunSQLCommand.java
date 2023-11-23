@@ -46,7 +46,7 @@ public class RunSQLCommand extends CommandWithMetadata {
 
 	public RunSQLCommand() {
 		super(CommandMetadata.builder(RunSQLCommand.class)
-				.addOption(OptionMetadata.builder("sql").valueRequired("sql_string")));
+				.addOption(OptionMetadata.builder("sql").valueRequired("sql_string")).build());
 	}
 
 	@Override

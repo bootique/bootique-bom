@@ -31,7 +31,7 @@ public class LogbackTestCommand extends CommandWithMetadata {
 	private static final Logger LOGGER = LoggerFactory.getLogger(LogbackTestCommand.class);
 
 	public LogbackTestCommand() {
-		super(CommandMetadata.builder(LogbackTestCommand.class));
+		super(CommandMetadata.of(LogbackTestCommand.class));
 	}
 
 	@Override

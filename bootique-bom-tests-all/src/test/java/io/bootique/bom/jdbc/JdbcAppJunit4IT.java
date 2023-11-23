@@ -41,7 +41,7 @@ public class JdbcAppJunit4IT {
 	}
 
 	@Test
-	public void testRun_Help() {
+    public void run_Help() {
 
 		TestIO io = TestIO.noTrace();
 		CommandOutcome outcome = appBuilder("--help").bootLogger(io.getBootLogger()).run();
@@ -53,7 +53,7 @@ public class JdbcAppJunit4IT {
 	}
 
 	@Test
-	public void testRun_SQL_1() {
+    public void run_SQL_1() {
 
         TestIO io = TestIO.noTrace();
         CommandOutcome outcome = appBuilder(
@@ -71,7 +71,7 @@ public class JdbcAppJunit4IT {
 	}
 
 	@Test
-	public void testRun_SQL_2() {
+    public void run_SQL_2() {
 
         TestIO io = TestIO.noTrace();
 
