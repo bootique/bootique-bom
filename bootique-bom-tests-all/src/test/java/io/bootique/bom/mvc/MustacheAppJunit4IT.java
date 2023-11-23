@@ -39,7 +39,7 @@ public class MustacheAppJunit4IT {
     public BQTestFactory testFactory = new BQTestFactory();
 
     @Test
-    public void testRun() {
+    public void run() {
 
         testFactory.app("--config=src/test/resources/io/bootique/bom/mvc/test.yml", "--server")
                 .moduleProvider(new MvcMustacheModuleProvider())

@@ -48,7 +48,7 @@ public class MustacheAppIT {
             .createRuntime();
 
     @Test
-    public void testRun() {
+    public void run() {
 
         WebTarget base = jetty.getTarget();
 

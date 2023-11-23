@@ -42,7 +42,7 @@ public class JobAppJunit4IT {
     }
 
     @Test
-    public void testRun_Help() {
+    public void run_Help() {
 
         TestIO io = TestIO.noTrace();
         CommandOutcome outcome = appBuilder("--help").bootLogger(io.getBootLogger()).run();
@@ -59,7 +59,7 @@ public class JobAppJunit4IT {
     }
 
     @Test
-    public void testList() {
+    public void list() {
         TestIO io = TestIO.noTrace();
         CommandOutcome outcome = appBuilder("--list").bootLogger(io.getBootLogger()).run();
 
@@ -68,7 +68,7 @@ public class JobAppJunit4IT {
     }
 
     @Test
-    public void testExec() {
+    public void exec() {
 
         BomJob.COUNTER.set(0);
 
@@ -78,7 +78,7 @@ public class JobAppJunit4IT {
     }
 
     @Test
-    public void testSchedule() throws InterruptedException {
+    public void schedule() throws InterruptedException {
 
         BomJob.COUNTER.set(0);
         BomParameterizedJob.COUNTER.set(0);

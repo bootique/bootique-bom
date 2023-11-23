@@ -46,7 +46,7 @@ public class JettyAppJunit4IT {
     }
 
     @Test
-    public void testRun_Help() {
+    public void run_Help() {
 
         TestIO io = TestIO.noTrace();
         appBuilder("--help").bootLogger(io.getBootLogger()).run();
@@ -56,7 +56,7 @@ public class JettyAppJunit4IT {
     }
 
     @Test
-    public void testRun() {
+    public void run() {
 
         appBuilder("--config=src/test/resources/io/bootique/bom/jetty/test.yml", "--server").run();
 

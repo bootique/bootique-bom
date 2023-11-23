@@ -48,14 +48,14 @@ public class SwaggerIT {
             .createRuntime();
 
     @Test
-    public void testApi_Yaml() {
+    public void api_Yaml() {
         Response r = jetty.getTarget().path("/openapi.yaml").request().get();
         assertEquals(200, r.getStatus());
         assertEqualsToResourceContents("response1.yml", r.readEntity(String.class));
     }
 
     @Test
-    public void testApi_Json() {
+    public void api_Json() {
         Response r = jetty.getTarget().path("/openapi.json").request().get();
         assertEquals(200, r.getStatus());
         assertEqualsToResourceContents("response1.json", r.readEntity(String.class) + "\n");

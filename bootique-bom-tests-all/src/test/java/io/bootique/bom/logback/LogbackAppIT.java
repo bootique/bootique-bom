@@ -54,7 +54,7 @@ public class LogbackAppIT {
     }
 
     @Test
-    public void testHelp() {
+    public void help() {
 
         TestIO io = TestIO.noTrace();
 
@@ -67,7 +67,7 @@ public class LogbackAppIT {
     }
 
     @Test
-    public void testLogToFile_Debug() throws IOException {
+    public void logToFile_Debug() throws IOException {
         File logFile = prepareLogFile("target/logback/testRun_Debug.log");
 
         BQRuntime runtime = appBuilder(
@@ -92,7 +92,7 @@ public class LogbackAppIT {
     }
 
     @Test
-    public void testLogToFile_Warn() throws IOException {
+    public void logToFile_Warn() throws IOException {
         File logFile = prepareLogFile("target/logback/testRun_Warn.log");
 
         BQRuntime runtime = appBuilder(

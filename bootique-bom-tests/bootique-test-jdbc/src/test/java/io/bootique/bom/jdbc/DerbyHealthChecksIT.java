@@ -40,7 +40,7 @@ public class DerbyHealthChecksIT {
     final BQTestFactory testFactory = new BQTestFactory();
 
     @Test
-    public void testDerbyHealth() {
+    public void derbyHealth() {
 
         BQRuntime runtime = testFactory.app("--config=classpath:db.yml").autoLoadModules().createRuntime();
 

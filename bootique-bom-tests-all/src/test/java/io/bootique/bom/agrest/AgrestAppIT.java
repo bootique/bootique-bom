@@ -54,7 +54,7 @@ public class AgrestAppIT {
     }
 
     @Test
-    public void testRun_Help() {
+    public void run_Help() {
 
         TestIO io = TestIO.noTrace();
 
@@ -66,7 +66,7 @@ public class AgrestAppIT {
     }
 
     @Test
-    public void testRun() {
+    public void run() {
 
         appBuilder("--config=src/test/resources/io/bootique/bom/agrest/test.yml", "--server").run();
 

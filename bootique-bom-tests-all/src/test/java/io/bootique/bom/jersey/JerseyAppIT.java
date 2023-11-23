@@ -53,7 +53,7 @@ public class JerseyAppIT {
     }
 
     @Test
-    public void testRun_Help() {
+    public void run_Help() {
 
         TestIO io = TestIO.noTrace();
         CommandOutcome outcome = appBuilder("--help").bootLogger(io.getBootLogger()).run();
@@ -64,7 +64,7 @@ public class JerseyAppIT {
     }
 
     @Test
-    public void testRun() {
+    public void run() {
 
         appBuilder("--config=src/test/resources/io/bootique/bom/jersey/test.yml", "--server").run();
 

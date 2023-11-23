@@ -44,7 +44,7 @@ public class CayenneAppJunit4IT {
     }
 
     @Test
-    public void testRun_Help() {
+    public void run_Help() {
 
         TestIO io = TestIO.noTrace();
         CommandOutcome outcome = appBuilder("--help").bootLogger(io.getBootLogger()).run();
@@ -59,7 +59,7 @@ public class CayenneAppJunit4IT {
     }
 
     @Test
-    public void testRun_Query() {
+    public void run_Query() {
 
         TestIO io = TestIO.noTrace();
         CommandOutcome outcome = appBuilder(
