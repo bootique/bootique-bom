@@ -21,7 +21,7 @@ package io.bootique.bom.jdbc;
 
 import io.bootique.BQRuntime;
 import io.bootique.jdbc.DataSourceFactory;
-import io.bootique.jdbc.instrumented.tomcat.healthcheck.TomcatConnectivityCheck;
+import io.bootique.jdbc.instrumented.hikaricp.healthcheck.HikariCPConnectivityCheck;
 import io.bootique.junit5.BQTest;
 import io.bootique.junit5.BQTestFactory;
 import io.bootique.junit5.BQTestTool;
@@ -31,6 +31,7 @@ import io.bootique.metrics.health.HealthCheckStatus;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @BQTest
@@ -48,13 +49,13 @@ public class DerbyHealthChecksIT {
         Map<String, HealthCheckOutcome> results = healthChecks.runHealthChecks();
 
         // check before DataSources are started
-        HealthCheckOutcome one = results.get(TomcatConnectivityCheck.healthCheckName("derby1"));
+        HealthCheckOutcome one = results.get(HikariCPConnectivityCheck.healthCheckName("derby1"));
         assertNull(one);
 
-        HealthCheckOutcome two = results.get(TomcatConnectivityCheck.healthCheckName("derby2"));
+        HealthCheckOutcome two = results.get(HikariCPConnectivityCheck.healthCheckName("derby2"));
         assertNull(two);
 
-        HealthCheckOutcome three = results.get(TomcatConnectivityCheck.healthCheckName("derby3"));
+        HealthCheckOutcome three = results.get(HikariCPConnectivityCheck.healthCheckName("derby3"));
         assertNull(three);
 
         // init DataSources and re-check
@@ -65,15 +66,15 @@ public class DerbyHealthChecksIT {
 
         results = healthChecks.runHealthChecks();
 
-        one = results.get(TomcatConnectivityCheck.healthCheckName("derby1"));
+        one = results.get(HikariCPConnectivityCheck.healthCheckName("derby1"));
         assertNotNull(one);
         assertEquals(HealthCheckStatus.OK, one.getStatus());
 
-        two = results.get(TomcatConnectivityCheck.healthCheckName("derby2"));
+        two = results.get(HikariCPConnectivityCheck.healthCheckName("derby2"));
         assertNotNull(two);
         assertEquals(HealthCheckStatus.OK, two.getStatus());
 
-        three = results.get(TomcatConnectivityCheck.healthCheckName("derby3"));
+        three = results.get(HikariCPConnectivityCheck.healthCheckName("derby3"));
         assertNotNull(three);
         assertEquals(HealthCheckStatus.CRITICAL, three.getStatus());
     }
