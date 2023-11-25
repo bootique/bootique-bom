@@ -22,7 +22,7 @@ package io.bootique.bom.logback;
 import io.bootique.BQCoreModule;
 import io.bootique.BQRuntime;
 import io.bootique.command.CommandOutcome;
-import io.bootique.logback.LogbackModuleProvider;
+import io.bootique.logback.LogbackModule;
 import io.bootique.test.junit.BQTestFactory;
 import io.bootique.test.junit.TestIO;
 import org.junit.Rule;
@@ -42,7 +42,7 @@ public class LogbackAppJunit4IT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .moduleProvider(new LogbackModuleProvider())
+                .moduleProvider(new LogbackModule())
                 .module(b -> BQCoreModule.extend(b).addCommand(LogbackTestCommand.class));
     }
 

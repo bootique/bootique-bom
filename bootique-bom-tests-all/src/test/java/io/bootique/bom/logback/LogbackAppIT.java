@@ -23,7 +23,7 @@ import io.bootique.BQCoreModule;
 import io.bootique.BQRuntime;
 import io.bootique.command.CommandOutcome;
 import io.bootique.junit5.*;
-import io.bootique.logback.LogbackModuleProvider;
+import io.bootique.logback.LogbackModule;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -41,7 +41,7 @@ public class LogbackAppIT {
 
     private TestRuntumeBuilder appBuilder(String... args) {
         return testFactory.app(args)
-                .moduleProvider(new LogbackModuleProvider())
+                .moduleProvider(new LogbackModule())
                 .module(b -> BQCoreModule.extend(b).addCommand(LogbackTestCommand.class));
     }
 
