@@ -20,7 +20,8 @@
 package io.bootique.bom.job;
 
 import io.bootique.command.CommandOutcome;
-import io.bootique.job.JobModule;
+import io.bootique.job.JobsModule;
+import io.bootique.job.SchedulerModule;
 import io.bootique.junit5.*;
 import org.junit.jupiter.api.Test;
 
@@ -35,8 +36,8 @@ public class JobAppIT {
 
     private TestRuntumeBuilder appBuilder(String... args) {
         return testFactory.app(args)
-                .module(new JobModule())
-                .module(b -> JobModule.extend(b).addJob(BomJob.class).addJob(BomParameterizedJob.class));
+                .modules(new JobsModule(), new SchedulerModule())
+                .module(b -> JobsModule.extend(b).addJob(BomJob.class).addJob(BomParameterizedJob.class));
     }
 
     @Test

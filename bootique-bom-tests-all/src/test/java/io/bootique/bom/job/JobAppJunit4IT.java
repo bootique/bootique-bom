@@ -20,7 +20,8 @@
 package io.bootique.bom.job;
 
 import io.bootique.command.CommandOutcome;
-import io.bootique.job.JobModule;
+import io.bootique.job.JobsModule;
+import io.bootique.job.SchedulerModule;
 import io.bootique.test.junit.BQTestFactory;
 import io.bootique.test.junit.TestIO;
 import org.junit.Rule;
@@ -36,8 +37,8 @@ public class JobAppJunit4IT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .module(new JobModule())
-                .module(b -> JobModule.extend(b).addJob(BomJob.class).addJob(BomParameterizedJob.class));
+                .modules(new JobsModule(), new SchedulerModule())
+                .module(b -> JobsModule.extend(b).addJob(BomJob.class).addJob(BomParameterizedJob.class));
     }
 
     @Test
