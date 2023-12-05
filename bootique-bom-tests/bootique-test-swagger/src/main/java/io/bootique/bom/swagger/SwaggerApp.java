@@ -21,7 +21,7 @@ package io.bootique.bom.swagger;
 
 import io.bootique.bom.swagger.api.Api1;
 import io.bootique.di.Binder;
-import io.bootique.di.BQModule;
+import io.bootique.BQModule;
 import io.bootique.jersey.JerseyModule;
 
 public class SwaggerApp implements BQModule {
