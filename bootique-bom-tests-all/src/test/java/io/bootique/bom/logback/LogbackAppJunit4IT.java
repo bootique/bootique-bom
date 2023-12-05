@@ -42,7 +42,7 @@ public class LogbackAppJunit4IT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .moduleProvider(new LogbackModule())
+                .module(LogbackModule.class)
                 .module(b -> BQCoreModule.extend(b).addCommand(LogbackTestCommand.class));
     }
 

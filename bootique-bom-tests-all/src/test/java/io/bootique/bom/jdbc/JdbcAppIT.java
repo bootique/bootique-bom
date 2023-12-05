@@ -21,8 +21,9 @@ package io.bootique.bom.jdbc;
 
 import io.bootique.BQCoreModule;
 import io.bootique.command.CommandOutcome;
+import io.bootique.jdbc.JdbcModule;
 import io.bootique.jdbc.junit5.derby.DerbyTester;
-import io.bootique.jdbc.tomcat.JdbcTomcatModuleProvider;
+import io.bootique.jdbc.tomcat.JdbcTomcatModule;
 import io.bootique.junit5.*;
 import org.junit.jupiter.api.Test;
 
@@ -39,8 +40,8 @@ public class JdbcAppIT {
 
 	private TestRuntumeBuilder appBuilder(String... args) {
 		return testFactory.app(args)
+				.modules(JdbcTomcatModule.class, JdbcModule.class)
 				.module(db.moduleWithTestDataSource("test1"))
-				.moduleProvider(new JdbcTomcatModuleProvider())
 				.module(b -> BQCoreModule.extend(b).addCommand(RunSQLCommand.class));
 	}
 

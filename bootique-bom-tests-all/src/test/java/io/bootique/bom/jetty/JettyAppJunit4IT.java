@@ -20,7 +20,6 @@
 package io.bootique.bom.jetty;
 
 import io.bootique.jetty.JettyModule;
-import io.bootique.jetty.JettyModuleProvider;
 import io.bootique.test.junit.BQTestFactory;
 import io.bootique.test.junit.TestIO;
 import org.junit.Rule;
@@ -41,7 +40,7 @@ public class JettyAppJunit4IT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .moduleProvider(new JettyModuleProvider())
+                .modules(JettyModule.class)
                 .module(b -> JettyModule.extend(b).addServlet(BomServlet.class).addFilter(BomFilter.class));
     }
 

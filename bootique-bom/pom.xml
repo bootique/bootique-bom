@@ -38,11 +38,6 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.bootique.di</groupId>
-                <artifactId>bootique-di</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.bootique</groupId>
                 <artifactId>bootique</artifactId>
                 <version>${bootique.version}</version>

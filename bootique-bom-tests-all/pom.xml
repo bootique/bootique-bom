@@ -61,10 +61,6 @@
         <!-- 	* bootique-job-zookeeper (conflicts with bootique-job-consul) -->
         <!--    * bootique-undertow (conflicts with bootique-jetty -->
         <dependency>
-            <groupId>io.bootique.di</groupId>
-            <artifactId>bootique-di</artifactId>
-        </dependency>
-        <dependency>
             <groupId>io.bootique</groupId>
             <artifactId>bootique</artifactId>
         </dependency>

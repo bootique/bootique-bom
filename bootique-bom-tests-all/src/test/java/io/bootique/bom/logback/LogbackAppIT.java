@@ -41,7 +41,7 @@ public class LogbackAppIT {
 
     private TestRuntumeBuilder appBuilder(String... args) {
         return testFactory.app(args)
-                .moduleProvider(new LogbackModule())
+                .modules(LogbackModule.class)
                 .module(b -> BQCoreModule.extend(b).addCommand(LogbackTestCommand.class));
     }
 

@@ -23,7 +23,7 @@ import io.bootique.bom.jersey.r1.Resource1;
 import io.bootique.bom.jersey.r2.Resource2;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jersey.JerseyModule;
-import io.bootique.jersey.JerseyModuleProvider;
+import io.bootique.jetty.JettyModule;
 import io.bootique.test.junit.BQTestFactory;
 import io.bootique.test.junit.TestIO;
 import org.junit.Rule;
@@ -44,7 +44,7 @@ public class JerseyAppJunit4IT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .moduleProvider(new JerseyModuleProvider())
+                .modules(JerseyModule.class, JettyModule.class)
                 .module(b -> JerseyModule.extend(b)
                         .addFeature(JerseyAppFeature.class)
                         .addPackage(Resource1.class.getPackage())

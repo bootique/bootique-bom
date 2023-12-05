@@ -22,6 +22,7 @@ package io.bootique.bom.cayenne;
 import io.bootique.BQCoreModule;
 import io.bootique.cayenne.v42.CayenneModule;
 import io.bootique.command.CommandOutcome;
+import io.bootique.jdbc.JdbcModule;
 import io.bootique.jdbc.junit5.derby.DerbyTester;
 import io.bootique.jdbc.tomcat.JdbcTomcatModule;
 import io.bootique.junit5.*;
@@ -41,7 +42,7 @@ public class CayenneAppIT {
 
     private TestRuntumeBuilder appBuilder(String... args) {
         return testFactory.app(args)
-                .moduleProvider(new CayenneModule())
+                .modules(CayenneModule.class, JdbcModule.class, JdbcTomcatModule.class)
                 .module(db.moduleWithTestDataSource("test2"))
                 .module(new JdbcTomcatModule())
                 .module(b -> BQCoreModule.extend(b).addCommand(RunQueryCommand.class));

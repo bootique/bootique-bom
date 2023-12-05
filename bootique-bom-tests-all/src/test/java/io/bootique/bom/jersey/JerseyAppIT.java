@@ -23,10 +23,9 @@ import io.bootique.bom.jersey.r1.Resource1;
 import io.bootique.bom.jersey.r2.Resource2;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jersey.JerseyModule;
-import io.bootique.jersey.JerseyModuleProvider;
+import io.bootique.jetty.JettyModule;
 import io.bootique.junit5.*;
 import org.junit.jupiter.api.Test;
-
 
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
@@ -45,7 +44,7 @@ public class JerseyAppIT {
 
     private TestRuntumeBuilder appBuilder(String... args) {
         return testFactory.app(args)
-                .moduleProvider(new JerseyModuleProvider())
+                .modules(JerseyModule.class, JettyModule.class)
                 .module(b -> JerseyModule.extend(b)
                         .addFeature(JerseyAppFeature.class)
                         .addPackage(Resource1.class.getPackage())

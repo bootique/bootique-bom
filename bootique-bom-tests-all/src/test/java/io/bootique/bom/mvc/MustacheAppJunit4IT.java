@@ -21,7 +21,9 @@ package io.bootique.bom.mvc;
 
 import io.bootique.bom.mvc.r1.MustacheResource;
 import io.bootique.jersey.JerseyModule;
-import io.bootique.mvc.mustache.MvcMustacheModuleProvider;
+import io.bootique.jetty.JettyModule;
+import io.bootique.mvc.MvcModule;
+import io.bootique.mvc.mustache.MvcMustacheModule;
 import io.bootique.test.junit.BQTestFactory;
 import org.junit.Rule;
 import org.junit.Test;
@@ -42,7 +44,7 @@ public class MustacheAppJunit4IT {
     public void run() {
 
         testFactory.app("--config=src/test/resources/io/bootique/bom/mvc/test.yml", "--server")
-                .moduleProvider(new MvcMustacheModuleProvider())
+                .modules(MvcMustacheModule.class, JerseyModule.class, JettyModule.class, MvcModule.class)
                 .module(binder -> JerseyModule.extend(binder).addResource(MustacheResource.class))
                 .run();
 

@@ -19,11 +19,14 @@
 
 package io.bootique.bom.agrest;
 
-import io.bootique.agrest.v4.AgrestModuleProvider;
+import io.bootique.agrest.v4.AgrestModule;
 import io.bootique.bom.agrest.r1.AgResource1;
+import io.bootique.cayenne.v42.CayenneModule;
 import io.bootique.command.CommandOutcome;
-import io.bootique.jdbc.tomcat.JdbcTomcatModuleProvider;
+import io.bootique.jdbc.JdbcModule;
+import io.bootique.jdbc.tomcat.JdbcTomcatModule;
 import io.bootique.jersey.JerseyModule;
+import io.bootique.jetty.JettyModule;
 import io.bootique.test.junit.BQTestFactory;
 import io.bootique.test.junit.TestIO;
 import org.junit.Rule;
@@ -44,8 +47,7 @@ public class AgrestAppJunit4IT {
 
     private BQTestFactory.Builder appBuilder(String... args) {
         return testFactory.app(args)
-                .moduleProvider(new AgrestModuleProvider())
-                .moduleProvider(new JdbcTomcatModuleProvider())
+                .modules(AgrestModule.class, CayenneModule.class, JdbcModule.class, JdbcTomcatModule.class, JettyModule.class, JerseyModule.class)
                 .module(b -> JerseyModule.extend(b).addResource(AgResource1.class));
     }
 
