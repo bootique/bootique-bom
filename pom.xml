@@ -47,8 +47,6 @@
 		<module>bootique-bom</module>
 		<module>bootique-bom-tests</module>
 		<module>bootique-bom-tests-all</module>
-		<!-- FIXME: Kotlin module is excluded for now per #6 -->
-		<!-- <module>bootique-bom-tests-all-kotlin</module> -->
 	</modules>
 
 	<scm>
