@@ -406,38 +406,6 @@
                 <version>${bootique.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.kotlin</groupId>
-                <artifactId>bootique-kotlin</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.kotlin</groupId>
-                <artifactId>bootique-kotlin-config</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.kotlin</groupId>
-                <artifactId>bootique-kotlin-jetty</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.kotlin</groupId>
-                <artifactId>bootique-kotlin-logback</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.kotlin</groupId>
-                <artifactId>bootique-kotlin-jackson</artifactId>
-                <version>${bootique.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.kotlin</groupId>
-                <artifactId>bootique-kotlin-undertow</artifactId>
-                <version>${bootique.version}</version>
-
-            </dependency>
-
-            <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove2</artifactId>
                 <version>${bootique.version}</version>
