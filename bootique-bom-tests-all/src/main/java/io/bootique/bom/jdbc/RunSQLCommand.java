@@ -38,84 +38,85 @@ import java.sql.SQLException;
 
 public class RunSQLCommand extends CommandWithMetadata {
 
-	@Inject
-	private Provider<DataSourceFactory> dataSourceFactoryProvider;
+    @Inject
+    private Provider<DataSourceFactory> dataSourceFactoryProvider;
 
-	@Inject
-	private BootLogger logger;
+    @Inject
+    private BootLogger logger;
 
-	public RunSQLCommand() {
-		super(CommandMetadata.builder(RunSQLCommand.class)
-				.addOption(OptionMetadata.builder("sql").valueRequired("sql_string")).build());
-	}
+    public RunSQLCommand() {
+        super(CommandMetadata.builder(RunSQLCommand.class)
+                .addOption(OptionMetadata.builder("sql").valueRequired("sql_string").build())
+                .build());
+    }
 
-	@Override
-	public CommandOutcome run(Cli cli) {
+    @Override
+    public CommandOutcome run(Cli cli) {
 
-		DataSource dataSource = dataSourceFactoryProvider.get().forName("test1");
+        DataSource dataSource = dataSourceFactoryProvider.get().forName("test1");
 
-		try (Connection c = dataSource.getConnection()) {
-			prepareDB(c);
+        try (Connection c = dataSource.getConnection()) {
+            prepareDB(c);
 
-			for (String sql : cli.optionStrings("sql")) {
-				runSELECT(c, sql);
-			}
+            for (String sql : cli.optionStrings("sql")) {
+                runSELECT(c, sql);
+            }
 
-		} catch (SQLException ex) {
-			logger.stderr("Error....", ex);
-		}
+        } catch (SQLException ex) {
+            logger.stderr("Error....", ex);
+        }
 
-		return CommandOutcome.succeeded();
-	}
+        return CommandOutcome.succeeded();
+    }
 
-	private void prepareDB(Connection c) throws SQLException {
+    private void prepareDB(Connection c) throws SQLException {
 
-		try {
-			runUPDATE(c, "CREATE TABLE T1 (ID INT PRIMARY KEY, NAME VARCHAR(200))");
-		} catch (SQLException ex) {
-			// see http://db.apache.org/derby/docs/10.8/ref/rrefexcept71493.html
-			if ("X0Y32".equals(ex.getSQLState())) {
-				logger.stdout("Table already exists...");
-			} else {
-				throw ex;
-			}
-		}
+        try {
+            runUPDATE(c, "CREATE TABLE T1 (ID INT PRIMARY KEY, NAME VARCHAR(200))");
+        } catch (SQLException ex) {
+            // see http://db.apache.org/derby/docs/10.8/ref/rrefexcept71493.html
+            if ("X0Y32".equals(ex.getSQLState())) {
+                logger.stdout("Table already exists...");
+            } else {
+                throw ex;
+            }
+        }
 
-		runUPDATE(c, "DELETE FROM T1");
-		runUPDATE(c, "INSERT INTO T1 VALUES (1, 'aa')");
-		runUPDATE(c, "INSERT INTO T1 VALUES (2, 'bb')");
-		c.commit();
-	}
+        runUPDATE(c, "DELETE FROM T1");
+        runUPDATE(c, "INSERT INTO T1 VALUES (1, 'aa')");
+        runUPDATE(c, "INSERT INTO T1 VALUES (2, 'bb')");
+        c.commit();
+    }
 
-	private void runUPDATE(Connection c, String sql) throws SQLException {
-		logger.stdout("Running update: " + sql);
+    private void runUPDATE(Connection c, String sql) throws SQLException {
+        logger.stdout("Running update: " + sql);
 
-		try (PreparedStatement st = c.prepareStatement(sql)) {
-			st.executeUpdate();
-		}
-	}
+        try (PreparedStatement st = c.prepareStatement(sql)) {
+            st.executeUpdate();
+        }
+    }
 
-	private void runSELECT(Connection c, String sql) throws SQLException {
-		logger.stdout("Running select: " + sql);
+    private void runSELECT(Connection c, String sql) throws SQLException {
+        logger.stdout("Running select: " + sql);
 
-		try (PreparedStatement st = c.prepareStatement(sql)) {
+        try (PreparedStatement st = c.prepareStatement(sql)) {
 
-			try (ResultSet rs = st.executeQuery()) {
-				ResultSetMetaData md = rs.getMetaData();
+            try (ResultSet rs = st.executeQuery()) {
+                ResultSetMetaData md = rs.getMetaData();
 
-				while (rs.next()) {
+                while (rs.next()) {
 
-					StringBuffer line = new StringBuffer();
-					for (int i = 1; i <= md.getColumnCount(); i++) {
-						if (i > 1) {
-							line.append(",");
-						}
-						line.append(rs.getObject(i));
-					}
+                    StringBuffer line = new StringBuffer();
+                    for (int i = 1; i <= md.getColumnCount(); i++) {
+                        if (i > 1) {
+                            line.append(",");
+                        }
+                        line.append(rs.getObject(i));
+                    }
 
-					logger.stdout(line.toString());
-				}
-			}
-		}
-	}
+                    logger.stdout(line.toString());
+                }
+            }
+        }
+    }
 }

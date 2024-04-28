@@ -51,8 +51,9 @@ public class RunQueryCommand extends CommandWithMetadata {
 
     public RunQueryCommand() {
         super(CommandMetadata.builder(RunQueryCommand.class)
-                .addOption(OptionMetadata.builder(KEY_OPTION).valueRequired("property_name"))
-                .addOption(OptionMetadata.builder(VALUE_OPTION).valueRequired("property_value")).build());
+                .addOption(OptionMetadata.builder(KEY_OPTION).valueRequired("property_name").build())
+                .addOption(OptionMetadata.builder(VALUE_OPTION).valueRequired("property_value").build())
+                .build());
     }
 
     @Override
