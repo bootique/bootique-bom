@@ -36,12 +36,10 @@
         <dependency>
             <groupId>io.bootique.logback</groupId>
             <artifactId>bootique-logback</artifactId>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.bootique.swagger</groupId>
             <artifactId>bootique-swagger</artifactId>
-            <scope>compile</scope>
         </dependency>
 
         <!-- unit test deps -->
