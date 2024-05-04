@@ -21,7 +21,7 @@ package io.bootique.bom.job;
 
 import io.bootique.job.BaseJob;
 import io.bootique.job.JobMetadata;
-import io.bootique.job.JobResult;
+import io.bootique.job.JobOutcome;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,9 +39,9 @@ public class BomJob extends BaseJob {
 	}
 
 	@Override
-	public JobResult run(Map<String, Object> parameters) {
+	public JobOutcome run(Map<String, Object> parameters) {
 		LOGGER.info("Running job");
 		BomJob.COUNTER.incrementAndGet();
-		return JobResult.success(getMetadata());
+		return JobOutcome.succeeded();
 	}
 }

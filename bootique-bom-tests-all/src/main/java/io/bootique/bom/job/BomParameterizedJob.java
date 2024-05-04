@@ -21,7 +21,7 @@ package io.bootique.bom.job;
 
 import io.bootique.job.BaseJob;
 import io.bootique.job.JobMetadata;
-import io.bootique.job.JobResult;
+import io.bootique.job.JobOutcome;
 
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
@@ -38,11 +38,11 @@ public class BomParameterizedJob extends BaseJob {
 	}
 
 	@Override
-	public JobResult run(Map<String, Object> parameters) {
+	public JobOutcome run(Map<String, Object> parameters) {
 
 		Long inc = (Long) parameters.get(LONG_PARAMETER);
 
 		BomParameterizedJob.COUNTER.addAndGet(inc.longValue());
-		return JobResult.success(getMetadata());
+		return JobOutcome.succeeded();
 	}
 }
