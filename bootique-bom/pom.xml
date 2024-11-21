@@ -40,582 +40,582 @@
             <dependency>
                 <groupId>io.bootique</groupId>
                 <artifactId>bootique</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique</groupId>
                 <artifactId>bootique-test</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique</groupId>
                 <artifactId>bootique-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest-jakarta-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest4</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest4-swagger</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest5-jakarta</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest5-jakarta-swagger</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
                 <artifactId>bootique-agrest5-swagger</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws-secrets</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws-s3</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws2</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws2-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws2-secrets</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws2-s3</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws2-s3-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne41</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne41-jcache</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne41-test</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne41-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne42</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne42-jcache</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne42-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne50</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne50-jcache</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
                 <artifactId>bootique-cayenne50-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.curator</groupId>
                 <artifactId>bootique-curator</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cxf</groupId>
                 <artifactId>bootique-cxf-core</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cxf</groupId>
                 <artifactId>bootique-cxf-jaxrs</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cxf</groupId>
                 <artifactId>bootique-cxf-jaxws-client</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.cxf</groupId>
                 <artifactId>bootique-cxf-jaxws-server</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.docker</groupId>
                 <artifactId>bootique-docker</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.flyway</groupId>
                 <artifactId>bootique-flyway</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jcache</groupId>
                 <artifactId>bootique-jcache</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-test</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-junit5-derby</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-junit5-testcontainers</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-tomcat</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-tomcat-instrumented</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-hikaricp</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
                 <artifactId>bootique-jdbc-hikaricp-instrumented</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-jackson</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-beanvalidation</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-client</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-client-instrumented</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
 
 
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-jakarta</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-jakarta-jackson</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-jakarta-beanvalidation</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-jakarta-client</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-jakarta-client-instrumented</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-jakarta-client-jetty</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
                 <artifactId>bootique-jersey-jakarta-client-junit5-wiremock</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-cors</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-instrumented</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-websocket</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-metrics</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-jakarta</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-jakarta-cors</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-jakarta-instrumented</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-jakarta-websocket</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-jakarta-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.job</groupId>
                 <artifactId>bootique-job</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.job</groupId>
                 <artifactId>bootique-job-consul</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.job</groupId>
                 <artifactId>bootique-job-instrumented</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.job</groupId>
                 <artifactId>bootique-job-zookeeper</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jooq</groupId>
                 <artifactId>bootique-jooq</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.kafka</groupId>
                 <artifactId>bootique-kafka-client</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.kafka</groupId>
                 <artifactId>bootique-kafka-streams</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove2</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove2-json</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove2-rest</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove3</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove3-json</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove3-rest</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.linkmove</groupId>
                 <artifactId>bootique-linkmove3-rest-jakarta</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.liquibase</groupId>
                 <artifactId>bootique-liquibase</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.logback</groupId>
                 <artifactId>bootique-logback</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.logback</groupId>
                 <artifactId>bootique-logback-sentry</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>io.bootique.mongo</groupId>
                 <artifactId>bootique-mongo-client</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.mongo</groupId>
                 <artifactId>bootique-mongo-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.mongo</groupId>
                 <artifactId>bootique-mongo-morphia</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>io.bootique.metrics</groupId>
                 <artifactId>bootique-metrics</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.metrics</groupId>
                 <artifactId>bootique-metrics-healthchecks</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.mvc</groupId>
                 <artifactId>bootique-mvc</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.mvc</groupId>
                 <artifactId>bootique-mvc-freemarker</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.mvc</groupId>
                 <artifactId>bootique-mvc-mustache</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.mvc</groupId>
                 <artifactId>bootique-mvc-jakarta</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.mvc</groupId>
                 <artifactId>bootique-mvc-jakarta-freemarker</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.mvc</groupId>
                 <artifactId>bootique-mvc-jakarta-mustache</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.mybatis</groupId>
                 <artifactId>bootique-mybatis</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.rabbitmq</groupId>
                 <artifactId>bootique-rabbitmq-client</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.rabbitmq</groupId>
                 <artifactId>bootique-rabbitmq-junit5</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.shiro</groupId>
                 <artifactId>bootique-shiro</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.shiro</groupId>
                 <artifactId>bootique-shiro-jdbc</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.shiro</groupId>
                 <artifactId>bootique-shiro-web</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.shiro</groupId>
                 <artifactId>bootique-shiro-web-mdc</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.shiro</groupId>
                 <artifactId>bootique-shiro-web-jakarta</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.shiro</groupId>
                 <artifactId>bootique-shiro-web-jakarta-mdc</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.simplejavamail</groupId>
                 <artifactId>bootique-simplejavamail</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.simplejavamail</groupId>
                 <artifactId>bootique-simplejavamail-jakarta</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.swagger</groupId>
                 <artifactId>bootique-swagger</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.swagger</groupId>
                 <artifactId>bootique-swagger-ui</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.swagger</groupId>
                 <artifactId>bootique-swagger-jakarta</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.swagger</groupId>
                 <artifactId>bootique-swagger-jakarta-ui</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.tapestry</groupId>
                 <artifactId>bootique-tapestry55</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.tapestry</groupId>
                 <artifactId>bootique-tapestry58</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.undertow</groupId>
                 <artifactId>bootique-undertow</artifactId>
-                <version>${bootique.version}</version>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
