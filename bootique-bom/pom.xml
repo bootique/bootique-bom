@@ -613,6 +613,11 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.tapestry</groupId>
+                <artifactId>bootique-tapestry59-jakarta</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.undertow</groupId>
                 <artifactId>bootique-undertow</artifactId>
                 <version>${project.version}</version>
