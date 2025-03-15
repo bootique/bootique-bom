@@ -21,7 +21,7 @@ package io.bootique.bom.jersey.r1;
 
 import io.bootique.annotation.Args;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;

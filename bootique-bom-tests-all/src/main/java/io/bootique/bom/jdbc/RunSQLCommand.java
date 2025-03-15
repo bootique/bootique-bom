@@ -27,8 +27,8 @@ import io.bootique.command.CommandWithMetadata;
 import io.bootique.jdbc.DataSourceFactory;
 import io.bootique.log.BootLogger;
 
-import javax.inject.Inject;
-import javax.inject.Provider;
+import jakarta.inject.Inject;
+import jakarta.inject.Provider;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
