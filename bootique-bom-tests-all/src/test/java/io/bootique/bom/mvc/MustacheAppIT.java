@@ -29,13 +29,10 @@ import io.bootique.junit5.BQApp;
 import io.bootique.junit5.BQTest;
 import io.bootique.mvc.MvcModule;
 import io.bootique.mvc.mustache.MvcMustacheModule;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.Response;
 import org.junit.jupiter.api.Test;
-
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 @BQTest
 public class MustacheAppIT {
@@ -55,7 +52,7 @@ public class MustacheAppIT {
         WebTarget base = jetty.getTarget();
 
         Response r1 = base.path("/mustache").request().get();
-        assertEquals(Status.OK.getStatusCode(), r1.getStatus());
+        assertEquals(Response.Status.OK.getStatusCode(), r1.getStatus());
         assertEquals("hi_myname.", r1.readEntity(String.class));
     }
 

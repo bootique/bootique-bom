@@ -19,7 +19,7 @@
 
 package io.bootique.bom.agrest;
 
-import io.bootique.agrest.v4.AgrestModule;
+import io.bootique.agrest.v5.AgrestModule;
 import io.bootique.bom.agrest.r1.AgResource1;
 import io.bootique.cayenne.v42.CayenneModule;
 import io.bootique.command.CommandOutcome;
@@ -29,13 +29,11 @@ import io.bootique.jersey.JerseyModule;
 import io.bootique.jetty.JettyModule;
 import io.bootique.test.junit.BQTestFactory;
 import io.bootique.test.junit.TestIO;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.Response;
 import org.junit.Rule;
 import org.junit.Test;
-
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -72,7 +70,7 @@ public class AgrestAppJunit4IT {
 
         // added as a part of a package
         Response r1 = base.path("/lr/lrservlet/lr1").request().get();
-        assertEquals(Status.OK.getStatusCode(), r1.getStatus());
+        assertEquals(Response.Status.OK.getStatusCode(), r1.getStatus());
         String expected1 = "{\"data\":[{\"id\":5,\"name\":\"name5\"},{\"id\":6,\"name\":\"name6\"}],\"total\":2}";
         assertEquals(expected1, r1.readEntity(String.class));
     }

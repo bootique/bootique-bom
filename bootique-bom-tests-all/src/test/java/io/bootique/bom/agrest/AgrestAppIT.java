@@ -19,22 +19,20 @@
 
 package io.bootique.bom.agrest;
 
-import io.bootique.agrest.v4.AgrestModule;
+import io.bootique.agrest.v5.AgrestModule;
 import io.bootique.bom.agrest.r1.AgResource1;
 import io.bootique.cayenne.v42.CayenneModule;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jdbc.JdbcModule;
+import io.bootique.jdbc.hikaricp.JdbcHikariCPModule;
 import io.bootique.jdbc.junit5.derby.DerbyTester;
-import io.bootique.jdbc.tomcat.JdbcTomcatModule;
 import io.bootique.jersey.JerseyModule;
 import io.bootique.jetty.JettyModule;
 import io.bootique.junit5.*;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.Response;
 import org.junit.jupiter.api.Test;
-
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -51,7 +49,7 @@ public class AgrestAppIT {
     private TestRuntumeBuilder appBuilder(String... args) {
         return testFactory.app(args)
                 .module(db.moduleWithTestDataSource("ds"))
-                .modules(AgrestModule.class, JdbcTomcatModule.class, JdbcModule.class, CayenneModule.class, JettyModule.class, JerseyModule.class)
+                .modules(AgrestModule.class, JdbcHikariCPModule.class, JdbcModule.class, CayenneModule.class, JettyModule.class, JerseyModule.class)
                 .module(b -> JerseyModule.extend(b).addResource(AgResource1.class));
     }
 
@@ -76,7 +74,7 @@ public class AgrestAppIT {
 
         // added as a part of a package
         Response r1 = base.path("/lr/lrservlet/lr1").request().get();
-        assertEquals(Status.OK.getStatusCode(), r1.getStatus());
+        assertEquals(Response.Status.OK.getStatusCode(), r1.getStatus());
         String expected1 = "{\"data\":[{\"id\":5,\"name\":\"name5\"},{\"id\":6,\"name\":\"name6\"}],\"total\":2}";
         assertEquals(expected1, r1.readEntity(String.class));
     }

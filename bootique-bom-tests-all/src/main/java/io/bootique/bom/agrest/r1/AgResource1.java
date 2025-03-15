@@ -19,19 +19,19 @@
 
 package io.bootique.bom.agrest.r1;
 
-import io.agrest.Ag;
 import io.agrest.DataResponse;
+import io.agrest.jaxrs3.AgJaxrs;
 import io.agrest.meta.AgEntity;
 import io.agrest.meta.AgEntityOverlay;
 import io.bootique.bom.agrest.ITEntity;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Configuration;
+import jakarta.ws.rs.core.Context;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.UriInfo;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Configuration;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.UriInfo;
 import java.util.List;
 
 @Path("/lr1")
@@ -42,10 +42,10 @@ public class AgResource1 {
     private Configuration config;
 
     @GET
-    public DataResponse<ITEntity> get(UriInfo info) {
+    public DataResponse<ITEntity> get(@Context UriInfo info) {
 
         AgEntityOverlay<ITEntity> overlay = AgEntity.overlay(ITEntity.class)
-                .redefineDataResolver(c -> {
+                .dataResolver(c -> {
                     ITEntity e1 = new ITEntity();
                     e1.setId(5);
                     e1.setName("name5");
@@ -57,8 +57,8 @@ public class AgResource1 {
                     return List.of(e1, e2);
                 });
 
-        return Ag.select(ITEntity.class, config)
-                .uri(info)
+        return AgJaxrs.select(ITEntity.class, config)
+                .clientParams(info.getQueryParameters())
                 .entityOverlay(overlay)
                 .get();
     }

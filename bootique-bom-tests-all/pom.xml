@@ -57,7 +57,6 @@
         <!-- Exception is version-specific modules and a few other mutually exclusive modules:  -->
         <!-- 	* cayenne42 -->
         <!-- 	* tapestry55 -->
-        <!-- 	* bootique-kotlin-jackson (conflicts with bootique-kotlin-config) -->
         <!-- 	* bootique-job-zookeeper (conflicts with bootique-job-consul) -->
         <!--    * bootique-undertow (conflicts with bootique-jetty -->
         <dependency>
@@ -66,11 +65,11 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.agrest</groupId>
-            <artifactId>bootique-agrest4</artifactId>
+            <artifactId>bootique-agrest5-jakarta</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.agrest</groupId>
-            <artifactId>bootique-agrest-junit5</artifactId>
+            <artifactId>bootique-agrest-jakarta-junit5</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.aws</groupId>
@@ -94,19 +93,19 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.cxf</groupId>
-            <artifactId>bootique-cxf-core</artifactId>
+            <artifactId>bootique-cxf-jakarta-core</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.cxf</groupId>
-            <artifactId>bootique-cxf-jaxrs</artifactId>
+            <artifactId>bootique-cxf-jakarta-jaxrs</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.cxf</groupId>
-            <artifactId>bootique-cxf-jaxws-client</artifactId>
+            <artifactId>bootique-cxf-jakarta-jaxws-client</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.cxf</groupId>
-            <artifactId>bootique-cxf-jaxws-server</artifactId>
+            <artifactId>bootique-cxf-jakarta-jaxws-server</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.flyway</groupId>
@@ -138,43 +137,39 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.jersey</groupId>
-            <artifactId>bootique-jersey</artifactId>
+            <artifactId>bootique-jersey-jakarta</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jersey</groupId>
-            <artifactId>bootique-jersey-jackson</artifactId>
+            <artifactId>bootique-jersey-jakarta-jackson</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jersey</groupId>
-            <artifactId>bootique-jersey-beanvalidation</artifactId>
+            <artifactId>bootique-jersey-jakarta-beanvalidation</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jersey</groupId>
-            <artifactId>bootique-jersey-client</artifactId>
+            <artifactId>bootique-jersey-jakarta-client</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jersey</groupId>
-            <artifactId>bootique-jersey-client-instrumented</artifactId>
+            <artifactId>bootique-jersey-jakarta-client-instrumented</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty</artifactId>
+            <artifactId>bootique-jetty-jakarta</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-cors</artifactId>
+            <artifactId>bootique-jetty-jakarta-cors</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-instrumented</artifactId>
+            <artifactId>bootique-jetty-jakarta-instrumented</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-websocket</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-metrics</artifactId>
+            <artifactId>bootique-jetty-jakarta-websocket</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.job</groupId>
@@ -202,15 +197,15 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
-            <artifactId>bootique-linkmove2</artifactId>
+            <artifactId>bootique-linkmove3</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
-            <artifactId>bootique-linkmove2-json</artifactId>
+            <artifactId>bootique-linkmove3-json</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
-            <artifactId>bootique-linkmove2-rest</artifactId>
+            <artifactId>bootique-linkmove3-rest-jakarta</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.liquibase</groupId>
@@ -234,15 +229,15 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.mvc</groupId>
-            <artifactId>bootique-mvc</artifactId>
+            <artifactId>bootique-mvc-jakarta</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.mvc</groupId>
-            <artifactId>bootique-mvc-freemarker</artifactId>
+            <artifactId>bootique-mvc-jakarta-freemarker</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.mvc</groupId>
-            <artifactId>bootique-mvc-mustache</artifactId>
+            <artifactId>bootique-mvc-jakarta-mustache</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.mybatis</groupId>
@@ -262,27 +257,27 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.shiro</groupId>
-            <artifactId>bootique-shiro-web</artifactId>
+            <artifactId>bootique-shiro-web-jakarta</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.shiro</groupId>
-            <artifactId>bootique-shiro-web-mdc</artifactId>
+            <artifactId>bootique-shiro-web-jakarta-mdc</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.simplejavamail</groupId>
-            <artifactId>bootique-simplejavamail</artifactId>
+            <artifactId>bootique-simplejavamail-jakarta</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.swagger</groupId>
-            <artifactId>bootique-swagger</artifactId>
+            <artifactId>bootique-swagger-jakarta</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.swagger</groupId>
-            <artifactId>bootique-swagger-ui</artifactId>
+            <artifactId>bootique-swagger-jakarta-ui</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.tapestry</groupId>
-            <artifactId>bootique-tapestry55</artifactId>
+            <artifactId>bootique-tapestry59-jakarta</artifactId>
         </dependency>
 
         <!-- Non-Bootique dependencies needed for the stack to run -->
@@ -326,7 +321,7 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-junit5</artifactId>
+            <artifactId>bootique-jetty-jakarta-junit5</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.rabbitmq</groupId>

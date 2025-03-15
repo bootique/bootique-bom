@@ -25,13 +25,11 @@ import io.bootique.jetty.JettyModule;
 import io.bootique.mvc.MvcModule;
 import io.bootique.mvc.mustache.MvcMustacheModule;
 import io.bootique.test.junit.BQTestFactory;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.Response;
 import org.junit.Rule;
 import org.junit.Test;
-
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
 
 import static org.junit.Assert.assertEquals;
 
@@ -52,7 +50,7 @@ public class MustacheAppJunit4IT {
 
         // added as a part of a package
         Response r1 = base.path("/mustache").request().get();
-        assertEquals(Status.OK.getStatusCode(), r1.getStatus());
+        assertEquals(Response.Status.OK.getStatusCode(), r1.getStatus());
         assertEquals("hi_myname.", r1.readEntity(String.class));
     }
 
