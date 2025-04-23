@@ -24,7 +24,7 @@
     <parent>
         <groupId>io.bootique.bom</groupId>
         <artifactId>bootique-bom-parent</artifactId>
-        <version>3.0-SNAPSHOT</version>
+        <version>4.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>bootique-bom-tests-all</artifactId>
@@ -58,7 +58,6 @@
         <!-- 	* cayenne42 -->
         <!-- 	* tapestry55 -->
         <!-- 	* bootique-job-zookeeper (conflicts with bootique-job-consul) -->
-        <!--    * bootique-undertow (conflicts with bootique-jetty -->
         <dependency>
             <groupId>io.bootique</groupId>
             <artifactId>bootique</artifactId>
