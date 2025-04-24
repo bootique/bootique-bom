@@ -606,17 +606,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.tapestry</groupId>
-                <artifactId>bootique-tapestry55</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.tapestry</groupId>
-                <artifactId>bootique-tapestry58</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.tapestry</groupId>
-                <artifactId>bootique-tapestry59-jakarta</artifactId>
+                <artifactId>bootique-tapestry59</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

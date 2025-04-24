@@ -56,7 +56,6 @@
         <!-- Include all non-test modules from the BOM to ensure the BOM itself contains existing versions... -->
         <!-- Exception is version-specific modules and a few other mutually exclusive modules:  -->
         <!-- 	* cayenne42 -->
-        <!-- 	* tapestry55 -->
         <!-- 	* bootique-job-zookeeper (conflicts with bootique-job-consul) -->
         <dependency>
             <groupId>io.bootique</groupId>
@@ -289,7 +288,6 @@
         <!-- Include all test modules from the BOM to ensure the BOM itself contains existing versions. -->
         <!-- Exception is version-specific modules:  -->
         <!-- 	* cayenne42 -->
-        <!-- 	* tapestry55 -->
         <dependency>
             <groupId>io.bootique</groupId>
             <artifactId>bootique-test</artifactId>
