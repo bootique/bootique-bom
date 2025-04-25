@@ -20,10 +20,9 @@
 package io.bootique.bom.swagger.api;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 
 @OpenAPIDefinition
 @Path("/api1")
