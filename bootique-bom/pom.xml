@@ -570,16 +570,6 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.swagger</groupId>
-                <artifactId>bootique-swagger-jakarta</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.swagger</groupId>
-                <artifactId>bootique-swagger-jakarta-ui</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.bootique.tapestry</groupId>
                 <artifactId>bootique-tapestry59</artifactId>
                 <version>${project.version}</version>
