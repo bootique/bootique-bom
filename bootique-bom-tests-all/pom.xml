@@ -227,15 +227,15 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.mvc</groupId>
-            <artifactId>bootique-mvc-jakarta</artifactId>
+            <artifactId>bootique-mvc</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.mvc</groupId>
-            <artifactId>bootique-mvc-jakarta-freemarker</artifactId>
+            <artifactId>bootique-mvc-freemarker</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.mvc</groupId>
-            <artifactId>bootique-mvc-jakarta-mustache</artifactId>
+            <artifactId>bootique-mvc-mustache</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.mybatis</groupId>

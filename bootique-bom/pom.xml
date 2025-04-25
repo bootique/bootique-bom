@@ -490,21 +490,6 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.mvc</groupId>
-                <artifactId>bootique-mvc-jakarta</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.mvc</groupId>
-                <artifactId>bootique-mvc-jakarta-freemarker</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.mvc</groupId>
-                <artifactId>bootique-mvc-jakarta-mustache</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.bootique.mybatis</groupId>
                 <artifactId>bootique-mybatis</artifactId>
                 <version>${project.version}</version>
