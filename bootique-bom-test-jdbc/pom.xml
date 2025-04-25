@@ -23,14 +23,26 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.bootique.bom</groupId>
-        <artifactId>bootique-bom-tests</artifactId>
+        <artifactId>bootique-bom-parent</artifactId>
         <version>4.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bootique-test-jdbc</artifactId>
+    <artifactId>bootique-bom-test-jdbc</artifactId>
     <packaging>jar</packaging>
 
-    <name>bootique-test-jdbc: bootique-jdbc integration tests.</name>
+    <name>bootique-bom-test-jdbc: bootique-jdbc integration tests.</name>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.bootique.bom</groupId>
+                <artifactId>bootique-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>

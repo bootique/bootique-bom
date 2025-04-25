@@ -23,14 +23,26 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>io.bootique.bom</groupId>
-        <artifactId>bootique-bom-tests</artifactId>
+        <artifactId>bootique-bom-parent</artifactId>
         <version>4.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bootique-test-swagger</artifactId>
+    <artifactId>bootique-bom-test-swagger</artifactId>
     <packaging>jar</packaging>
 
-    <name>bootique-test-swagger: bootique-swagger integration tests.</name>
+    <name>bootique-bom-test-swagger: bootique-swagger integration tests.</name>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.bootique.bom</groupId>
+                <artifactId>bootique-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>

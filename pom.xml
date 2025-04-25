@@ -44,7 +44,8 @@
 
 	<modules>
 		<module>bootique-bom</module>
-		<module>bootique-bom-tests</module>
+		<module>bootique-bom-test-jdbc</module>
+    <module>bootique-bom-test-swagger</module>
 		<module>bootique-bom-tests-all</module>
 	</modules>
 
