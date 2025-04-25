@@ -540,16 +540,6 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.shiro</groupId>
-                <artifactId>bootique-shiro-web-jakarta</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.shiro</groupId>
-                <artifactId>bootique-shiro-web-jakarta-mdc</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.bootique.simplejavamail</groupId>
                 <artifactId>bootique-simplejavamail</artifactId>
                 <version>${project.version}</version>

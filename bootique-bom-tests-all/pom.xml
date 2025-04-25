@@ -255,11 +255,11 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.shiro</groupId>
-            <artifactId>bootique-shiro-web-jakarta</artifactId>
+            <artifactId>bootique-shiro-web</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.shiro</groupId>
-            <artifactId>bootique-shiro-web-jakarta-mdc</artifactId>
+            <artifactId>bootique-shiro-web-mdc</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.simplejavamail</groupId>
