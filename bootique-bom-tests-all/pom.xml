@@ -203,7 +203,7 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.linkmove</groupId>
-            <artifactId>bootique-linkmove3-rest-jakarta</artifactId>
+            <artifactId>bootique-linkmove3-rest</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.liquibase</groupId>
