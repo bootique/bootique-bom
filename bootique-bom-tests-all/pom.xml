@@ -155,19 +155,19 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-jakarta</artifactId>
+            <artifactId>bootique-jetty</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-jakarta-cors</artifactId>
+            <artifactId>bootique-jetty-cors</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-jakarta-instrumented</artifactId>
+            <artifactId>bootique-jetty-instrumented</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-jakarta-websocket</artifactId>
+            <artifactId>bootique-jetty-websocket</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.job</groupId>
@@ -318,7 +318,7 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-jakarta-junit5</artifactId>
+            <artifactId>bootique-jetty-junit5</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.rabbitmq</groupId>

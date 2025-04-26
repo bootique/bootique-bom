@@ -275,37 +275,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty-metrics</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jetty</groupId>
                 <artifactId>bootique-jetty-junit5</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty-jakarta</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty-jakarta-cors</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty-jakarta-instrumented</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty-jakarta-websocket</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty-jakarta-junit5</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
