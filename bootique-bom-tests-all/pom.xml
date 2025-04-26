@@ -119,14 +119,6 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.jdbc</groupId>
-            <artifactId>bootique-jdbc-tomcat</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.jdbc</groupId>
-            <artifactId>bootique-jdbc-tomcat-instrumented</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.jdbc</groupId>
             <artifactId>bootique-jdbc-hikaricp</artifactId>
         </dependency>
         <dependency>
@@ -299,10 +291,6 @@
         <dependency>
             <groupId>io.bootique.cayenne</groupId>
             <artifactId>bootique-cayenne42-junit5</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique.jdbc</groupId>
-            <artifactId>bootique-jdbc-test</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jdbc</groupId>
