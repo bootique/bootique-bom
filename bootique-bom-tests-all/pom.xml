@@ -286,10 +286,6 @@
         <!-- 	* cayenne42 -->
         <dependency>
             <groupId>io.bootique</groupId>
-            <artifactId>bootique-test</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.bootique</groupId>
             <artifactId>bootique-junit5</artifactId>
         </dependency>
         <dependency>
