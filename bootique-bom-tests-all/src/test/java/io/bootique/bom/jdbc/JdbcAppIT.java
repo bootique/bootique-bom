@@ -22,9 +22,13 @@ package io.bootique.bom.jdbc;
 import io.bootique.BQCoreModule;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jdbc.JdbcModule;
+import io.bootique.jdbc.hikaricp.JdbcHikariCPModule;
 import io.bootique.jdbc.junit5.derby.DerbyTester;
-import io.bootique.jdbc.tomcat.JdbcTomcatModule;
-import io.bootique.junit5.*;
+import io.bootique.junit5.BQTest;
+import io.bootique.junit5.BQTestFactory;
+import io.bootique.junit5.BQTestTool;
+import io.bootique.junit5.TestIO;
+import io.bootique.junit5.TestRuntumeBuilder;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -40,7 +44,7 @@ public class JdbcAppIT {
 
 	private TestRuntumeBuilder appBuilder(String... args) {
 		return testFactory.app(args)
-				.modules(JdbcTomcatModule.class, JdbcModule.class)
+				.modules(JdbcHikariCPModule.class, JdbcModule.class)
 				.module(db.moduleWithTestDataSource("test1"))
 				.module(b -> BQCoreModule.extend(b).addCommand(RunSQLCommand.class));
 	}
