@@ -210,10 +210,6 @@
             <artifactId>bootique-logback</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.bootique.logback</groupId>
-            <artifactId>bootique-logback-sentry</artifactId>
-        </dependency>
-        <dependency>
             <groupId>io.bootique.metrics</groupId>
             <artifactId>bootique-metrics</artifactId>
         </dependency>
