@@ -91,19 +91,19 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.cxf</groupId>
-            <artifactId>bootique-cxf-jakarta-core</artifactId>
+            <artifactId>bootique-cxf-core</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.cxf</groupId>
-            <artifactId>bootique-cxf-jakarta-jaxrs</artifactId>
+            <artifactId>bootique-cxf-jaxrs</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.cxf</groupId>
-            <artifactId>bootique-cxf-jakarta-jaxws-client</artifactId>
+            <artifactId>bootique-cxf-jaxws-client</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.cxf</groupId>
-            <artifactId>bootique-cxf-jakarta-jaxws-server</artifactId>
+            <artifactId>bootique-cxf-jaxws-server</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.flyway</groupId>

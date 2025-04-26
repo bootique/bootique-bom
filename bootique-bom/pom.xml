@@ -162,28 +162,6 @@
                 <artifactId>bootique-cxf-jaxws-server</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
-            <dependency>
-                <groupId>io.bootique.cxf</groupId>
-                <artifactId>bootique-cxf-jakarta-core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.cxf</groupId>
-                <artifactId>bootique-cxf-jakarta-jaxrs</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.cxf</groupId>
-                <artifactId>bootique-cxf-jakarta-jaxws-client</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.cxf</groupId>
-                <artifactId>bootique-cxf-jakarta-jaxws-server</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
             <dependency>
                 <groupId>io.bootique.docker</groupId>
                 <artifactId>bootique-docker</artifactId>
