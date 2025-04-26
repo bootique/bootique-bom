@@ -263,7 +263,7 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.simplejavamail</groupId>
-            <artifactId>bootique-simplejavamail-jakarta</artifactId>
+            <artifactId>bootique-simplejavamail</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.swagger</groupId>

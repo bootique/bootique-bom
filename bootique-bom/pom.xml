@@ -530,11 +530,6 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.bootique.simplejavamail</groupId>
-                <artifactId>bootique-simplejavamail-jakarta</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.bootique.swagger</groupId>
                 <artifactId>bootique-swagger</artifactId>
                 <version>${project.version}</version>
