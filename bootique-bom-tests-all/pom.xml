@@ -71,11 +71,15 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.aws</groupId>
-            <artifactId>bootique-aws</artifactId>
+            <artifactId>bootique-aws2</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.aws</groupId>
-            <artifactId>bootique-aws-s3</artifactId>
+            <artifactId>bootique-aws2-s3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.bootique.aws</groupId>
+            <artifactId>bootique-aws2-secrets</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.cayenne</groupId>

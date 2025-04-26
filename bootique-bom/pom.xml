@@ -69,21 +69,6 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
-                <artifactId>bootique-aws</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.aws</groupId>
-                <artifactId>bootique-aws-secrets</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.aws</groupId>
-                <artifactId>bootique-aws-s3</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws2</artifactId>
                 <version>${project.version}</version>
             </dependency>
