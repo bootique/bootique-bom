@@ -247,41 +247,9 @@
                 <artifactId>bootique-jersey-client-instrumented</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
-
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
-                <artifactId>bootique-jersey-jakarta</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jersey</groupId>
-                <artifactId>bootique-jersey-jakarta-jackson</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jersey</groupId>
-                <artifactId>bootique-jersey-jakarta-beanvalidation</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jersey</groupId>
-                <artifactId>bootique-jersey-jakarta-client</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jersey</groupId>
-                <artifactId>bootique-jersey-jakarta-client-instrumented</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jersey</groupId>
-                <artifactId>bootique-jersey-jakarta-client-jetty</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.bootique.jersey</groupId>
-                <artifactId>bootique-jersey-jakarta-client-junit5-wiremock</artifactId>
+                <artifactId>bootique-jersey-client-junit5-wiremock</artifactId>
                 <version>${project.version}</version>
             </dependency>
             

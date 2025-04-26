@@ -135,23 +135,23 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.jersey</groupId>
-            <artifactId>bootique-jersey-jakarta</artifactId>
+            <artifactId>bootique-jersey</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jersey</groupId>
-            <artifactId>bootique-jersey-jakarta-jackson</artifactId>
+            <artifactId>bootique-jersey-jackson</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jersey</groupId>
-            <artifactId>bootique-jersey-jakarta-beanvalidation</artifactId>
+            <artifactId>bootique-jersey-beanvalidation</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jersey</groupId>
-            <artifactId>bootique-jersey-jakarta-client</artifactId>
+            <artifactId>bootique-jersey-client</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jersey</groupId>
-            <artifactId>bootique-jersey-jakarta-client-instrumented</artifactId>
+            <artifactId>bootique-jersey-client-instrumented</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
