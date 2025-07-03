@@ -23,7 +23,7 @@
 	<parent>
 		<groupId>io.bootique.modules.parent</groupId>
 		<artifactId>bootique-modules-parent</artifactId>
-		<version>4.0.0</version>
+		<version>4.0.1</version>
 	</parent>
 	<groupId>io.bootique.bom</groupId>
 	<artifactId>bootique-bom-parent</artifactId>
@@ -45,7 +45,7 @@
 	<modules>
 		<module>bootique-bom</module>
 		<module>bootique-bom-test-jdbc</module>
-    <module>bootique-bom-test-swagger</module>
+    		<module>bootique-bom-test-swagger</module>
 		<module>bootique-bom-tests-all</module>
 	</modules>
 
@@ -54,15 +54,19 @@
         <url>https://github.com/bootique/bootique-bom</url>
         <tag>HEAD</tag>
     </scm>
-
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<groupId>org.sonatype.central</groupId>
+				<artifactId>central-publishing-maven-plugin</artifactId>
+				<extensions>true</extensions>
 				<configuration>
-					<!-- Deploy every module independently to be able to skip deployment for some of them -->
-					<skipLocalStaging>true</skipLocalStaging>
+					<publishingServerId>sonatype-central</publishingServerId>
+					<excludeArtifacts>
+						<excludeArtifact>bootique-bom-tests-all</excludeArtifact>
+						<excludeArtifact>bootique-test-jdbc</excludeArtifact>
+						<excludeArtifact>bootique-test-swagger</excludeArtifact>
+					</excludeArtifacts>
 				</configuration>
 			</plugin>
 		</plugins>
