@@ -251,6 +251,10 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.shiro</groupId>
+            <artifactId>bootique-shiro-web-jwt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.bootique.shiro</groupId>
             <artifactId>bootique-shiro-web-mdc</artifactId>
         </dependency>
         <dependency>
