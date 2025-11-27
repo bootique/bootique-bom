@@ -304,6 +304,11 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.logback</groupId>
+                <artifactId>bootique-logback-smtp</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.mongo</groupId>
                 <artifactId>bootique-mongo-client</artifactId>
                 <version>${project.version}</version>
