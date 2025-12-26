@@ -50,7 +50,7 @@ public class AgrestAppIT {
         return testFactory.app(args)
                 .module(db.moduleWithTestDataSource("ds"))
                 .modules(AgrestModule.class, JdbcHikariCPModule.class, JdbcModule.class, CayenneModule.class, JettyModule.class, JerseyModule.class)
-                .module(b -> JerseyModule.extend(b).addResource(AgResource1.class));
+                .module(b -> JerseyModule.extend(b).addApiResource(AgResource1.class));
     }
 
     @Test

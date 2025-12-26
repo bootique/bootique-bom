@@ -42,7 +42,7 @@ public class MustacheAppIT {
     @BQApp
     final BQRuntime app = Bootique.app("-c", "classpath:io/bootique/bom/mvc/test.yml", "-s")
             .modules(MvcMustacheModule.class, JerseyModule.class, JettyModule.class, MvcModule.class)
-            .module(b -> JerseyModule.extend(b).addResource(MustacheResource.class))
+            .module(b -> JerseyModule.extend(b).addApiResource(MustacheResource.class))
             .module(jetty.moduleReplacingConnectors())
             .createRuntime();
 

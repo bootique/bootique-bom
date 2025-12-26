@@ -46,7 +46,7 @@ public class JerseyAppIT {
                 .module(b -> JerseyModule.extend(b)
                         .addFeature(JerseyAppFeature.class)
                         .addPackage(Resource1.class.getPackage())
-                        .addResource(Resource2.class));
+                        .addApiResource(Resource2.class));
     }
 
     @Test
