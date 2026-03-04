@@ -18,58 +18,59 @@
   under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>io.bootique.modules.parent</groupId>
-		<artifactId>bootique-modules-parent</artifactId>
-		<version>4.0.4</version>
-	</parent>
-	<groupId>io.bootique.bom</groupId>
-	<artifactId>bootique-bom-parent</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.bootique.modules.parent</groupId>
+        <artifactId>bootique-modules-parent</artifactId>
+        <version>4.0.4</version>
+    </parent>
+    <groupId>io.bootique.bom</groupId>
+    <artifactId>bootique-bom-parent</artifactId>
 
-	<!-- Keeping this version in sync with Bootique version -->
-	<version>4.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <!-- Keeping this version in sync with Bootique version -->
+    <version>4.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<name>bootique-bom-parent: Parent of bootique-bom</name>
-	<description>
-		Parent POM of bootique-bom and related modules.
-	</description>
+    <name>bootique-bom-parent: Parent of bootique-bom</name>
+    <description>
+        Parent POM of bootique-bom and related modules.
+    </description>
 
-	<properties>
-		<ehcache.version>3.5.2</ehcache.version>
-		<kotlin.version>1.4.0</kotlin.version>
-	</properties>
+    <properties>
+        <ehcache.version>3.5.2</ehcache.version>
+        <kotlin.version>1.4.0</kotlin.version>
+    </properties>
 
-	<modules>
-		<module>bootique-bom</module>
-		<module>bootique-bom-test-jdbc</module>
-    		<module>bootique-bom-test-swagger</module>
-		<module>bootique-bom-tests-all</module>
-	</modules>
+    <modules>
+        <module>bootique-bom</module>
+        <module>bootique-bom-test-jdbc</module>
+        <module>bootique-bom-test-swagger</module>
+        <module>bootique-bom-tests-all</module>
+    </modules>
 
-	<scm>
+    <scm>
         <developerConnection>scm:git:ssh://git@github.com/bootique/bootique-bom</developerConnection>
         <url>https://github.com/bootique/bootique-bom</url>
         <tag>HEAD</tag>
     </scm>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.sonatype.central</groupId>
-				<artifactId>central-publishing-maven-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<publishingServerId>sonatype-central</publishingServerId>
-					<excludeArtifacts>
-						<excludeArtifact>bootique-bom-tests-all</excludeArtifact>
-						<excludeArtifact>bootique-test-jdbc</excludeArtifact>
-						<excludeArtifact>bootique-test-swagger</excludeArtifact>
-					</excludeArtifacts>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>sonatype-central</publishingServerId>
+                    <excludeArtifacts>
+                        <excludeArtifact>bootique-bom-tests-all</excludeArtifact>
+                        <excludeArtifact>bootique-test-jdbc</excludeArtifact>
+                        <excludeArtifact>bootique-test-swagger</excludeArtifact>
+                    </excludeArtifacts>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
