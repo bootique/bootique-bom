@@ -356,6 +356,11 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.opentelemetry</groupId>
+                <artifactId>bootique-opentelemetry</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.rabbitmq</groupId>
                 <artifactId>bootique-rabbitmq-client</artifactId>
                 <version>${project.version}</version>

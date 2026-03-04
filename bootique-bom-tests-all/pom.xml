@@ -234,6 +234,10 @@
             <artifactId>bootique-mybatis</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.bootique.opentelemetry</groupId>
+            <artifactId>bootique-opentelemetry</artifactId>
+        </dependency>
+        <dependency>
             <groupId>io.bootique.rabbitmq</groupId>
             <artifactId>bootique-rabbitmq-client</artifactId>
         </dependency>
