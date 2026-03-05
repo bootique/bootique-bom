@@ -67,7 +67,7 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.agrest</groupId>
-            <artifactId>bootique-agrest-junit5</artifactId>
+            <artifactId>bootique-agrest-junit</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.aws</groupId>
@@ -290,31 +290,31 @@
         <!-- 	* cayenne42 -->
         <dependency>
             <groupId>io.bootique</groupId>
-            <artifactId>bootique-junit5</artifactId>
+            <artifactId>bootique-junit</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.cayenne</groupId>
-            <artifactId>bootique-cayenne42-junit5</artifactId>
+            <artifactId>bootique-cayenne42-junit</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jdbc</groupId>
-            <artifactId>bootique-jdbc-junit5</artifactId>
+            <artifactId>bootique-jdbc-junit</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jdbc</groupId>
-            <artifactId>bootique-jdbc-junit5-derby</artifactId>
+            <artifactId>bootique-jdbc-junit-derby</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jdbc</groupId>
-            <artifactId>bootique-jdbc-junit5-testcontainers</artifactId>
+            <artifactId>bootique-jdbc-junit-testcontainers</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.jetty</groupId>
-            <artifactId>bootique-jetty-junit5</artifactId>
+            <artifactId>bootique-jetty-junit</artifactId>
         </dependency>
         <dependency>
             <groupId>io.bootique.rabbitmq</groupId>
-            <artifactId>bootique-rabbitmq-junit5</artifactId>
+            <artifactId>bootique-rabbitmq-junit</artifactId>
         </dependency>
     </dependencies>
 

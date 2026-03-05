@@ -20,7 +20,11 @@
 package io.bootique.bom.jetty;
 
 import io.bootique.jetty.JettyModule;
-import io.bootique.junit5.*;
+import io.bootique.junit.BQTest;
+import io.bootique.junit.BQTestFactory;
+import io.bootique.junit.BQTestTool;
+import io.bootique.junit.TestIO;
+import io.bootique.junit.TestRuntumeBuilder;
 import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.core.Response;

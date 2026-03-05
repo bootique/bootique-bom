@@ -22,10 +22,10 @@ package io.bootique.bom.swagger;
 
 import io.bootique.BQRuntime;
 import io.bootique.Bootique;
-import io.bootique.jetty.junit5.JettyTester;
-import io.bootique.junit5.BQApp;
-import io.bootique.junit5.BQTest;
-import io.bootique.junit5.BQTestTool;
+import io.bootique.jetty.junit.JettyTester;
+import io.bootique.junit.BQApp;
+import io.bootique.junit.BQTest;
+import io.bootique.junit.BQTestTool;
 import jakarta.ws.rs.core.Response;
 import org.junit.jupiter.api.Test;
 

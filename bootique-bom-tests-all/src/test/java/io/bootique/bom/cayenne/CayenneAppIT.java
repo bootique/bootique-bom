@@ -24,12 +24,12 @@ import io.bootique.cayenne.v42.CayenneModule;
 import io.bootique.command.CommandOutcome;
 import io.bootique.jdbc.JdbcModule;
 import io.bootique.jdbc.hikaricp.JdbcHikariCPModule;
-import io.bootique.jdbc.junit5.derby.DerbyTester;
-import io.bootique.junit5.BQTest;
-import io.bootique.junit5.BQTestFactory;
-import io.bootique.junit5.BQTestTool;
-import io.bootique.junit5.TestIO;
-import io.bootique.junit5.TestRuntumeBuilder;
+import io.bootique.jdbc.junit.derby.DerbyTester;
+import io.bootique.junit.BQTest;
+import io.bootique.junit.BQTestFactory;
+import io.bootique.junit.BQTestTool;
+import io.bootique.junit.TestIO;
+import io.bootique.junit.TestRuntumeBuilder;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

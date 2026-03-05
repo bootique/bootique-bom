@@ -22,7 +22,11 @@ package io.bootique.bom.job;
 import io.bootique.command.CommandOutcome;
 import io.bootique.job.JobsModule;
 import io.bootique.job.SchedulerModule;
-import io.bootique.junit5.*;
+import io.bootique.junit.BQTest;
+import io.bootique.junit.BQTestFactory;
+import io.bootique.junit.BQTestTool;
+import io.bootique.junit.TestIO;
+import io.bootique.junit.TestRuntumeBuilder;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

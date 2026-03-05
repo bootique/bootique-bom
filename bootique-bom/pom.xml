@@ -45,12 +45,12 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique</groupId>
-                <artifactId>bootique-junit5</artifactId>
+                <artifactId>bootique-junit</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.agrest</groupId>
-                <artifactId>bootique-agrest-junit5</artifactId>
+                <artifactId>bootique-agrest-junit</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -70,7 +70,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
-                <artifactId>bootique-aws2-junit5</artifactId>
+                <artifactId>bootique-aws2-junit</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -85,7 +85,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.aws</groupId>
-                <artifactId>bootique-aws2-s3-junit5</artifactId>
+                <artifactId>bootique-aws2-s3-junit</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -100,7 +100,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
-                <artifactId>bootique-cayenne42-junit5</artifactId>
+                <artifactId>bootique-cayenne42-junit</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -115,7 +115,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.cayenne</groupId>
-                <artifactId>bootique-cayenne50-junit5</artifactId>
+                <artifactId>bootique-cayenne50-junit</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -165,17 +165,17 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
-                <artifactId>bootique-jdbc-junit5</artifactId>
+                <artifactId>bootique-jdbc-junit</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
-                <artifactId>bootique-jdbc-junit5-derby</artifactId>
+                <artifactId>bootique-jdbc-junit-derby</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.bootique.jdbc</groupId>
-                <artifactId>bootique-jdbc-junit5-testcontainers</artifactId>
+                <artifactId>bootique-jdbc-junit-testcontainers</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -215,7 +215,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.jersey</groupId>
-                <artifactId>bootique-jersey-client-junit5-wiremock</artifactId>
+                <artifactId>bootique-jersey-client-junit-wiremock</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -241,7 +241,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.jetty</groupId>
-                <artifactId>bootique-jetty-junit5</artifactId>
+                <artifactId>bootique-jetty-junit</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -316,7 +316,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.mongo</groupId>
-                <artifactId>bootique-mongo-junit5</artifactId>
+                <artifactId>bootique-mongo-junit</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -367,7 +367,7 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.rabbitmq</groupId>
-                <artifactId>bootique-rabbitmq-junit5</artifactId>
+                <artifactId>bootique-rabbitmq-junit</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
