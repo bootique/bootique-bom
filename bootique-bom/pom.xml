@@ -64,6 +64,16 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest6</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.agrest</groupId>
+                <artifactId>bootique-agrest6-swagger</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.aws</groupId>
                 <artifactId>bootique-aws2</artifactId>
                 <version>${project.version}</version>
