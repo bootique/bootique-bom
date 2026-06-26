@@ -40,7 +40,6 @@
 
     <properties>
         <ehcache.version>3.5.2</ehcache.version>
-        <kotlin.version>1.4.0</kotlin.version>
     </properties>
 
     <modules>
