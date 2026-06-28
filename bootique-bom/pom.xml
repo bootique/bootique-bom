@@ -305,6 +305,16 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove4</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.linkmove</groupId>
+                <artifactId>bootique-linkmove4-rest</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>io.bootique.liquibase</groupId>
                 <artifactId>bootique-liquibase</artifactId>
                 <version>${project.version}</version>
