@@ -74,4 +74,37 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <!-- Checking that the BOM produces a consistent dependency graph. Intentionally declared here and -->
+            <!-- not in the parent POM, so that it applies to the test modules only, and never to the BOM itself. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.6.2</version>
+                <executions>
+                    <execution>
+                        <id>enforce-dependency-versions</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <!-- Fails when Maven's "nearest wins" resolution picks a version lower than -->
+                                <!-- some other path requires, i.e. a silent downgrade -->
+                                <requireUpperBoundDeps/>
+
+                                <!-- Fails when any two paths disagree on a version at all -->
+                                <dependencyConvergence/>
+
+                                <banDuplicatePomDependencyVersions/>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

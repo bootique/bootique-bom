@@ -47,17 +47,6 @@
                 <artifactId>ehcache</artifactId>
                 <version>${ehcache.version}</version>
             </dependency>
-
-            <!-- TODO: remove once bootique-linkmove is upgraded to Cayenne 5.0-M3. -->
-            <!-- "bootique-linkmove-parent" still sets <cayenne50.version>5.0-M2</cayenne50.version>, so -->
-            <!-- "bootique-linkmove4" drags in cayenne-velocity:5.0-M2, while "bootique-cayenne50" brings -->
-            <!-- cayenne:5.0-M3. SQLTemplateProcessor was removed from Cayenne core between M2 and M3, so -->
-            <!-- the combination fails with a NoClassDefFoundError as soon as a CayenneRuntime is created. -->
-            <dependency>
-                <groupId>org.apache.cayenne</groupId>
-                <artifactId>cayenne-velocity</artifactId>
-                <version>5.0-M3</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -376,6 +365,39 @@
         </dependency>
 
     </dependencies>
+    <build>
+        <plugins>
+            <!-- Checking that the BOM produces a consistent dependency graph. Intentionally declared here and -->
+            <!-- not in the parent POM, so that it applies to the test modules only, and never to the BOM itself. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>3.6.2</version>
+                <executions>
+                    <execution>
+                        <id>enforce-dependency-versions</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <!-- Fails when Maven's "nearest wins" resolution picks a version lower than -->
+                                <!-- some other path requires, i.e. a silent downgrade -->
+                                <requireUpperBoundDeps/>
+
+                                <!-- Fails when any two paths disagree on a version at all -->
+                                <dependencyConvergence/>
+
+                                <banDuplicatePomDependencyVersions/>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 
     <profiles>
         <profile>
