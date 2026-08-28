@@ -1,0 +1,11 @@
+jdbc:
+  test2:
+    url: jdbc:derby:target/derby/bqjdbc_test2;create=true
+    maxActive: 2
+
+
+cayenne:
+  datasource: test2
+  createSchema: true
+  configs: 
+    - io/bootique/bom/cayenne/cayenne-project.xml

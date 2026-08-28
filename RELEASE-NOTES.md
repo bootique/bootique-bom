@@ -1,3 +1,7 @@
+## 4.0-M6
+
+* #10 More robust dependency conflict checking
+
 ## 4.0-M1
 
 * #9 Remove "bootique-undertow"

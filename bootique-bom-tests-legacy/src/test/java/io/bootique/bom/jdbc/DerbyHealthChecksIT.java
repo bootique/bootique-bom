@@ -1,0 +1,91 @@
+/*
+ * Licensed to ObjectStyle LLC under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ObjectStyle LLC licenses
+ * this file to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+package io.bootique.bom.jdbc;
+
+import io.bootique.BQRuntime;
+import io.bootique.jdbc.DataSourceFactory;
+import io.bootique.jdbc.instrumented.hikaricp.healthcheck.HikariCPConnectivityCheck;
+import io.bootique.junit.BQTest;
+import io.bootique.junit.BQTestFactory;
+import io.bootique.junit.BQTestTool;
+import io.bootique.metrics.health.HealthCheckOutcome;
+import io.bootique.metrics.health.HealthCheckRegistry;
+import io.bootique.metrics.health.HealthCheckStatus;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+@BQTest
+public class DerbyHealthChecksIT {
+
+    @BQTestTool
+    final BQTestFactory testFactory = new BQTestFactory();
+
+    @BeforeEach
+    public void loadDerbyDriver() throws ReflectiveOperationException {
+        // Other tests in this module use DerbyTester, which shuts the embedded Derby engine down when done.
+        // A Derby shutdown deregisters its JDBC driver, so re-register it before starting an app whose
+        // DataSources come from configuration only. Instantiating the driver is what re-registers it;
+        // Class.forName() alone is a noop once the class has been loaded.
+        Class.forName("org.apache.derby.jdbc.EmbeddedDriver").getDeclaredConstructor().newInstance();
+    }
+
+    @Test
+    public void derbyHealth() {
+
+        BQRuntime runtime = testFactory.app("--config=classpath:io/bootique/bom/autoload.yml", "--config=classpath:io/bootique/bom/jdbc/health.yml").autoLoadModules().createRuntime();
+
+        HealthCheckRegistry healthChecks = runtime.getInstance(HealthCheckRegistry.class);
+        Map<String, HealthCheckOutcome> results = healthChecks.runHealthChecks();
+
+        // check before DataSources are started
+        HealthCheckOutcome one = results.get(HikariCPConnectivityCheck.healthCheckName("derby1"));
+        assertNull(one);
+
+        HealthCheckOutcome two = results.get(HikariCPConnectivityCheck.healthCheckName("derby2"));
+        assertNull(two);
+
+        HealthCheckOutcome three = results.get(HikariCPConnectivityCheck.healthCheckName("derby3"));
+        assertNull(three);
+
+        // init DataSources and re-check
+        runtime.getInstance(DataSourceFactory.class).forName("derby1");
+        runtime.getInstance(DataSourceFactory.class).forName("derby2");
+        runtime.getInstance(DataSourceFactory.class).forName("derby3");
+
+
+        results = healthChecks.runHealthChecks();
+
+        one = results.get(HikariCPConnectivityCheck.healthCheckName("derby1"));
+        assertNotNull(one);
+        assertEquals(HealthCheckStatus.OK, one.getStatus());
+
+        two = results.get(HikariCPConnectivityCheck.healthCheckName("derby2"));
+        assertNotNull(two);
+        assertEquals(HealthCheckStatus.OK, two.getStatus());
+
+        three = results.get(HikariCPConnectivityCheck.healthCheckName("derby3"));
+        assertNotNull(three);
+        assertEquals(HealthCheckStatus.CRITICAL, three.getStatus());
+    }
+}

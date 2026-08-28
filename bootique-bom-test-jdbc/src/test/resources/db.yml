@@ -1,9 +1,0 @@
-jdbc:
-  derby1:
-    jdbcUrl: "jdbc:derby:target/derby/1;create=true"
-  derby2:
-    jdbcUrl: "jdbc:derby:target/derby/2;create=true"
-  # this emulates a bad DB
-  derby3:
-    jdbcUrl: "jdbc:derby:target/derby/3;create=false"
-    initializationFailTimeout: -1

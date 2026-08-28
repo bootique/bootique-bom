@@ -1,0 +1,14 @@
+jdbc:
+  ds:
+    url: jdbc:derby:target/derby/agrest_noconfig;create=true
+    initialSize: 1
+
+jersey:
+  urlPattern: /lrservlet/*
+
+jetty:
+  context: /lr
+  connectors:
+    - port: 12111
+
+

@@ -1,0 +1,23 @@
+# Minimal configuration for the modules that fail DI graph construction when left unconfigured.
+# Loaded by every test in this module that calls "autoLoadModules()" with the full BOM on the classpath.
+# These are not functional tests of the modules below - only enough config to let the graph resolve.
+
+# bootique-shiro-web-oidc validates all four of these eagerly, in a provider method
+shiroweboidc:
+  oidpUrl: "https://oidp.example.org/authorize"
+  tokenUrl: "https://oidp.example.org/token"
+  clientId: "bom-test-client"
+  clientSecret: "bom-test-secret"
+
+# bootique-cxf-jaxrs, bootique-cxf-jaxws-server and bootique-jersey all map a servlet to "/*" by default,
+# and Jetty refuses to start with more than one of them on the classpath. Moving the CXF servlets out of
+# the way lets all three coexist.
+cxfjaxrs:
+  urlPattern: "/cxf-jaxrs/*"
+cxfjaxwsserver:
+  urlPattern: "/cxf-jaxws/*"
+
+# bootique-tapestry59 registers a servlet filter that fails to init without an app package
+tapestry:
+  appPackage: io.bootique.bom.tapestry
+  urlPattern: "/tapestry/*"

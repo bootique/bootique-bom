@@ -43,9 +43,13 @@
 
     <modules>
         <module>bootique-bom</module>
-        <module>bootique-bom-test-jdbc</module>
-        <module>bootique-bom-test-swagger</module>
-        <module>bootique-bom-tests-all</module>
+
+        <!-- Integration test modules. Split along the axes of mutually exclusive Bootique modules, so that -->
+        <!-- between them, they cover every artifact declared in the BOM -->
+        <module>bootique-bom-tests-legacy</module>
+        <module>bootique-bom-tests-newest</module>
+        <module>bootique-bom-tests-zookeeper</module>
+        <module>bootique-bom-tests-consul</module>
     </modules>
 
     <scm>
@@ -62,9 +66,10 @@
                 <configuration>
                     <publishingServerId>sonatype-central</publishingServerId>
                     <excludeArtifacts>
-                        <excludeArtifact>bootique-bom-tests-all</excludeArtifact>
-                        <excludeArtifact>bootique-test-jdbc</excludeArtifact>
-                        <excludeArtifact>bootique-test-swagger</excludeArtifact>
+                        <excludeArtifact>bootique-bom-tests-legacy</excludeArtifact>
+                        <excludeArtifact>bootique-bom-tests-newest</excludeArtifact>
+                        <excludeArtifact>bootique-bom-tests-zookeeper</excludeArtifact>
+                        <excludeArtifact>bootique-bom-tests-consul</excludeArtifact>
                     </excludeArtifacts>
                 </configuration>
             </plugin>

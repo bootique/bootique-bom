@@ -1,0 +1,8 @@
+swagger:
+  pretty: false
+  specs:
+    default:
+      pathJson: openapi.json
+      pathYaml: openapi.yaml
+      resourceClasses:
+        - io.bootique.bom.swagger.api.Api1

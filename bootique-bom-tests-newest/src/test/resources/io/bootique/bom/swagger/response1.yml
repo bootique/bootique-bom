@@ -1,0 +1,19 @@
+openapi: 3.0.1
+paths:
+  /api1/{id}:
+    get:
+      operationId: getById
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        default:
+          description: default response
+          content:
+            '*/*':
+              schema:
+                type: string
