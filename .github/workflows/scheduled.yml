@@ -1,0 +1,36 @@
+name: 'scheduled upstream test'
+
+on:
+  schedule:
+    # every 3 days at 07:00 UTC (on days 1, 4, 7 ... 28, 31 of the month, so the
+    # interval is shorter across a month boundary). Note that GitHub runs
+    # scheduled jobs on a best-effort basis, so the start time may be delayed
+    - cron: '0 7 */3 * *'
+  # allow manual runs from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    name: JDK ${{ matrix.java }}
+    strategy:
+      # let the other JDK finish, so we see whether a failure is version-specific
+      fail-fast: false
+      matrix:
+        java: [ 21, 25 ]
+
+    steps:
+      - name: Checkout...
+        uses: actions/checkout@v6
+
+      - name: Set up JDK...
+        uses: actions/setup-java@v5
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: 'temurin'
+          cache: 'maven'
+
+      # "-U" forces re-resolution of upstream module SNAPSHOTs, which is the
+      # entire point of this workflow
+      - name: Build and test...
+        run: mvn clean verify -U
