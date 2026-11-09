@@ -1,3 +1,7 @@
+## 4.0-M7
+
+* #11 Missing bootique-logback-json module 
+
 ## 4.0-M6
 
 * #10 More robust dependency conflict checking

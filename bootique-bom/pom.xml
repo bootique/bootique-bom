@@ -330,6 +330,11 @@
             </dependency>
             <dependency>
                 <groupId>io.bootique.logback</groupId>
+                <artifactId>bootique-logback-json</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique.logback</groupId>
                 <artifactId>bootique-logback-smtp</artifactId>
                 <version>${project.version}</version>
             </dependency>

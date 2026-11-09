@@ -225,6 +225,10 @@
         </dependency>
         <dependency>
             <groupId>io.bootique.logback</groupId>
+            <artifactId>bootique-logback-json</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.bootique.logback</groupId>
             <artifactId>bootique-logback-smtp</artifactId>
         </dependency>
         <dependency>
