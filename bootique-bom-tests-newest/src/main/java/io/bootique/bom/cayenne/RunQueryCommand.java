@@ -27,12 +27,12 @@ import io.bootique.meta.application.CommandMetadata;
 import io.bootique.meta.application.OptionMetadata;
 import jakarta.inject.Inject;
 import jakarta.inject.Provider;
+import org.apache.cayenne.CayenneRuntime;
 import org.apache.cayenne.ObjectContext;
 import org.apache.cayenne.exp.Expression;
 import org.apache.cayenne.exp.ExpressionFactory;
 import org.apache.cayenne.query.ObjectSelect;
-import org.apache.cayenne.query.SQLTemplate;
-import org.apache.cayenne.runtime.CayenneRuntime;
+import org.apache.cayenne.query.SQLExec;
 
 public class RunQueryCommand extends CommandWithMetadata {
 
@@ -77,7 +77,7 @@ public class RunQueryCommand extends CommandWithMetadata {
     private void prepareDB() {
         ObjectContext context = cayenneProvider.get().newContext();
 
-        context.performGenericQuery(new SQLTemplate(T1.class, "delete from T1"));
+        SQLExec.query("delete from T1").execute(context);
 
         for (int i = 0; i < 10; i++) {
             T1 o = context.newObject(T1.class);
